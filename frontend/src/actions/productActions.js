@@ -1,22 +1,23 @@
 import productService from '../services/productService.js'
 
-export function loadProduct(productId) {
+
+export function loadProduct(userId) {
     return async dispatch => {
-        try {
-            const product = await productService.get(productId);
-            console.log(product);
-            dispatch(setProduct(product));
-        } catch (err) {
-            console.log('ProductActions: err in loadProduct', err);
-        }
+      try {
+        const user = await productService.get(userId);
+        console.log(user);
+        dispatch(setProduct(user));
+      } catch (err) {
+        console.log('ProductActions: err in loadProduct', err);
+      }
     };
-}
-function setProduct(product) {
+  }
+  function setProduct(user) {
     return {
-        type: 'SET_PRODUCT',
-        product
+      type: 'SET_PRODUCT',
+      user
     };
-}
+  }
 
 export function loadProducts(cityId) {
     return async dispatch => {

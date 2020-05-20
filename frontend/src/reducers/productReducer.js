@@ -8,7 +8,7 @@ export default function productReducer(state = initialState, action = {}) {
         case 'SET_PRODUCT':
             return {
                 ...state,
-                currProduct: action.product
+                currProduct: action.user.product
             }
         case 'SET_PRODUCTS':
             return {

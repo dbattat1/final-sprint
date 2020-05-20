@@ -9,6 +9,6 @@ function query(cityId) {
     return httpService.get(`user?product.city._id=${cityId}`)
 }
 
-function get(productId) {
-    return httpService.get(`product/${productId}`)
+function get(userId) {
+    return httpService.get(`user/${userId}`)
 }
