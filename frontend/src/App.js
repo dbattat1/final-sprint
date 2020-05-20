@@ -4,6 +4,7 @@ import { createBrowserHistory } from "history";
 import './App.css';
 
 import {Home} from './pages/Home.jsx';
+import {CityPage} from './pages/CityPage.jsx';
 
 const history = createBrowserHistory();
 
@@ -13,6 +14,7 @@ function App() {
       <Router history={history}>
         <Switch>
           <Route path="/" component={Home} exact/>
+          <Route path="/cityId" component={CityPage} exact/>
         </Switch>
       </Router>
     </div>
