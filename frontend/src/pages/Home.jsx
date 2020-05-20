@@ -1,37 +1,38 @@
-
-// import { connect } from 'react-redux';
-import cityService from '../services/cityService.js'
-import React, { Component } from 'react'
-
+import {loadCities} from '../actions/cityActions.js';
+import { connect } from 'react-redux';
+import React, { Component } from 'react';
 
 
-export class Home extends Component {
+class Home extends Component {
 
     componentDidMount() {
-        cityService.query()
-        .then(res => console.log(res)
-        )
-        
-    }
+        console.log('comp');
+        this.props.loadCities()
     
+    }
+
     render() {
+        console.log('cities',this.props.cities);
+        
         return (
             <div>
-                <h1>Hello Final Sprint</h1>
+               { this.props.cities.length && <h1>{this.props.cities[0].name}</h1> }
             </div>
         )
     }
 }
 
 
-// const mapStateToProps = (state) => {
-//     return {}
-// };
+const mapStateToProps = (state) => {
+    return {
+       cities: state.city.cities
+    }
+};
 
-// const mapDispatchToProps = {
-//     saveToy,
-// };
+const mapDispatchToProps = {
+    loadCities,
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(ToyEdit);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 

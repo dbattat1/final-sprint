@@ -1,8 +1,9 @@
 const initialState = {
     currCity: null,
+    cities: []
 }
 
-export default function cityReducer(state = initialState, action) {
+export default function cityReducer(state = initialState, action = {}) {
     switch (action.type) {
         case 'SET_CITIES':
             return {
