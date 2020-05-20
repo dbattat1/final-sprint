@@ -1,9 +1,19 @@
 
 // import { connect } from 'react-redux';
-
+import cityService from '../services/cityService.js'
 import React, { Component } from 'react'
 
+
+
 export class Home extends Component {
+
+    componentDidMount() {
+        cityService.query()
+        .then(res => console.log(res)
+        )
+        
+    }
+    
     render() {
         return (
             <div>
@@ -12,5 +22,16 @@ export class Home extends Component {
         )
     }
 }
+
+
+// const mapStateToProps = (state) => {
+//     return {}
+// };
+
+// const mapDispatchToProps = {
+//     saveToy,
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(ToyEdit);
 
 
