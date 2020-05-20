@@ -108,6 +108,7 @@
             "_id": "c104",
             "name": "Moscow",
             "info": "blah blaj blah the city of Stalin and the best ballet shows, don't forget to check oout the Kremlin",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1559221897-66ef95d1af85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80",
             "imgUrls": [
                 "http://some-img1",
                 "http://some-img2",
@@ -118,6 +119,7 @@
             "_id": "c109",
             "name": "New York",
             "info": "The city that never sleeps",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1587217997519-afded20ada5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
             "imgUrls": [
                 "http://some-img1",
                 "http://some-img2",
