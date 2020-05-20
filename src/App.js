@@ -16,7 +16,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+<<<<<<< HEAD
           Learn React Final1111
+=======
+          Learn React Final - yotam
+>>>>>>> e9f15c8e5bd4e19aa207ad8b3cc5720feccd9f9e
         </a>
       </header>
     </div>
