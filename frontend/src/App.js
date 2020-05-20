@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Switch, Route} from 'react-router';
 import { createBrowserHistory } from "history";
 import './App.css';
-
+import './assets/styles/global.scss';
 import Home from './pages/Home.jsx';
 import CityPage from './pages/CityPage.jsx';
 import ProductDetails from './pages/ProductDetails';

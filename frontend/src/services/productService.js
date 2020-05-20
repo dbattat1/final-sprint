@@ -1,7 +1,7 @@
 import httpService from './httpService';
 export default {
     query,
-    get   
+    get,  
 }
 
 function query(cityId) {

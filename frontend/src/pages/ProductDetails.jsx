@@ -13,7 +13,7 @@ class ProductDetails extends React.Component {
 
     if (!product) return 'Loading...';
 
-    return <div className="">
+    return <div className="flex column justify-center align-center">
       <h1>Product: {product.title}</h1>
       <h2>Price: {product.price}</h2>
       <p>{product.description}</p>
