@@ -1,6 +1,8 @@
-import cityService from '../services/cityService.js';
+import cityService from '../services/cityService';
 
 export function loadCities() {
+  console.log('loadcities');
+  
     return dispatch => {
         cityService.query()
         .then(cities => dispatch({

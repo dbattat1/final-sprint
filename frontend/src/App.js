@@ -3,7 +3,7 @@ import { Router, Switch, Route} from 'react-router';
 import { createBrowserHistory } from "history";
 import './App.css';
 
-import {Home} from './pages/Home.jsx';
+import Home from './pages/Home.jsx';
 import {CityPage} from './pages/CityPage.jsx';
 
 const history = createBrowserHistory();
