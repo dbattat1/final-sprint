@@ -1,14 +1,13 @@
 import { combineReducers } from 'redux';
-import cityReducer from './cityReducer' 
-// import ReviewReducer from './ReviewReducer'
-// import UserReducer from './UserReducer'
+import cityReducer from './cityReducer'
+import productReducer from './productReducer'
+import userReducer from './userReducer'
 // import SystemReducer from './SystemReducer';
 
 const rootReducer = combineReducers({
-    //   system: SystemReducer,
-    //   review: ReviewReducer,
-    //   user: UserReducer
-    city: cityReducer
+  user: userReducer,
+  product: productReducer,
+  city: cityReducer
 })
 
 export default rootReducer;

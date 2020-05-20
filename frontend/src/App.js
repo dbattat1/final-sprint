@@ -5,18 +5,24 @@ import './App.css';
 
 import Home from './pages/Home.jsx';
 import {CityPage} from './pages/CityPage.jsx';
+import ProductDetails from './pages/ProductDetails';
+import { Header } from './cmps/Header.jsx';
+import {Footer} from './cmps/Footer.jsx';
 
 const history = createBrowserHistory();
 
 function App() {
   return (
     <div className="App"> 
+     <Header/>
       <Router history={history}>
         <Switch>
           <Route path="/" component={Home} exact/>
           <Route path="/cityId" component={CityPage} exact/>
+          <Route path='/user/:id' component={ProductDetails}/>
         </Switch>
       </Router>
+      <Footer/>
     </div>
   );
 }
