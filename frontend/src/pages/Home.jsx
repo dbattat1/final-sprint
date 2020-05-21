@@ -13,7 +13,7 @@ class Home extends Component {
     console.log("cities", this.props.cities);
 
     return (
-      <div>
+      <div className="home-page-container">
         <header>
           <div>LOGO HERE</div>
           <div>NAVBAR HERE</div>
@@ -34,7 +34,7 @@ class Home extends Component {
         </section>
         <section className="products-container">
             <ul>
-                
+
             </ul>
 
         </section>
