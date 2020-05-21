@@ -15,6 +15,11 @@ export default function productReducer(state = initialState, action = {}) {
                 ...state,
                 products: action.products
             }
+        case 'REMOVE_PRODUCT':
+            return {
+                ...state,
+                currProduct: action.product
+            }
         default:
             return state;
     }

@@ -1,11 +1,11 @@
 import React from 'react'
-import { ProductPreview } from '../cmps/ProductPreview';
+import { ProductPreview } from '../cmps/ProductPreview.jsx';
 
 export function ProductList(props) {
     
     return (
         <div className="">
-            {/* {props.products && props.products.map((product, idx) => <ProductPreview product={product} key={product._id}/> )} */}
+            {props.users && props.users.map((user, idx) => <ProductPreview user={user} key={idx} onRemoveProduct={props.onRemoveProduct} /> )}
         </div>
     )
 }

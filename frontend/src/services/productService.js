@@ -1,14 +1,20 @@
 import httpService from './httpService';
 export default {
     query,
-    get,  
+    get,
+    remove  
 }
 
 function query(cityId) {
-    console.log('hello from cityService');
     return httpService.get(`user?product.city._id=${cityId}`)
 }
 
 function get(userId) {
     return httpService.get(`user/${userId}`)
 }
+
+function remove(user) {
+    console.log(user);
+    
+    return httpService.put(`user/${user._id}`, user);
+  }
