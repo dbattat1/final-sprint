@@ -1,0 +1,31 @@
+.product-header {
+    .title {
+        h1 {
+            color: $clr5;
+            font-size: rem(30px);
+            margin-right: 20px;
+        }
+        h3 {
+            margin-right:20px;
+            color: grey;
+            font-size: rem(20px);
+        }
+    }
+    button {
+        background-color: $clr1;
+        font-size: rem(25px);
+    }
+}
+
+.product-img-container {
+    img {
+        width: 15%;
+    }
+ 
+}
+
+// .product-main-container {
+// }
+
+// .product-reviews {
+// }
