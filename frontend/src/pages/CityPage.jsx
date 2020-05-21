@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { loadCity } from '../actions/cityActions.js';
-import { loadProducts, removeProduct } from '../actions/productActions.js';
+import { loadProducts, updateProduct } from '../actions/productActions.js';
 import { ProductList } from '../cmps/ProductList.jsx';
+import { Link } from 'react-router-dom';
 
 class CityPage extends Component {
     componentDidMount() {
@@ -26,6 +27,7 @@ class CityPage extends Component {
         if (!city) return 'Loading';
         return (
             <div>
+                <Link to={`/become`}>BECOME</Link>
                 <h1>Expreince {`${city.name}`}!</h1>
                 <h3>{city._id}</h3>
                 <h3>{city.name}</h3>
@@ -46,7 +48,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     loadCity,
     loadProducts,
-    removeProduct
+    updateProduct
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CityPage);
