@@ -15,14 +15,28 @@ export function loadProduct(userId) {
   export function loadProducts(cityId) {
     return async dispatch => {
       try {
-        const products = await productService.query(cityId);
-        console.log(products);
+        const users = await productService.query(cityId);
+        const products = users;
+        // const products = _makeProductFromUsers(users);
+        // console.log(products);
         dispatch(setProducts(products));
       } catch (err) {
         console.log('ProductActions: err in loadProducts', err);
       }
     };
   }
+
+  export function removeProduct(user) {
+    return async dispatch => {
+      try {
+        await productService.remove(user);
+        dispatch(_removeProduct(user));
+      } catch (err) {
+        console.log('ProductActions: err in removeProduct', err);
+      }
+    };
+  }
+
   function setProducts(products) {
     return {
       type: 'SET_PRODUCTS',
@@ -36,4 +50,16 @@ export function loadProduct(userId) {
       product
     };
   }
+
+  function _removeProduct(userId) {
+    return {
+      type: 'PRODUCT_REMOVE',
+      userId
+    };
+  }
+
+ function _makeProductFromUsers(users){
+    const products = users.map(user => user.product);
+    return products;
+ }
 

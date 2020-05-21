@@ -1,130 +1,183 @@
 {
-    "user": [
+  "user": [
+    {
+      "_id": "b101",
+      "fullName": "Seller Ben-Mocher",
+      "userName": "soRich@buy.com",
+      "password": "RichiRich",
+      "createdAt": 154646679997897900,
+      "isAdmin": false,
+      "bio": "Hi everyone I'm Seller, a born and raised in Milan chef. I invite you to join me on a once in lifetime culinary tour in the heart of the North-Italian (and world) capital of the glorious pasta",
+      "imgUrl": "http://some-img",
+      "msgs": [
         {
-            "_id": "b101",
-            "fullName": "Seller Ben-Mocher",
-            "userName": "soRich@buy.com",
-            "password": "RichiRich",
-            "createdAt": 154646679997897897,
-            "isAdmin": false,
-            "bio": "Hi everyone I'm Seller, a born and raised in Milan chef. I invite you to join me on a once in lifetime culinary tour in the heart of the North-Italian (and world) capital of the glorious pasta",
-            "imgUrl": "http://some-img",
-            "msgs": [
-                {
-                    "createdAt": 1515151515151515,
-                    "txt": "hi",
-                    "sentBy": { 
-                        "_id": "b102",
-                        "name": "Moshe Abu-Shukry",
-                        "imgUrl": "http://some-img"
-                    } 
-                }
-            ],
-            "product": {
-                    "title": "A Dreamy Walk through the treditional markets of Milan",
-                    "price": 75,
-                    "city": {
-                        "_id": "c104",
-                        "name": "milan",
-                        "imgUrl": "http://some-img1" 
-                    },
-                    "tags": ["Italian", "treditional", "Home Cooking", "tour", "workshop", "tastings"],
-                    "description": "Lorem food food food wine pasta pizza market local experience for everyone",
-                    "reviews": [],
-                    "imgUrls": [
-                        "http://some-img1",
-                        "http://some-img2",
-                        "http://some-img3"
-                    ]
-            }
-        },
-        {
+          "createdAt": 1515151515151515,
+          "txt": "hi",
+          "sentBy": {
             "_id": "b102",
-            "fullName": "Moshe Abu-Shukry",
-            "userName": "moshe@buy.com",
-            "password": "123",
-            "createdAt": 1546466799978434897,
-            "isAdmin": true,
-            "bio": "Hi everyone I'm Moshe",
-            "imgUrl": "http://some-img",
-            "msgs": [
-                {
-                    "createdAt": 151515145687845,
-                    "txt": "hello",
-                    "sentBy": { 
-                        "_id": "b101",
-                        "name": "Seller Ben-Mocher",
-                        "imgUrl": "http://some-img"
-                    } 
-                }
-            ],
-            "product": {
-                    "title": "Pizza",
-                    "price": 30,
-                    "city": {
-                        "_id": "c106",
-                        "name": "New York",
-                        "imgUrl": "http://some-img1" 
-                    },
-                    "tags": ["American", "pizza", "veggies", "market"],
-                    "description": "Lorem blah blah blah blah local",
-                    "reviews": [],
-                    "imgUrls": [
-                        "http://some-img1",
-                        "http://some-img2",
-                        "http://some-img3"
-                    ]
+            "name": "Moshe Abu-Shukry",
+            "imgUrl": "http://some-img"
+          }
+        }
+      ],
+      "product": {
+        "title": "A Dreamy Walk through the treditional markets of Milan",
+        "price": 75,
+        "city": {
+          "_id": "c104",
+          "name": "milan",
+          "imgUrl": "http://some-img1"
+        },
+        "tags": [
+          "Italian",
+          "treditional",
+          "Home Cooking",
+          "tour",
+          "workshop",
+          "tastings"
+        ],
+        "description": "Lorem food food food wine pasta pizza market local experience for everyone",
+        "reviews": [],
+        "imgUrls": [
+          "http://some-img1",
+          "http://some-img2",
+          "http://some-img3"
+        ]
+      }
+    },
+    {
+        "_id": "b104",
+        "fullName": "Seller Ben-Mocher",
+        "userName": "soRich@buy.com",
+        "password": "RichiRich",
+        "createdAt": 154646679997897900,
+        "isAdmin": false,
+        "bio": "Hi everyone I'm Seller, a born and raised in Milan chef. I invite you to join me on a once in lifetime culinary tour in the heart of the North-Italian (and world) capital of the glorious pasta",
+        "imgUrl": "http://some-img",
+        "msgs": [
+          {
+            "createdAt": 1515151515151515,
+            "txt": "hi",
+            "sentBy": {
+              "_id": "b102",
+              "name": "Moshe Abu-Shukry",
+              "imgUrl": "http://some-img"
             }
-        }
-    ],
-
-    "order": [
-        {
-            "_id": "o101",
-            "seller": "mini-seller",
-            "buyer": "mini-user",
-            "status": "pending",
-            "createdAt": 157497947812545328471298,
-            "dueDate": 15797975358989898989,
-            "quantity": 8,
-            "totalPrice": 600
-
-        },
-        {
-            "_id": "o105",
-            "seller": "mini-seller",
-            "buyer": "mini-user",
-            "status": "approved",
-            "createdAt": 1574979478129471928471298,
-            "dueDate": 157979799798989898989,
-            "quantity": 6,
-            "totalPrice": 450
-
-        }
-    ],
-
-    "city": [
-        {
+          }
+        ],
+        "product": {
+          "title": "A Dreamy Walk through the treditional markets of Milan",
+          "price": 75,
+          "city": {
             "_id": "c104",
-            "name": "Moscow",
-            "info": "blah blaj blah the city of Stalin and the best ballet shows, don't forget to check oout the Kremlin",
-            "thumbnailUrl": "https://images.unsplash.com/photo-1559221897-66ef95d1af85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80",
-            "imgUrls": [
-                "http://some-img1",
-                "http://some-img2",
-                "http://some-img3"
-            ]
-        },
-        {
-            "_id": "c109",
-            "name": "New York",
-            "info": "The city that never sleeps",
-            "thumbnailUrl": "https://images.unsplash.com/photo-1587217997519-afded20ada5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
-            "imgUrls": [
-                "http://some-img1",
-                "http://some-img2",
-                "http://some-img3"
-            ]
+            "name": "milan",
+            "imgUrl": "http://some-img1"
+          },
+          "tags": [
+            "Italian",
+            "treditional",
+            "Home Cooking",
+            "tour",
+            "workshop",
+            "tastings"
+          ],
+          "description": "Lorem food food food wine pasta pizza market local experience for everyone",
+          "reviews": [],
+          "imgUrls": [
+            "http://some-img1",
+            "http://some-img2",
+            "http://some-img3"
+          ]
         }
-    ]
+      },
+    {
+      "_id": "b102",
+      "fullName": "Moshe Abu-Shukry",
+      "userName": "moshe@buy.com",
+      "password": "123",
+      "createdAt": 1546466799978434800,
+      "isAdmin": true,
+      "bio": "Hi everyone I'm Moshe",
+      "imgUrl": "http://some-img",
+      "msgs": [
+        {
+          "createdAt": 151515145687845,
+          "txt": "hello",
+          "sentBy": {
+            "_id": "b101",
+            "name": "Seller Ben-Mocher",
+            "imgUrl": "http://some-img"
+          }
+        }
+      ],
+      "product": {
+        "title": "Pizza",
+        "price": 30,
+        "city": {
+          "_id": "c106",
+          "name": "New York",
+          "imgUrl": "http://some-img1"
+        },
+        "tags": [
+          "American",
+          "pizza",
+          "veggies",
+          "market"
+        ],
+        "description": "Lorem blah blah blah blah local",
+        "reviews": [],
+        "imgUrls": [
+          "http://some-img1",
+          "http://some-img2",
+          "http://some-img3"
+        ]
+      }
+    }
+  ],
+  "order": [
+    {
+      "_id": "o101",
+      "seller": "mini-seller",
+      "buyer": "mini-user",
+      "status": "pending",
+      "createdAt": 1.5749794781254534e+23,
+      "dueDate": 15797975358989900000,
+      "quantity": 8,
+      "totalPrice": 600
+    },
+    {
+      "_id": "o105",
+      "seller": "mini-seller",
+      "buyer": "mini-user",
+      "status": "approved",
+      "createdAt": 1.574979478129472e+24,
+      "dueDate": 157979799798989900000,
+      "quantity": 6,
+      "totalPrice": 450
+    }
+  ],
+  "city": [
+    {
+      "_id": "c104",
+      "name": "Moscow",
+      "info": "blah blaj blah the city of Stalin and the best ballet shows, don't forget to check oout the Kremlin",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1559221897-66ef95d1af85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80",
+      "imgUrls": [
+        "https://www.costacruises.eu/content/dam/costa/inventory-assets/ports/RIO/c035_rio_de_janeiro.jpg",
+        "http://some-img2",
+        "http://some-img3"
+      ]
+    },
+    {
+      "_id": "c109",
+      "name": "New York",
+      "info": "The city that never sleeps",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1587217997519-afded20ada5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+      "imgUrls": [
+        "http://some-img1",
+        "http://some-img2",
+        "http://some-img3"
+      ]
+    }
+  ]
 }
