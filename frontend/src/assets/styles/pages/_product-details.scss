@@ -1,15 +1,19 @@
 .product-header {
-    align-items: baseline;
     .title {
         h1 {
-            color: clr5;
+            color: $clr5;
             font-size: rem(30px);
             margin-right: 20px;
         }
         h3 {
-            color: clr6;
+            margin-right:20px;
+            color: grey;
             font-size: rem(20px);
         }
+    }
+    button {
+        background-color: $clr1;
+        font-size: rem(25px);
     }
 }
 
@@ -20,8 +24,8 @@
  
 }
 
-.product-main-container {
-}
+// .product-main-container {
+// }
 
-.product-reviews {
-}
+// .product-reviews {
+// }

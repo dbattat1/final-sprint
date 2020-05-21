@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { EventCalendar } from '../cmps/EventCalendar'
 import { ProductReview } from '../cmps/ProductReview'
+import { Link } from 'react-router-dom';
 
 class ProductDetails extends React.Component {
   componentDidMount() {
@@ -14,12 +15,16 @@ class ProductDetails extends React.Component {
     const { product } = this.props;
 
     if (!product) return 'Loading...';
-
     return <div className="">
       <div className="product-header flex column justify-center align-center">
         <div className="title flex row">
           <h1>{product.title}</h1>
           <h3>{product.city.name}</h3>
+          <div> 
+            <Link to= "">
+          <button>✎</button>
+          </Link>
+          </div>
         </div>
         <h4>★8.2/10</h4>
       </div>
