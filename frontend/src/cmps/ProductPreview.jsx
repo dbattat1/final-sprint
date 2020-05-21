@@ -11,8 +11,9 @@ export function ProductPreview(props) {
             <h3>Description: {user.product.description}</h3>
             <h3>From: (city) {user.product.city.name}</h3>
             <p>Price: ${user.product.price}</p>
-            <button onClick={() => props.onRemoveProduct(user)}>Delete Product</button>
-            <Link to={`/user/${user._id}`}>Product Details</Link>
+            <button onClick={() => props.onRemoveProduct(user)}>Delete Product |</button>
+            <Link to={`/user/${user._id}`}>Product Details |</Link>
+            <Link to={`/edit/${user._id}`}>Edit Product</Link>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import httpService from './httpService';
 export default {
     query,
     get,
-    remove  
+    update  
 }
 
 function query(cityId) {
@@ -13,8 +13,6 @@ function get(userId) {
     return httpService.get(`user/${userId}`)
 }
 
-function remove(user) {
-    console.log(user);
-    
+function update(user) {
     return httpService.put(`user/${user._id}`, user);
   }

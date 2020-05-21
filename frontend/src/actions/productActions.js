@@ -26,13 +26,13 @@ export function loadProduct(userId) {
     };
   }
 
-  export function removeProduct(user) {
+  export function updateProduct(user) {
     return async dispatch => {
       try {
-        await productService.remove(user);
-        dispatch(_removeProduct(user));
+        await productService.update(user);
+        dispatch(_updateProduct(user));
       } catch (err) {
-        console.log('ProductActions: err in removeProduct', err);
+        console.log('ProductActions: err in updateProduct', err);
       }
     };
   }
@@ -51,9 +51,9 @@ export function loadProduct(userId) {
     };
   }
 
-  function _removeProduct(userId) {
+  function _updateProduct(userId) {
     return {
-      type: 'PRODUCT_REMOVE',
+      type: 'PRODUCT_UPDATE',
       userId
     };
   }
