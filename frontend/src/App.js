@@ -9,6 +9,7 @@ import ProductDetails from './pages/ProductDetails';
 import { Header } from './cmps/Header.jsx';
 import {Footer} from './cmps/Footer.jsx';
 import EditProduct from './pages/EditProduct.jsx';
+import {LoginPage} from './pages/LoginPage.jsx'
 
 const history = createBrowserHistory();
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/:id" component={CityPage} exact/>
           <Route path="/" component={Home} exact/>
           <Route path='/user/:id' component={ProductDetails}/>
+          <Route path="/login" component={LoginPage} exact/>
         </Switch>
       </Router>
       <Footer/>
