@@ -2,19 +2,9 @@
     font-family: Roboto;
     margin-inline-end: 10px;
     height: 500px;
-<<<<<<< HEAD
     img {
         object-fit: cover;
         height: 50%;
-=======
-    border: 1px solid black;
-    p, h1, h2, h3, a  {
-        color: black;
-        overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex-grow: 1;
->>>>>>> b3d151befb10f69cb28649aa8fa53446f5dc2129
     }
 
     .product-card-content {
@@ -73,13 +63,5 @@
             }
         }
     }
-<<<<<<< HEAD
     box-shadow: 0px 1px 6px -4px rgb(161, 159, 159);
 }
-=======
-    img {
-        height: 198px;
-        width: 100%;
-    }
-}
->>>>>>> b3d151befb10f69cb28649aa8fa53446f5dc2129
