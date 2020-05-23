@@ -8,18 +8,19 @@
 @import "./basics/helpers";
 @import "./basics/base";
 
-
 // Pages
-
 @import "./pages/home-page";
 @import "./pages/product-details";
 @import "./pages/city-page";
 
-
 // Components
 @import "./cmps/main-header";
 @import "./cmps/main-footer";
-@import "./cmps/product-list";
 @import "./cmps/product-card";
 @import "./cmps/event-calender";
+@import "./cmps/city-list";
+@import "./cmps/city-card";
+@import "./cmps/search-bar";
+
+
 
