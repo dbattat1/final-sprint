@@ -2,7 +2,7 @@ import { loadCities } from "../actions/cityActions";
 import { connect } from "react-redux";
 import React, { Component } from "react";
 import CityList from "../cmps/CityList";
-import SearchBar from '../cmps/SearchBar';
+import CitySearchBar from '../cmps/CitySearchBar';
 
 class Home extends Component {
   componentDidMount() {
@@ -11,9 +11,9 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home-page-container">
+      <div className="home-page container">
         <div className="hero hero-home-page">
-          <SearchBar />
+          <CitySearchBar />
         </div>
         <section className="cities-container">
           <ul>

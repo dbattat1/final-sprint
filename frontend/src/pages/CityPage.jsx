@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loadCity } from '../actions/cityActions.js';
 import { loadProducts, updateProduct } from '../actions/productActions.js';
 import { ProductList } from '../cmps/ProductList.jsx';
+import TagSearchBar from '../cmps/TagSeacrhBar';
 import { Link } from 'react-router-dom';
 
 class CityPage extends Component {
@@ -26,12 +27,21 @@ class CityPage extends Component {
         // console.log('PRODUCTS', this.props.products)
         if (!city) return 'Loading';
         return (
-            <div className="city-page">
-                <h1>Expreince {`${city.name}`}!</h1>
-                <p>{city.info}</p>
-                <img src={city.imgUrls[0]}></img>
-                {/* {city.imgUrls.map((imgurl, idx) => <img key={idx} src={imgurl}></img>)} */}
+            <div className="city-page container">
+                <div className="hero hero-city-page" style={{ backgroundImage: `url(${city.thumbnailUrl})`}}>
+                    <p>{`${city.name}`}</p>
+                </div>
+                
+                <TagSearchBar />
+                
+
                 <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+    
+                <p>{city.info}</p>
+    
             </div>
         )
     }

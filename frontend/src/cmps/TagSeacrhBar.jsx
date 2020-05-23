@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Select } from "semantic-ui-react";
 import { loadCities } from "../actions/cityActions";
 
-class SearchBar extends Component {
+class TagSearchBar extends Component {
   componentDidMount() {
     this.props.loadCities();
   }
@@ -16,9 +16,9 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-bar">
+      <div className="tag-search-bar">
           <Select
-            placeholder="Choose a city"
+            placeholder="Filter Events"
             size="huge"
             value=""
             options={this.getCitiesForDropDown()}
@@ -40,4 +40,4 @@ const mapDispatchToProps = {
   loadCities,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(TagSearchBar);

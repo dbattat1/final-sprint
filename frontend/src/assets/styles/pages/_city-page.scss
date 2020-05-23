@@ -1,12 +1,49 @@
 .city-page{
-    img {
-        height: 392px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "hero-city-page"
+    "cities-container"
+    "products-container";
+    
+    .hero {
+        display: flex;
+        height: 40vh;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: contain;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
     }
-    h1 {
-        color: black;
-        font-size: 30px;
-    }
-    p {
-        color : black;
-    }
+
+
+    // @include for-narrow-layout {
+    //     grid-template-columns: 
+    //     minmax(20px, 1fr)
+    //     minmax(auto, $mobile-breakpoint)
+    //     minmax(20px, 1fr)
+    // }
+    
+    // @include for-narrow-layout {
+    //     grid-template-columns: 
+    //     minmax(20px, 1fr)
+    //     minmax(auto, $mobile-breakpoint)
+    //     minmax(20px, 1fr)     
+    // }
+
+    // @include for-normal-layout {
+    //     grid-template-columns: 
+    //     minmax(20px, 1fr)
+    //     minmax(auto, $narrow-breakpoint)
+    //     minmax(20px, 1fr)
+    //     ;
+    // }
+
+    // @include for-wide-layout {
+    //     grid-template-columns: 
+    //     minmax(20px, 1fr)
+    //     minmax(auto, $wide-breakpoint)
+    //     minmax(20px, 1fr)
+    //     ;
+    // }
 }
