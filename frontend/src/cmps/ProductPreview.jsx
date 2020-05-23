@@ -9,7 +9,7 @@ export function ProductPreview(props) {
     // const tags = product.tags
 
     return (
-        <div className="product-card">
+        <li className="product-card">
             <Link to={`/user/${user._id}`}> <img alt={product.title} src="https://www.w3schools.com/tags/img_girl.jpg" /></Link>
             <div className="product-card-content">
             <div className="product-card-header flex">
@@ -28,7 +28,7 @@ export function ProductPreview(props) {
                     <h4 className="tag" key={idx}>{tag}</h4>)}
             </div>
             </div>
-        </div>
+        </li>
     );
 };
 

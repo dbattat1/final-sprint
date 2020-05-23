@@ -5,10 +5,13 @@ export function CityPreview(props) {
   const { city } = props;
 
   return (
-    <li className="city-card" style={{backgroundImage: `url(${city.thumbnailUrl})`}}>
-      <Link to={`/${city._id}`}>
-          <div className="city-card-name">{city.name}</div>
-      </Link>
-    </li>
+    <Link to={`/${city._id}`}>
+      <li
+        className="city-card"
+        style={{ backgroundImage: `url(${city.thumbnailUrl})` }}
+      >
+        <div className="city-card-name">{city.name}</div>
+      </li>
+    </Link>
   );
 }
