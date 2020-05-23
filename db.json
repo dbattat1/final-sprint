@@ -23,8 +23,11 @@
       "product": {
         "title": "A Dreamy Walk through the treditional markets of Moscow",
         "price": 71,
-        "description": "Lorem food food food wine vodka blini market local experience for everyonetwo",
-        "tags": ["Option1","Option2"],
+        "description": "Lorem food food food wine vodka blini market local experience for everyonetwothree",
+        "tags": [
+          "Option1",
+          "Option3"
+        ],
         "city": {
           "_id": "c104",
           "name": "Moscow",
@@ -159,7 +162,6 @@
         ]
       }
     },
-    
     {
       "_id": "b120",
       "fullName": "Alexi Von-Moskva",

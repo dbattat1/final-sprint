@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { updateProduct } from '../actions/productActions.js';
 import productService from '../services/productService.js';
 import { Link } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
-import { Dropdown } from 'semantic-ui-react'
+import { Button, Dropdown, Input, Form, TextArea } from 'semantic-ui-react'
 
 class EditProduct extends Component {
     state = {
@@ -23,8 +22,7 @@ class EditProduct extends Component {
         if (!id) return;
 
         productService.get(id).then(user => {
-            console.log(user.tags)
-            // const tags = _makeSemantic(user.tags)
+            console.log('The user tags from the db', user.product.tags)
             this.setState({ ...user.product });
         })
     }
@@ -47,42 +45,39 @@ class EditProduct extends Component {
     };
 
     handleChange1 = (e, { value }) => {
-        console.log(value)
+        this.setState(prevState => ({ ...prevState, tags: value }));
     }
+
+    // __makeSemantic() {
+    //     return this.state.tags.map(tag => {
+    //         return { value: tag, text: tag }
+    //     })
+    // }
 
     _makeSemantic() {
-        return this.state.tags.map(tag => {
-            return { value: tag, text: tag }
-        })
+        return [
+            { value: "Option1", text: "Option1" },
+            { value: "Option2", text: "Option2" },
+            { value: "Option3", text: "Option3" },
+            { value: "Option4", text: "Option4" },
+            { value: "Option5", text: "Option5" },
+            { value: "Option6", text: "Option6" }
+        ]
     }
-
-    handleChangeMultiple = (event) => {
-        console.log('multiple', event)
-        const { options } = event.target;
-        const values = [];
-        if (options) {
-            for (let i = 0, l = options.length; i < l; i += 1) {
-                if (options[i].selected) {
-                    values.push(options[i].value);
-                }
-            }
-            this.setState(prevState => ({ ...prevState, tags: values }));
-        }
-        console.log('state from multiple', this.state);
-    };
 
     render() {
         console.log('This is the state', this.state);
         const { id } = this.props.match.params;
         const { title, price, description } = this.state;
         return (
-            <div>
-                BBBB
-                <form onSubmit={this.handleSubmit}>
+            <div className="edit-product align-center justify-center column">
+                <h1>Product Edit/Add</h1>
+                <Form onSubmit={this.handleSubmit}>
                     <div>
                         <label>
-                            title:
-                            <input
+                            Title:
+                            <Input
+                                className="edit-product-input"
                                 value={title}
                                 type="text"
                                 name="title"
@@ -94,7 +89,8 @@ class EditProduct extends Component {
                     <div>
                         <label>
                             Price:
-                            <input
+                            <Input
+                                className="edit-product-input"
                                 value={price}
                                 type="number"
                                 name="price"
@@ -106,28 +102,25 @@ class EditProduct extends Component {
                     <div>
                         <label>
                             Description:
-                            <textarea
+                            <TextArea
                                 value={description}
                                 type="text"
                                 name="description"
                                 required
                                 onChange={this.handleChange}
-                            >
-                            </textarea>
+                            />
+                            {/* </textarea> */}
 
                         </label>
                     </div>
-                    <Dropdown multiple fluid placeholder='Tags' options={this._makeSemantic()} onChange={this.handleChange1.bind(this)} />
+                    <Dropdown multiple fluid placeholder='Tags' value={this.state.tags} options={this._makeSemantic()} onChange={this.handleChange1.bind(this)} />
                     <Button>Save</Button>
                     {/* <Link to={`/user/${id}`}></Link> */}
-                </form>
+                </Form>
             </div >
         )
     }
 }
-
-
-
 
 const mapStateToProps = (state) => {
     return {
@@ -142,3 +135,17 @@ const mapDispatchToProps = {
 export default connect(mapStateToProps, mapDispatchToProps)(EditProduct)
 
 
+// handleChangeMultiple = (event) => {
+//     console.log('multiple', event)
+//     const { options } = event.target;
+//     const values = [];
+//     if (options) {
+//         for (let i = 0, l = options.length; i < l; i += 1) {
+//             if (options[i].selected) {
+//                 values.push(options[i].value);
+//             }
+//         }
+//         this.setState(prevState => ({ ...prevState, tags: values }));
+//     }
+//     console.log('state from multiple', this.state);
+// };
