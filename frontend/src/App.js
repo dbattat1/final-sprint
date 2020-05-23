@@ -8,7 +8,8 @@ import ProductDetails from './pages/ProductDetails';
 import { Header } from './cmps/Header.jsx';
 import {Footer} from './cmps/Footer.jsx';
 import EditProduct from './pages/EditProduct.jsx';
-import {LoginPage} from './pages/LoginPage.jsx'
+import {LoginPage} from './pages/LoginPage.jsx';
+import SignupPage from './pages/SignupPage.jsx'
 
 const history = createBrowserHistory();
 
@@ -18,11 +19,12 @@ function App() {
      <Header/>
       <Router history={history}>
         <Switch>
+          <Route path="/login" component={LoginPage} exact/>
+          <Route path="/signup" component={SignupPage} exact/>
           <Route path='/edit/:id?' component={EditProduct} exact/>
           <Route path="/:id" component={CityPage} exact/>
           <Route path="/" component={Home} exact/>
           <Route path='/user/:id' component={ProductDetails}/>
-          <Route path="/login" component={LoginPage} exact/>
         </Switch>
       </Router>
       <Footer/>
