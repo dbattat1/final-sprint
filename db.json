@@ -408,36 +408,100 @@
   ],
   "city": [
     {
-      "_id": "c104",
+      "_id": "c101",
       "name": "Moscow",
-      "info": "blah blaj blah the city of Stalin and the best ballet shows, don't forget to check oout the Kremlin",
+      "info": "The political, scientific, historical, architectural and business center of Russia, Moscow displays the country's contrasts at their most extreme. The ancient and modern are juxtaposed side by side in this city of 10 million. Catch a metro from one of the ornate stations to see Red Square, the Kremlin, the nine domes of St. Basil's Cathedral, Lenin's Mausoleum, the KGB Museum and other symbols of Moscow's great and terrible past, then lighten up and shop Boulevard Ring or people watch in Pushkin Square.",
       "thumbnailUrl": "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt",
       "imgUrls": [
         "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt",
         "https://drive.google.com/uc?id=1SCdo4R9SkNqQZxB0DwkX_OvomUsn29gx",
-        "https://drive.google.com/uc?id=1Vwuo4aRPrfLm0IiTgqT-WdoLtbjfzF_t"
+        "https://drive.google.com/uc?id=1Vwuo4aRPrfLm0IiTgqT-WdoLtbjfzF_t",
+        "https://drive.google.com/uc?id=1L88gO5XPlO90mGAnLojMn-PN_GQXy1VH"
       ]
     },
     {
-      "_id": "c106",
+      "_id": "c102",
       "name": "New York",
-      "info": "The city that never sleeps",
+      "info": "A city that never sleeps, never stops moving Luxe hotels. Gritty dive bars. Broadway magic. Side-street snack carts. Whether you’re a first-time traveler or a long-time resident, NYC is a city that loves to surprise. The unrivaled mix of iconic arts spaces, endless shopping experiences, architectural marvels, and proudly distinct neighborhoods — along with the city’s accessible 24/7 transport — means there’s always more to explore in the five boroughs.",
       "thumbnailUrl": "https://drive.google.com/uc?id=1kx7nfftpZCNHhw_wlH0K1sJ19r40OMU3",
       "imgUrls": [
         "https://drive.google.com/uc?id=1kx7nfftpZCNHhw_wlH0K1sJ19r40OMU3",
         "https://drive.google.com/uc?id=1j0gFLO4dJTWpZKuqe-V0rozGiLL2my1W",
-        "https://drive.google.com/uc?id=1OJc5CKCVStw_zSLCAlRi4KYzkF1ALgpD"
+        "https://drive.google.com/uc?id=1OJc5CKCVStw_zSLCAlRi4KYzkF1ALgpD",
+        "https://drive.google.com/uc?id=17XngTWFRIwChSCVhGXekSwaJUxCAS335"
       ]
     },
     {
-      "_id": "c115",
+      "_id": "c103",
       "name": "Tokyo",
-      "info": "The city of cats, kinky vending machines and sushi",
+      "info": "With its futuristic skyscrapers, unrivaled food scene, and wild nightlife, Tokyo is a rush of pure adrenaline. This vast and multifaceted city is famously cutting edge, yet its ancient Buddhist temples, vintage teahouses, and peaceful gardens offer a serene escape — and a poignant reminder of the city’s long history. And for those who know where to look, Tokyo’s smaller pleasures (secret ramen spots, shopping alleys, chill record bars) are often hiding in plain sight.",
       "thumbnailUrl": "https://drive.google.com/uc?id=1AcqkmwsVj1toa_OvxTx1FS-JHNwI46-5",
       "imgUrls": [
         "https://drive.google.com/uc?id=1AcqkmwsVj1toa_OvxTx1FS-JHNwI46-5",
         "https://drive.google.com/uc?id=18UaodtRRFnit6gZ0VfqtJBtGEo_1SM_3",
-        "https://drive.google.com/uc?id=1KiP_-GgNuS1GQu9EqvJD2HLIh9o4KwNY"
+        "https://drive.google.com/uc?id=1KiP_-GgNuS1GQu9EqvJD2HLIh9o4KwNY",
+        "https://drive.google.com/uc?id=1Gf6LcWTMMaB1kT8iHzOQyCpyvOlXx9oP"
+      ]
+    },
+    {
+      "_id": "c104",
+      "name": "Tel Aviv",
+      "info": "A youthful, modern metropolis with a diverse population, Tel Aviv dates back only to 1909. Clubs, bars, a thriving arts community, gay life and beaches attract artists, musicians and young professionals to Tel Aviv's more secular scene. Its UNESCO-designated Bauhaus architecture has won the city the moniker The White City. Walk, drive or catch cabs between the cultural exhibition pavilions of Haaretz Museum, historic Independence Hall Museum, bustling Carmel Market and Old Jaffa's boardwalk.",
+      "thumbnailUrl": "https://drive.google.com/uc?id=19wiHNZ9dUhG6hzEctxUi3T1fyze-fjP5",
+      "imgUrls": [
+        "https://drive.google.com/uc?id=19wiHNZ9dUhG6hzEctxUi3T1fyze-fjP5",
+        "https://drive.google.com/uc?id=1PlZc0Kl4wWNp82a257M5cv_ecyHDBNUm",
+        "https://drive.google.com/uc?id=1iLO5R_lF1hHlvuPswP0zzuspx7Tldxxy",
+        "https://drive.google.com/uc?id=15jzpyi66Yt2CfhaABsklQh0QWcxMuORy"
+      ]
+    },
+    {
+      "_id": "c105",
+      "name": "Rome",
+      "info": "The sprawling city of Rome remains one of the most significant stops in the world, thanks to its seamless blend of Old World wonders and modern delights. The ruins of the Colosseum, her iconic fountains, lazy wanders through cobblestone streets with gelato in hand: All this and more beckon. Rome is a winding, spectacular city full of places to discover.",
+      "thumbnailUrl": "https://drive.google.com/uc?id=1rMJBSSyixnpunK4AXXoEdyvlWdhLnwns",
+      "imgUrls": [
+        "https://drive.google.com/uc?id=1qSw-UiQ0dtM2tFP4sMqlv6FqqzG3OBQZ",
+        "https://drive.google.com/uc?id=1b7KpLHewYGbHYwk5bPtU_I3Tx0LAYL06",
+        "https://drive.google.com/uc?id=1rMJBSSyixnpunK4AXXoEdyvlWdhLnwns",
+        "https://drive.google.com/uc?id=1eRczbNpxth7r8EPULalsHPzWuQZq-o2e"
+        
+      ]
+    },
+    {
+      "_id": "c106",
+      "name": "Paris",
+      "info": "Nowhere else on earth makes the heart swoon like the mention of Paris. The city lures with its magnificent art, architecture, culture, and cuisine, but there’s also a quieter magic waiting to be explored: the quaint cobbled lanes, the sweet patisseries around the corner, and the cozy little bistros that beckon with a glass of Beaujolais. Get ready to make Paris your own.",
+      "thumbnailUrl": "https://drive.google.com/uc?id=1XW5y4Q8DjuGIQsWREZLnRKKGvJPe-5T-",
+      "imgUrls": [
+        "https://drive.google.com/uc?id=1XW5y4Q8DjuGIQsWREZLnRKKGvJPe-5T-",
+        "https://drive.google.com/uc?id=1_QKXwfRxD3lwVlP3CNRRu3xDMtK3F19r",
+        "https://drive.google.com/uc?id=1YEDV2J65CCIUheU_HAar41VqbXTZkKGI",
+        "https://drive.google.com/uc?id=1Jrdn1kZZ087ZRSD4UdJthn4Q3iJaJlcr"
+      ]
+    },
+    {
+      "_id": "c107",
+      "name": "Barcelona",
+      "info": "Bustling markets, tree lined blocks, and fantastical architecture cozy up to one another in this dreamy Mediterranean beach town. Paella and pintxos bars, exceptional seafood, standout local wines, a world-class arts scene, and bumping nightlife, Barcelona effortlessly blends the history of its districts with a healthy appetite for the new.",
+      "thumbnailUrl": "https://drive.google.com/uc?id=1l3wqFrcxp2mhV9FvJcEKay_jMnvKHRxj",
+      "imgUrls": [
+        "https://drive.google.com/uc?id=1l3wqFrcxp2mhV9FvJcEKay_jMnvKHRxj",
+        "https://drive.google.com/uc?id=13b-mqCaoihpzMtot0z0_zTjmW6CghwVD",
+        "https://drive.google.com/uc?id=1syB5SrYLmaq0YF6Hf1QuunvgX3i6zhIK",
+        "https://drive.google.com/uc?id=1l3bmUqTi95oPFnQoNVzjMPTa3A_Jk3Wk"
+      ]
+    },
+    {
+      "_id": "c108",
+      "name": "Beirut",
+      "info": "Often called Paris of the Middle East, Beirut is a thriving hotspot for shopping, socializing and sightseeing, despite many wars and unrest. The city has been rebuilt several times, with modern architecture sharing space with Ottoman and colonial French buildings. Bustling streets such as Hamra and Ashrafieh provide hopping nightlife while the National Museum and the Gibran Museum give visitors a taste of the city's history. The Corniche is the place for activities like jogging and biking.",
+      "thumbnailUrl": "https://drive.google.com/uc?id=1XxHKby-dlIbZ5gHHmPlBWKDSsfdPTucY",
+      "imgUrls": [
+        "https://drive.google.com/uc?id=1XxHKby-dlIbZ5gHHmPlBWKDSsfdPTucY",
+        "https://drive.google.com/uc?id=1hfDSKpQxIga3tPjg6sEeSLUoMoCGaoCe",
+        "https://drive.google.com/uc?id=1Cph46SOJY2m9CszF9oPJuIWp4m221b48",
+        "https://drive.google.com/uc?id=1cEQGQPK-i7yMVSTwKBAFQ3G5yoYnNcIx"
       ]
     }
   ]
