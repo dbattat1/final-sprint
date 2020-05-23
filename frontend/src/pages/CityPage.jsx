@@ -26,13 +26,11 @@ class CityPage extends Component {
         // console.log('PRODUCTS', this.props.products)
         if (!city) return 'Loading';
         return (
-            <div>
-                <Link to={`/become`}>BECOME</Link>
+            <div className="city-page">
                 <h1>Expreince {`${city.name}`}!</h1>
-                <h3>{city._id}</h3>
-                <h3>{city.name}</h3>
                 <p>{city.info}</p>
-                {city.imgUrls.map((imgurl, idx) => <img key={idx} src={imgurl}></img>)}
+                <img src={city.imgUrls[0]}></img>
+                {/* {city.imgUrls.map((imgurl, idx) => <img key={idx} src={imgurl}></img>)} */}
                 <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
             </div>
         )
