@@ -1,18 +1,67 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import productService from '../services/productService.js';
+import { loadProducts, updateProduct } from '../actions/productActions.js';
+import { ReviewAdd } from '../cmps/ReviewAdd.jsx'
 
 
-export function ProductReview() {
-    return (
-        <div className="review-container flex column">
-            <h2>Reviews:</h2>
-            <div>
-                <h3>
-                    by John Brown:
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+class ProductReview extends Component {
+    state = {
+        reviews: []
+    }
+    componentDidMount() {
+        this.loadUser();
+    }
+
+    loadUser() {
+        const { id } = this.props;
+
+        productService.get(id).then(user => {
+            this.setState({ ...user.product });
+        })
+    }
+
+    onAddReview = (newReview) => {
+        this.setState(prevState => ({ reviews: [...prevState.reviews, newReview] }));
+        const { id } = this.props;
+        productService.get(id)
+            .then(user => {
+                user.product.reviews.push(newReview);
+                this.props.updateProduct(user);
+            })
+    }
+
+    render() {
+        const { reviews } = this.state
+        console.log('at review productreview', reviews);
+        return (
+            <div className="review-container flex column">
+                {reviews.map((review, idx) =>
+                    <div key={idx}>
+                        <h1 >{review.rate}</h1>
+                        <p >{review.txt}</p>
+                        <h2>{review.byUser.name}</h2>
+                        <img>{review.byUser.createdBy}</img>
+                    </div>
+                )}
+                <ReviewAdd onAddReview={this.onAddReview} />
             </div>
-            <button>Add New Review</button>
-        </div>
-    )
+        )
+    }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.product.product,
+    };
+};
+
+const mapDispatchToProps = {
+    loadProducts,
+    updateProduct
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductReview)
+
+
+

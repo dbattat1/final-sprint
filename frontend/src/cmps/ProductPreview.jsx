@@ -5,7 +5,7 @@ export function ProductPreview(props) {
     const { user } = props;
     return (
         <div className="product-card">
-            <h1>Imgs</h1>
+            <img src={user.product.imgUrls[0]}></img>
             <h2>Full name: {user.fullName}</h2>
             <h3>Title: {user.product.title}</h3>
             <h3>Description: {user.product.description}</h3>

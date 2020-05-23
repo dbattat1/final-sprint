@@ -3,9 +3,17 @@
     height: 500px;
     border: 1px solid black;
     p, h1, h2, h3, a  {
-        color: black
+        color: black;
+        overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
     }
     h1 {
         font-size: 20px;
+    }
+    img {
+        height: 198px;
+        width: 100%;
     }
 }
