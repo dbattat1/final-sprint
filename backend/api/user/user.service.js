@@ -12,10 +12,14 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
+    console.log('log');
+    
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('user')
     try {
         const users = await collection.find(criteria).toArray();
+        console.log('user',users);
+        
         return users
     } catch (err) {
         console.log('ERROR: cannot find users')
