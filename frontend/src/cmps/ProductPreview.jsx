@@ -20,8 +20,8 @@ export function ProductPreview(props) {
                 </div>
             </div>
             <div className="host-mini-details">
-                <img alt={user.fullName} src={`${user.imgUrl}`}/>
-                <h3>By {user.fullName}</h3>
+                <img alt={user.name.first} src={`${user.imgUrl}`}/>
+                <h3>By {user.name.first}</h3>
             </div>
             <div className="flex colunm">
                 {product.tags && product.tags.slice(0,3).map((tag, idx) =>
