@@ -15,6 +15,11 @@ export default function productReducer(state = initialState, action = {}) {
                 ...state,
                 products: action.products
             }
+        case 'SET_ALL_PRODUCTS':
+            return {
+                ...state,
+                products: action.products
+            }
         case 'REMOVE_PRODUCT':
             return {
                 ...state,
