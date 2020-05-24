@@ -1,5 +1,8 @@
 import React from "react";
 import { Navbar } from "./Navbar.jsx";
+import { Link } from "react-router-dom";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 
 export class Header extends React.Component {
 
@@ -21,6 +24,7 @@ export class Header extends React.Component {
     return (
       <div className="main-header flex" id="header">
         <h1 className="logo flex">Heat</h1>
+        <Link to="/login"><AccountCircleIcon className="login" /></Link>
         {/* <Navbar/> */}
       </div>
     );
