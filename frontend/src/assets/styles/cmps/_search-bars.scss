@@ -1,6 +1,8 @@
 .city-search-bar {
     position: sticky;
     top: 6px;
+    z-index: 100;
+    margin-top: -46vh;
 }
 .tag-search-bar {
     position: sticky;
