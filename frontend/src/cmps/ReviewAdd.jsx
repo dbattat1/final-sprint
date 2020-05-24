@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Dropdown, Input, Form, TextArea } from 'semantic-ui-react'
 // import { connect } from 'react-redux';
+import ReviewRate from './ReviewRate.jsx';
 
 
 export class ReviewAdd extends Component {
@@ -28,8 +29,13 @@ export class ReviewAdd extends Component {
         this.setState({ txt: '', rate: 0 })
     };
 
+    rate = (val) => {
+        console.log('val', val)
+        this.setState({rate : +val})
+    }
+
     render() {
-        // console.log(this.state);
+        console.log('the state is', this.state);
         const { txt, rate } = this.state;
         return (
             <div className="product-review">
@@ -46,7 +52,8 @@ export class ReviewAdd extends Component {
                             />
                         </label>
                     </div>
-                    <div>
+                    <ReviewRate rate={this.rate}/>
+                    {/* <div>
                         <label>Rate the expreience:</label>
                         <select name="rate"
                             value={rate}
@@ -60,7 +67,7 @@ export class ReviewAdd extends Component {
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                    </div>
+                    </div> */}
                     <button>Save</button>
                 </form>
             </div>
