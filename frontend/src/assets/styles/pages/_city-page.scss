@@ -1,38 +1,41 @@
-.city-page{
+.city-page {
     grid-template-columns: 1fr;
     grid-template-areas:
-    "hero-city-page"
-    "cities-container"
-    "products-container";
-    
+        "hero-city-page"
+        "cities-container"
+        "products-container";
+
     .hero {
         display: flex;
-        height: 40vh;
+        height: 60vh;
         background-repeat: no-repeat;
         width: 100%;
         background-size: cover;
+        background-position: center;
         justify-content: center;
         align-items: center;
-        background-attachment: fixed;
+        font-family: "Teko", sans-serif;
+        color: white;
+        font-size: 4em;
+        text-shadow: -1px 1px 20px rgba(39,33,33,0.89);
     }
 
-
     // @include for-narrow-layout {
-    //     grid-template-columns: 
+    //     grid-template-columns:
     //     minmax(20px, 1fr)
     //     minmax(auto, $mobile-breakpoint)
     //     minmax(20px, 1fr)
     // }
-    
+
     // @include for-narrow-layout {
-    //     grid-template-columns: 
+    //     grid-template-columns:
     //     minmax(20px, 1fr)
     //     minmax(auto, $mobile-breakpoint)
-    //     minmax(20px, 1fr)     
+    //     minmax(20px, 1fr)
     // }
 
     // @include for-normal-layout {
-    //     grid-template-columns: 
+    //     grid-template-columns:
     //     minmax(20px, 1fr)
     //     minmax(auto, $narrow-breakpoint)
     //     minmax(20px, 1fr)
@@ -40,7 +43,7 @@
     // }
 
     // @include for-wide-layout {
-    //     grid-template-columns: 
+    //     grid-template-columns:
     //     minmax(20px, 1fr)
     //     minmax(auto, $wide-breakpoint)
     //     minmax(20px, 1fr)

@@ -24,7 +24,7 @@ class CityPage extends Component {
     render() {
         const { city } = this.props;
         // console.log('CITY', city);
-        // console.log('PRODUCTS', this.props.products)
+        console.log('PRODUCTS', this.props.products)
         if (!city) return 'Loading';
         return (
             <div className="city-page container">
@@ -36,10 +36,6 @@ class CityPage extends Component {
                 
 
                 <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
-                {/* <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
-                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
-                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} /> */}
-    
                 <p>{city.info}</p>
     
             </div>

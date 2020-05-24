@@ -7,7 +7,8 @@ import { ReviewAdd } from '../cmps/ReviewAdd.jsx'
 
 class ProductReview extends Component {
     state = {
-        reviews: []
+        reviews: [],
+        // loggedInUser: null
     }
     componentDidMount() {
         this.loadUser();
@@ -33,7 +34,7 @@ class ProductReview extends Component {
 
     render() {
         const { reviews } = this.state
-        console.log('at review productreview', reviews);
+        console.log('loggedInUser', this.props.loggedInUser);
         return (
             <div className="review-container flex column">
                 {reviews.map((review, idx) =>
@@ -54,6 +55,7 @@ class ProductReview extends Component {
 const mapStateToProps = (state) => {
     return {
         user: state.product.product,
+        loggedInUser: state.user.loggedInUser
     };
 };
 
