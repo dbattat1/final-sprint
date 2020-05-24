@@ -2,12 +2,15 @@
   "user": [
     {
       "_id": "b101",
-      "fullName": "Seller Ben-Moskva",
-      "userName": "soRich@buy.com",
-      "password": "RichiRich",
+      "name": {
+        "first": "Vlad",
+        "last": "Ben-Moskva"
+      },
+      "email": "vlad@buy.com",
+      "password": "vlad123",
       "createdAt": 154646679997897900,
       "isAdmin": false,
-      "bio": "Hi everyone I'm Seller, a born and raised in Moscow chef. I invite you to join me on a once in lifetime culinary tour in the heart of the North-European (and world) capital of the glorious Regel-Krusha",
+      "bio": "Hi everyone I'm Vlad, a born and raised in Moscow chef. I invite you to join me on a once in lifetime culinary tour in the heart of the North-European (and world) capital of the glorious Regel-Krusha",
       "imgUrl": "https://drive.google.com/uc?id=1MCJG7SkclIkwhGQ3epWczqRPbxC8Gr5w",
       "msgs": [
         {
@@ -21,7 +24,7 @@
         }
       ],
       "product": {
-        "title": "A Dreamy Walk through the treditional markets of Moscow",
+        "title": "The markets of Moscow",
         "price": 71,
         "description": "Lorem food food food wine vodka blini market local experience for everyonetwothree",
         "tags": [
@@ -29,7 +32,7 @@
           "Option3"
         ],
         "city": {
-          "_id": "c104",
+          "_id": "c101",
           "name": "Moscow",
           "imgUrl": "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt"
         },
@@ -73,14 +76,17 @@
       }
     },
     {
-      "_id": "b101",
-      "fullName": "Seller Ben-Moskva",
-      "userName": "soRich@buy.com",
-      "password": "RichiRich",
-      "createdAt": 154646679997897900,
+      "_id": "b102",
+      "name": {
+        "first": "Stas",
+        "last": "Gorki"
+      },
+      "email": "stas@buy.com",
+      "password": "stas123",
+      "createdAt": 154646679535353900,
       "isAdmin": false,
-      "bio": "Hi everyone I'm Seller, a born and raised in Moscow chef. I invite you to join me on a once in lifetime culinary tour in the heart of the North-European (and world) capital of the glorious Regel-Krusha",
-      "imgUrl": "https://drive.google.com/uc?id=1MCJG7SkclIkwhGQ3epWczqRPbxC8Gr5w",
+      "bio": "Hi everyone I'm Stas. I like food and Russian classic culture",
+      "imgUrl": "https://drive.google.com/uc?id=1HLn6r2wUtWqBls070Ta838vSLG--LIUz",
       "msgs": [
         {
           "createdAt": 1515151515151515,
@@ -93,22 +99,19 @@
         }
       ],
       "product": {
-        "title": "A Dreamy Walk through the treditional markets of Moscow",
-        "price": 72,
+        "title": "Museums and local food spots",
+        "price": 140,
         "city": {
-          "_id": "c104",
+          "_id": "c101",
           "name": "Moscow",
-          "imgUrl": "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt"
+          "imgUrl": "https://drive.google.com/uc?id=1FTkEPqqrhT962jH_m6ZPM7bErGyJ9rs6"
         },
         "tags": [
-          "Russin",
-          "treditional",
-          "Home Cooking",
-          "tour",
-          "workshop",
-          "tastings"
+          "Local",
+          "Food Culture",
+          "Tour"
         ],
-        "description": "Lorem food food food wine vodka blini market local experience for everyone",
+        "description": "A full-day culinary trip in the classic streets of Moscow",
         "reviews": [],
         "imgUrls": [
           "https://drive.google.com/uc?id=1r1GX3eU_kd3j-DiZdgTQzZDTrYnspkWC",
@@ -118,14 +121,17 @@
       }
     },
     {
-      "_id": "b101",
-      "fullName": "Seller Ben-Moskva",
-      "userName": "soRich@buy.com",
-      "password": "RichiRich",
-      "createdAt": 154646679997897900,
+      "_id": "b103",
+      "name": {
+        "first": "Boris",
+        "last": "Yelzin"
+      },
+      "email": "boris@buy.com",
+      "password": "boris123",
+      "createdAt": 15464665342397900,
       "isAdmin": false,
-      "bio": "Hi everyone I'm Seller, a born and raised in Moscow chef. I invite you to join me on a once in lifetime culinary tour in the heart of the North-European (and world) capital of the glorious Regel-Krusha",
-      "imgUrl": "https://drive.google.com/uc?id=1MCJG7SkclIkwhGQ3epWczqRPbxC8Gr5w",
+      "bio": "Hello, I am Boris and my life is dedicated to making people appreciate vegan delicatessens",
+      "imgUrl": "https://drive.google.com/uc?id=1eJYqiGuCHM1yRbvjmaaPHrlmgZQowDxI",
       "msgs": [
         {
           "createdAt": 1515151515151515,
@@ -138,35 +144,35 @@
         }
       ],
       "product": {
-        "title": "A Dreamy Walk through the treditional markets of Moscow",
+        "title": "Vegan extravaganza",
         "price": 72,
         "city": {
-          "_id": "c104",
+          "_id": "c101",
           "name": "Moscow",
           "imgUrl": "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt"
         },
         "tags": [
-          "Russin",
-          "treditional",
-          "Home Cooking",
-          "tour",
-          "workshop",
-          "tastings"
+          "Vegan",
+          "Private Chef",
+          "Dinner Party"
         ],
-        "description": "Lorem food food food wine vodka blini market local experience for everyone",
+        "description": "An all-nighter vegan dinner party for you and your friends and family at your place or in mine",
         "reviews": [],
         "imgUrls": [
-          "https://drive.google.com/uc?id=1r1GX3eU_kd3j-DiZdgTQzZDTrYnspkWC",
-          "https://drive.google.com/uc?id=1ZQdPZkQTHe8zp0CsEOW5XlN6qTE6jlj8",
-          "https://drive.google.com/uc?id=1AfLlyKgfch5AYVXpZ15pgEqcxHvEiJ6X"
+          "https://drive.google.com/uc?id=1VEhBPmew6dWETA6BSNlp1l0GVJSfE2A7",
+          "https://drive.google.com/uc?id=14GbLW1_mmcL6Kem9-kJMB8_ZHU2SHMs-",
+          "https://drive.google.com/uc?id=12JVy8yXqmpXAcbfvipyreu4QNBFBJSe3"
         ]
       }
     },
     {
-      "_id": "b120",
-      "fullName": "Alexi Von-Moskva",
-      "userName": "alexi@buy.com",
-      "password": "alex123",
+      "_id": "b104",
+      "name": {
+        "first": "Alexi",
+        "last": "Romanov"
+      },
+      "email": "alexi@buy.com",
+      "password": "alexi123",
       "createdAt": 1546466799975453400,
       "isAdmin": false,
       "bio": "Hi everyone I'm Alexi, a cool kid from Moscow chef. Come join me and my friends in our community kitchen and check out the latest innovations of Moscow's cuisine",
@@ -183,22 +189,19 @@
         }
       ],
       "product": {
-        "title": "A Day in my new-age local kitchen just near the central market in Moscow",
+        "title": "A Day in my new-age kitchen near central market",
         "price": 150,
         "city": {
-          "_id": "c104",
+          "_id": "c101",
           "name": "Moscow",
           "imgUrl": "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt"
         },
         "tags": [
-          "Russin",
-          "treditional",
           "Home Cooking",
-          "tour",
           "workshop",
           "tastings"
         ],
-        "description": "Lorem food food food wine vodka blini market local experience for everyone",
+        "description": "Come over to my kitchen! We are going to cook amazing food and mix unbelievable cocktails",
         "reviews": [],
         "imgUrls": [
           "https://drive.google.com/uc?id=1F4EXnyohiXmEVnkTGMnIDH8iUoLb_Hhc",
@@ -208,10 +211,13 @@
       }
     },
     {
-      "_id": "b102",
-      "fullName": "Moshe Abu-York",
-      "userName": "moshe@buy.com",
-      "password": "123",
+      "_id": "b105",
+      "name": {
+        "first": "Moshe",
+        "last": "York"
+      },
+      "email": "moshe@buy.com",
+      "password": "moshe123",
       "createdAt": 1546466799978434800,
       "isAdmin": true,
       "bio": "Hi everyone I'm Moshe and I just love pizza so much, I made it my occupation",
@@ -252,9 +258,12 @@
     },
     {
       "_id": "b106",
-      "fullName": "Dennis York",
-      "userName": "dennis@buy.com",
-      "password": "dandan123",
+      "name": {
+        "first": "Dennis",
+        "last": "Yorkush"
+      },
+      "email": "dennis@buy.com",
+      "password": "dennis123",
       "createdAt": 1546466799978565600,
       "isAdmin": true,
       "bio": "Well hello there my fellow foodies! I'm Dennis. I love cheeseburgers and beer, and everything about them",
@@ -274,16 +283,59 @@
         "title": "Home made beer & burgers night with your buddies",
         "price": 30,
         "city": {
-          "_id": "c106",
+          "_id": "c102",
           "name": "New York",
           "imgUrl": "https://drive.google.com/uc?id=1kx7nfftpZCNHhw_wlH0K1sJ19r40OMU3"
         },
         "tags": [
-          "American",
-          "hamburger",
-          "meat lovers",
-          "late night",
-          "beer"
+          "Drinks",
+          "Food Culture",
+          "Dinner Party"
+        ],
+        "description": "Bring your friends and nothing else. It's on! I will take care of the rest. Just make sure you arrive hungry and ready for a night you won't be able to remember :)",
+        "reviews": [],
+        "imgUrls": [
+          "https://drive.google.com/uc?id=1lRmI76jC8SdSe71a0m86-tgJumShnSxJ",
+          "https://drive.google.com/uc?id=1Sa1gfo5TdgRBEb8fdPA5B7BQKwTGcYz5",
+          "https://drive.google.com/uc?id=1whrokO4MlYJJfTF7dH6TTtpVqhXXmQfR"
+        ]
+      }
+    },
+    {
+      "_id": "b106",
+      "name": {
+        "first": "Johnny",
+        "last": "White"
+      },
+      "email": "johnny@buy.com",
+      "password": "johnny123",
+      "createdAt": 1546466742478565600,
+      "isAdmin": true,
+      "bio": "My name is Johnny and I'm here to talk about bolony",
+      "imgUrl": "https://drive.google.com/uc?id=1LY0if4IzbIoEY2w4lmhzGDko8fgTIQC6",
+      "msgs": [
+        {
+          "createdAt": 1515151456865645,
+          "txt": "Yooo Johnny ma man!",
+          "sentBy": {
+            "_id": "b102",
+            "name": "Moshe Abu-York",
+            "imgUrl": "https://drive.google.com/uc?id=1h-jbo2gIZQDQQwi5uvwlvT48UthCGQLT"
+          }
+        }
+      ],
+      "product": {
+        "title": "Meat Lovers Feast",
+        "price": 85,
+        "city": {
+          "_id": "c102",
+          "name": "New York",
+          "imgUrl": "https://drive.google.com/uc?id=1kx7nfftpZCNHhw_wlH0K1sJ19r40OMU3"
+        },
+        "tags": [
+          "Drinks",
+          "Food Culture",
+          "Dinner Party"
         ],
         "description": "Bring your friends and nothing else. It's on! I will take care of the rest. Just make sure you arrive hungry and ready for a night you won't be able to remember :)",
         "reviews": [],
@@ -296,8 +348,8 @@
     },
     {
       "_id": "b500",
-      "fullName": "Haruki Murakami Tokyo",
-      "userName": "haruki@buy.com",
+      "name": "Haruki Murakami Tokyo",
+      "email": "haruki@buy.com",
       "password": "321",
       "createdAt": 1546466799978434800,
       "isAdmin": true,
@@ -340,8 +392,8 @@
     },
     {
       "_id": "b600",
-      "fullName": "O-Ren Ishii Tokyo",
-      "userName": "o-ren@buy.com",
+      "name": "O-Ren Ishii Tokyo",
+      "email": "o-ren@buy.com",
       "password": "ren123",
       "createdAt": 1546466799989565700,
       "isAdmin": false,
