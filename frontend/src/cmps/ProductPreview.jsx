@@ -10,7 +10,7 @@ export function ProductPreview(props) {
 
     return (
         <li className="product-card">
-            <Link to={`/user/${user._id}`}> <img alt={product.title} src="https://www.w3schools.com/tags/img_girl.jpg" /></Link>
+            <Link to={`/user/${user._id}`}> <img alt={product.title} src={`${product.imgUrls[0]}`} /></Link>
             <div className="product-card-content">
             <div className="product-card-header flex">
                <h2>{product.title}</h2>
@@ -20,7 +20,7 @@ export function ProductPreview(props) {
                 </div>
             </div>
             <div className="host-mini-details">
-                <img alt={user.fullName} src="https://www.w3schools.com/tags/img_girl.jpg"/>
+                <img alt={user.fullName} src={`${user.imgUrl}`}/>
                 <h3>By {user.fullName}</h3>
             </div>
             <div className="flex colunm">
