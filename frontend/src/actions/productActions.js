@@ -5,7 +5,6 @@ export function loadProduct(userId) {
     return async dispatch => {
       try {
         const {product} = await productService.get(userId);
-        // console.log(product);
         dispatch(setProduct(product));
       } catch (err) {
         console.log('ProductActions: err in loadProduct', err);
