@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button, Dropdown, Input, Form, TextArea } from 'semantic-ui-react'
 // import { connect } from 'react-redux';
 
 
@@ -24,19 +25,19 @@ export class ReviewAdd extends Component {
             imgUrl: "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX"
         }
         this.props.onAddReview(reviewToAdd)
-        this.setState({txt: '', rate: 0})
+        this.setState({ txt: '', rate: 0 })
     };
 
     render() {
         // console.log(this.state);
         const { txt, rate } = this.state;
         return (
-            <div>
+            <div className="product-review">
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <label>
-                            title:
-                            <input
+                            Your Review:
+                            <Input
                                 value={txt}
                                 type="text"
                                 name="txt"
@@ -47,12 +48,12 @@ export class ReviewAdd extends Component {
                     </div>
                     <div>
                         <label>Rate the expreience:</label>
-                        <select name="rate"  
-                                value={rate}
-                                type="number"
-                                name="rate"
-                                required
-                                onChange={this.handleChange}>
+                        <select name="rate"
+                            value={rate}
+                            type="number"
+                            name="rate"
+                            required
+                            onChange={this.handleChange}>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

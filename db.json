@@ -168,7 +168,18 @@
           "Dinner Party"
         ],
         "description": "An all-nighter vegan dinner party for you and your friends and family at your place or in mine",
-        "reviews": [],
+        "reviews": [
+          {
+            "txt": "ccc",
+            "rate": 0,
+            "createdAt": 1590315476723,
+            "byUser": {
+              "_id": "b120",
+              "name": "Alexi Von-Moskva",
+              "imgUrl": "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX"
+            }
+          }
+        ],
         "imgUrls": [
           "https://drive.google.com/uc?id=1VEhBPmew6dWETA6BSNlp1l0GVJSfE2A7",
           "https://drive.google.com/uc?id=14GbLW1_mmcL6Kem9-kJMB8_ZHU2SHMs-",

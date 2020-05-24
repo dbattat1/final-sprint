@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import productService from '../services/productService.js';
 import { loadProducts, updateProduct } from '../actions/productActions.js';
 import { ReviewAdd } from '../cmps/ReviewAdd.jsx'
+import Button from '@material-ui/core/Button';
 
 
 class ProductReview extends Component {
     state = {
         reviews: [],
+        isAddReviewOn: false,
         // loggedInUser: null
     }
     componentDidMount() {
@@ -21,7 +23,9 @@ class ProductReview extends Component {
             this.setState({ ...user.product });
         })
     }
-
+    onOpenAdd = () => {
+        this.setState({ isAddReviewOn: true })
+    }
     onAddReview = (newReview) => {
         this.setState(prevState => ({ reviews: [...prevState.reviews, newReview] }));
         const { id } = this.props;
@@ -45,8 +49,8 @@ class ProductReview extends Component {
                         <img>{review.byUser.createdBy}</img>
                     </div>
                 )}
-             <button>Add Review</button>
-                <ReviewAdd onAddReview={this.onAddReview} />
+                <Button className="add-btn" variant="contained" onClick={this.onOpenAdd}>Add Review</Button>
+                {this.state.isAddReviewOn && <ReviewAdd onAddReview={this.onAddReview} />}
             </div>
         )
     }
