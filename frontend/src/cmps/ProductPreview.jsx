@@ -10,7 +10,11 @@ export function ProductPreview(props) {
 
     return (
         <li className="product-card">
+<<<<<<< HEAD
             <Link to={`/user/${user._id}`}> <img alt={product.title} src={`${product.imgUrls[0]}`} /></Link>
+=======
+            <Link to={`/user/${user._id}`}> <img alt={product.title} src={`${user.product.imgUrls[0]}`} /></Link>
+>>>>>>> 414193851be87bb54f424ddb32c702a75716b497
             <div className="product-card-content">
             <div className="product-card-header flex">
                <h2>{product.title}</h2>

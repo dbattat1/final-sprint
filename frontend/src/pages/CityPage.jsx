@@ -36,7 +36,13 @@ class CityPage extends Component {
                 
 
                 <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+<<<<<<< HEAD
              
+=======
+                {/* <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} /> */}
+>>>>>>> 414193851be87bb54f424ddb32c702a75716b497
     
                 <p>{city.info}</p>
     

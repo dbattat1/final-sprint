@@ -1,13 +1,13 @@
 .city-list {
     display: grid;
     max-width: 100%;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-auto-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 30px;
     margin-bottom: 25px;
-    padding: 20px;
+    padding: 50px 200px;
 
-    li  {
+    .city-card  {
         width: 250px;
         height: 250px;
         border-radius: 18px;
@@ -17,7 +17,14 @@
         justify-content: center;
         align-items: center;
         text-transform: uppercase;
-        font-family: Lato-Bold;
+        
+        .city-card-name {
+            font-family: 'Teko', sans-serif;
+            color: white;
+            font-size: 3em;
+
+
+        }
     }
 }
 
