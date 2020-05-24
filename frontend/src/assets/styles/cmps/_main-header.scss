@@ -5,6 +5,12 @@
     height: 1.7em;
     transition: 0.4s ease-out;
     font-size: 30px;
+    .logo {
+        font-size: rem(30px);
+        margin-left: 30px;
+        justify-self: start;
+        font-family: birly;
+    }
   
 }
 

@@ -19,8 +19,8 @@ export class Header extends React.Component {
     
   render() {
     return (
-      <div className="main-header" id="header">
-        <h2>Our Header</h2>
+      <div className="main-header flex" id="header">
+        <h1 className="logo flex">Heat</h1>
         {/* <Navbar/> */}
       </div>
     );
