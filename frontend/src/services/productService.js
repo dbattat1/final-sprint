@@ -12,8 +12,7 @@ function query(cityId) {
 
 function getFav(favIds){
     console.log('from product service',favIds)
-    // return httpService.get(`user?_id=${favIds[0]}&_id=${favIds[1]}&_id=${favIds[2]}&_id=${favIds[3]}`)
-    return httpService.get(`user?_id=${favIds[0]}`)
+    return httpService.get(`user?_id=${favIds[0]}&_id=${favIds[1]}&_id=${favIds[2]}&_id=${favIds[3]}`)
 }
 
 function get(userId) {
