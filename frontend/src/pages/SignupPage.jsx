@@ -36,7 +36,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
   const classes = useStyles();
-
+  const handleChange = (ev) => {
+    console.log(ev)
+  }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -59,6 +61,7 @@ export default function SignUp() {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                onChange={handleChange}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
