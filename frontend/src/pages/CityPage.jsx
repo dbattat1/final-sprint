@@ -13,13 +13,13 @@ class CityPage extends Component {
         this.props.loadProducts(id);
     }
 
-    onRemoveProduct = (user) => {
-        const editedUser = { ...user }
-        editedUser.product = null;
-        this.props.removeProduct(editedUser);
-        const { id } = this.props.match.params;
-        this.props.loadProducts(id);
-    }
+    // onRemoveProduct = (user) => {
+    //     const editedUser = { ...user }
+    //     editedUser.product = null;
+    //     this.props.removeProduct(editedUser);
+    //     const { id } = this.props.match.params;
+    //     this.props.loadProducts(id);
+    // }
 
     render() {
         const { city } = this.props;
@@ -35,7 +35,7 @@ class CityPage extends Component {
                 <TagSearchBar />
                 
 
-                <ProductList users={this.props.products} onRemoveProduct={this.onRemoveProduct} />
+                <ProductList users={this.props.products} />
                 <p>{city.info}</p>
     
             </div>
