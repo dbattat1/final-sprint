@@ -1,5 +1,4 @@
 module.exports = {
-  "dbURL": "mongodb+srv://<username>:<password>@cluster0-zexhl.mongodb.net/test?retryWrites=true&w=majority",
+  "dbURL": "mongodb+srv://sprint:finalsprint@cluster0-wyjya.mongodb.net/test?retryWrites=true&w=majority",
 }
 
-// mongodb+srv://<username>:<password>@cluster0-zexhl.mongodb.net/test?retryWrites=true&w=majority
