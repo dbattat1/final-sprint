@@ -56,4 +56,12 @@ button {
     display: grid;
 }
 
+.fas.fa-star {
+    cursor: pointer;
+    font-size: 2em;
+}
+input[type="radio"] {
+    display: none;
+}
+
 
