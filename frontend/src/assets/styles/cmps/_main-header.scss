@@ -6,8 +6,10 @@
     transition: 0.4s ease-out;
     font-size: 30px;
     .logo {
+        color: $clr6;
         font-size: rem(30px);
         margin-left: 30px;
+        margin-top: 5px;
         justify-self: start;
         font-family: birly;
     }

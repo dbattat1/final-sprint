@@ -5,10 +5,9 @@
     background-color: $clr1;
     height: 300px; 
     .logo {
-        background-color: $clr1;
-        padding: rem(50px);
-        border-radius: 50%;
+        margin-top: 30px;
+        color: $clr6;
+        font-size: rem(30px);
         font-family: birly;
-        font-size: rem(60px);
     }   
 }

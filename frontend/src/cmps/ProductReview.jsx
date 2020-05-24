@@ -44,6 +44,7 @@ class ProductReview extends Component {
                         <img>{review.byUser.createdBy}</img>
                     </div>
                 )}
+             <button>Add Review</button>
                 <ReviewAdd onAddReview={this.onAddReview} />
             </div>
         )

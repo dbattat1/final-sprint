@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Select } from "semantic-ui-react";
+import { Dropdown } from "semantic-ui-react";
 import { loadCities } from "../actions/cityActions";
+import { withRouter } from "react-router";
 
 class CitySearchBar extends Component {
   componentDidMount() {
@@ -14,17 +15,26 @@ class CitySearchBar extends Component {
     });
   }
 
+  handleChange = (e, {value}) => {
+    if (value) {
+       this.props.history.push(`/${value}`);   
+    }
+  }
+
   render() {
     return (
       <div className="city-search-bar">
-          <Select
-            placeholder="Choose a city"
-            size="huge"
+          <Dropdown className="icon"
+            text="Where do you want to eat?"
+            icon="search"
+            button
+            search
+            labeled
+            floating
             value=""
             options={this.getCitiesForDropDown()}
-            onChange={() => console.log(this.value)}
+            onChange={this.handleChange.bind(this)}
           />
-        
       </div>
     );
   }
@@ -40,4 +50,4 @@ const mapDispatchToProps = {
   loadCities,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CitySearchBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CitySearchBar));

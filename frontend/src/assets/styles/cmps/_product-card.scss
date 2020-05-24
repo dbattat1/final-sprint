@@ -3,6 +3,7 @@
     font-family: Roboto;
     margin-inline-end: 10px;
     height: 500px;
+    width: fit-content;
     img {
         object-fit: cover;
         height: 50%;
@@ -53,7 +54,6 @@
             }
         }
         .tag {
-            h4 {
                 color: $clr6;
                 background-color: $clr1;
                 margin-inline-end: 5px;
@@ -61,7 +61,6 @@
                 padding: 6px;
                 box-shadow: 0px 0px 8px -6px rgb(95, 94, 94);
                 font-size: rem(14px);
-            }
         }
     }
 }
