@@ -61,4 +61,3 @@ export function loadProduct(userId) {
     const products = users.map(user => user.product);
     return products;
  }
-

@@ -13,17 +13,18 @@ class CityPage extends Component {
     this.props.loadProducts(id);
   }
 
+
   onRemoveProduct = (user) => {
     const editedUser = { ...user };
     editedUser.product = null;
     this.props.removeProduct(editedUser);
     const { id } = this.props.match.params;
     this.props.loadProducts(id);
-  };
+  }
+
 
   render() {
     const { city } = this.props;
-    // console.log('CITY', city);
     console.log("PRODUCTS", this.props.products);
     if (!city) return "Loading";
     return (
@@ -34,9 +35,7 @@ class CityPage extends Component {
         >
           <p>{`${city.name}`}</p>
         </div>
-
         <TagSearchBar />
-
         <ProductList
           users={this.props.products}
           onRemoveProduct={this.onRemoveProduct}

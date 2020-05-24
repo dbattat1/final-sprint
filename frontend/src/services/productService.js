@@ -2,11 +2,18 @@ import httpService from './httpService';
 export default {
     query,
     get,
-    update  
+    update,
+    getFav
 }
 
 function query(cityId) {
     return httpService.get(`user?product.city._id=${cityId}`)
+}
+
+function getFav(favIds){
+    console.log('from product service',favIds)
+    // return httpService.get(`user?_id=${favIds[0]}&_id=${favIds[1]}&_id=${favIds[2]}&_id=${favIds[3]}`)
+    return httpService.get(`user?_id=${favIds[0]}`)
 }
 
 function get(userId) {

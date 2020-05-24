@@ -112,7 +112,18 @@
           "Tour"
         ],
         "description": "A full-day culinary trip in the classic streets of Moscow",
-        "reviews": [],
+        "reviews": [
+          {
+            "txt": "xxc",
+            "rate": "2",
+            "createdAt": 1590308692868,
+            "byUser": {
+              "_id": "b120",
+              "name": "Alexi Von-Moskva",
+              "imgUrl": "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX"
+            }
+          }
+        ],
         "imgUrls": [
           "https://drive.google.com/uc?id=1r1GX3eU_kd3j-DiZdgTQzZDTrYnspkWC",
           "https://drive.google.com/uc?id=1ZQdPZkQTHe8zp0CsEOW5XlN6qTE6jlj8",
@@ -157,7 +168,18 @@
           "Dinner Party"
         ],
         "description": "An all-nighter vegan dinner party for you and your friends and family at your place or in mine",
-        "reviews": [],
+        "reviews": [
+          {
+            "txt": "ccc",
+            "rate": 0,
+            "createdAt": 1590315476723,
+            "byUser": {
+              "_id": "b120",
+              "name": "Alexi Von-Moskva",
+              "imgUrl": "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX"
+            }
+          }
+        ],
         "imgUrls": [
           "https://drive.google.com/uc?id=1VEhBPmew6dWETA6BSNlp1l0GVJSfE2A7",
           "https://drive.google.com/uc?id=14GbLW1_mmcL6Kem9-kJMB8_ZHU2SHMs-",
@@ -517,7 +539,6 @@
         "https://drive.google.com/uc?id=1b7KpLHewYGbHYwk5bPtU_I3Tx0LAYL06",
         "https://drive.google.com/uc?id=1rMJBSSyixnpunK4AXXoEdyvlWdhLnwns",
         "https://drive.google.com/uc?id=1eRczbNpxth7r8EPULalsHPzWuQZq-o2e"
-        
       ]
     },
     {

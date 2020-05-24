@@ -18,7 +18,6 @@ class CitySearchBar extends Component {
   handleChange = (e, {value}) => {
     if (value) {
        this.props.history.push(`/${value}`);   
-
     }
   }
 

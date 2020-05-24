@@ -1,17 +1,37 @@
-import { loadProduct } from '../actions/productActions';
+import { loadProduct, updateProduct } from '../actions/productActions';
 import React from 'react';
 import { connect } from 'react-redux';
 import { EventCalendar } from '../cmps/EventCalendar'
-import  ProductReview from '../cmps/ProductReview.jsx'
+import ProductReview from '../cmps/ProductReview.jsx'
 import { Link } from 'react-router-dom';
+import { withRouter } from "react-router";
+import  productService  from '../services/productService.js';
 
 class ProductDetails extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadProduct(id);
   }
+
+  onRemoveProduct = () => {
+    const { id } = this.props.match.params;
+    if (!id) return;
+
+    productService.get(id).then(user => {
+      const editedUser = { ...user }
+      const cityId = editedUser.product.city._id;
+      editedUser.product = null;
+      this.props.updateProduct(editedUser);
+      this.props.history.push(`/${cityId}`); 
+
+    })
+  }
+
+
+
   render() {
     const { product } = this.props;
+    console.log(product);
 
     if (!product) return 'Loading...';
     return <div className="">
@@ -19,10 +39,9 @@ class ProductDetails extends React.Component {
         <div className="title flex row">
           <h1>{product.title}</h1>
           <h3>{product.city.name}</h3>
-          <div> 
-            <Link to= "">
-          <button>✎</button>
-          </Link>
+          <div style={{ zIndex: 100 }}>
+            <Link to={`/edit/${this.props.match.params.id}`}><button>✎</button></Link>
+            <button onClick={this.onRemoveProduct}><i className="trash icon"></i></button>
           </div>
         </div>
         <h4>★8.2/10</h4>
@@ -42,7 +61,7 @@ class ProductDetails extends React.Component {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <h2>price per person: ${product.price}</h2>
-          <ProductReview id={this.props.match.params.id}/>
+          <ProductReview id={this.props.match.params.id} />
         </div>
         <EventCalendar />
       </div>
@@ -58,7 +77,8 @@ const mapStateToProps = (state) => {
 
 
 const mapDispatchToProps = {
-  loadProduct
+  loadProduct,
+  updateProduct
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProductDetails));
