@@ -25,6 +25,18 @@ export function loadProduct(userId) {
     };
   }
 
+  export function loadAllProducts() {
+    return async dispatch => {
+      try {
+        const users = await productService.queryAll();
+        const products = users;
+        dispatch(setAllProducts(products));
+      } catch (err) {
+        console.log('ProductActions: err in loadProducts', err);
+      }
+    };
+  }
+
   export function updateProduct(user) {
     return async dispatch => {
       try {
@@ -43,6 +55,12 @@ export function loadProduct(userId) {
     };
   }
   
+  function setAllProducts(products) {
+    return {
+      type: 'SET_ALL_PRODUCTS',
+      products
+    };
+  }
   function setProduct(product) {
     return {
       type: 'SET_PRODUCT',
@@ -50,6 +68,7 @@ export function loadProduct(userId) {
     };
   }
 
+ 
   function _updateProduct(userId) {
     return {
       type: 'PRODUCT_UPDATE',
