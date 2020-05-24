@@ -8,36 +8,38 @@ import productService from '../services/productService'
 
 
 class Home extends Component {
+  state ={
+    users: null
+  }
   componentDidMount() {
     this.props.loadCities();
+    const favIds = ['b101','b102','b103','b104'];
+    this.getFavUsers(favIds);
   }
 
   getFavUsers = (favIds) => {
     productService.getFav(favIds)
-      .then(users => {
-        console.log(users)
-        return users})
-  }
+      .then(users => 
+        this.setState({users : users})
+      )}
 
   render() {
-    const favIds = ['b101'];
-    const favUsers = this.getFavUsers(favIds)
-    console.log('from Home page', favUsers)
+    console.log('from Home page')
     return (
       <div className="home-page container">
 
         <div className="hero hero-home-page">
         </div>
           <CitySearchBar />
-        <section className="products-container">
-          <h1>Top Rated</h1>
-          <ul>
-            <ProductList users={favUsers}/>
-          </ul>
-        </section>
         <section className="cities-container">
           <ul>
             <CityList cities={this.props.cities} />
+          </ul>
+        </section>
+        <section className="products-container">
+          <h1>Top Rated</h1>
+          <ul>
+            <ProductList users={this.state.users}/>
           </ul>
         </section>
       </div>
