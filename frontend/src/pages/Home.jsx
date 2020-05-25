@@ -3,34 +3,31 @@ import { connect } from "react-redux";
 import React, { Component } from "react";
 import CityList from "../cmps/CityList";
 import { ProductList } from "../cmps/ProductList";
-import CitySearchBar from '../cmps/CitySearchBar';
-import productService from '../services/productService'
-
+import CitySearchBar from "../cmps/CitySearchBar";
+import productService from "../services/productService";
 
 class Home extends Component {
-  state ={
-    users: null
-  }
+  state = {
+    users: null,
+  };
   componentDidMount() {
     this.props.loadCities();
-    const favIds = ['b101','b102','b103','b104'];
+    const favIds = ["5ecbb83a0c2535f563044b9b", "5ecbb83a0c2535f563044ba4", "5ecbb83a0c2535f563044b9f", "5ecbb83a0c2535f563044ba0"];
     this.getFavUsers(favIds);
   }
 
   getFavUsers = (favIds) => {
-    productService.getFav(favIds)
-      .then(users => 
-        this.setState({users : users})
-      )}
+    productService
+      .getFav(favIds)
+      .then((users) => this.setState({ users: users }));
+  };
 
   render() {
-    console.log('from Home page')
+    console.log("from Home page");
     return (
       <div className="home-page container">
-
-        <div className="hero hero-home-page">
-        </div>
-          <CitySearchBar />
+        <div className="hero hero-home-page"></div>
+        <CitySearchBar />
         <section className="cities-container">
           <ul>
             <CityList cities={this.props.cities} />
@@ -39,7 +36,7 @@ class Home extends Component {
         <section className="products-container">
           <h1>Top Rated</h1>
           <ul>
-            <ProductList users={this.state.users}/>
+            <ProductList users={this.state.users} />
           </ul>
         </section>
       </div>

@@ -17,7 +17,6 @@ export function loadProduct(userId) {
         const users = await productService.query(cityId);
         const products = users;
         // const products = _makeProductFromUsers(users);
-        // console.log(products);
         dispatch(setProducts(products));
       } catch (err) {
         console.log('ProductActions: err in loadProducts', err);
