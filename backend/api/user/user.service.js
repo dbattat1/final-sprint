@@ -30,7 +30,7 @@ async function queryByCity(cityId) {
     try {
         const users = await collection.find({ "product.city._id": cityId }).toArray();
         
-        console.log('from queryByCity at user.service', users);
+        // console.log('from queryByCity at user.service', users);
         return users
     } catch (err) {
         console.log('ERROR: cannot find users')
@@ -84,6 +84,8 @@ async function update(user) {
 }
 
 async function add(user) {
+    console.log('user', user);
+    
     const collection = await dbService.getCollection('user')
     try {
         await collection.insertOne(user);

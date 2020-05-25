@@ -19,14 +19,13 @@ function queryAll() {
   return  httpService.get(`user`)
 }
 
-async function getFav(favIds){
-    console.log('from product service',favIds)
-    const res = await httpService.get(`user?_id=${favIds[0]}&_id=${favIds[1]}&_id=${favIds[2]}&_id=${favIds[3]}`);
-    console.log('res', res);
-    return res
+function getFav(favIds){
+    return httpService.get(`user?_id=${favIds[0]}&_id=${favIds[1]}&_id=${favIds[2]}&_id=${favIds[3]}`)
 }
 
 function get(userId) {
+    console.log('id',userId);
+    
     return httpService.get(`user/${userId}`)
 }
 
