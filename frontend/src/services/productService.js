@@ -21,6 +21,8 @@ function getFav(favIds){
 }
 
 function get(userId) {
+    console.log('id',userId);
+    
     return httpService.get(`user/${userId}`)
 }
 

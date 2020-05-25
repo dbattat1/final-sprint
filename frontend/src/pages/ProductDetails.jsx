@@ -27,13 +27,11 @@ class ProductDetails extends React.Component {
     })
   }
 
-
-
   render() {
-    const { product } = this.props;
-    console.log(product);
-
-    if (!product) return 'Loading...';
+    const { user } = this.props
+    if (!user) return 'Loading...';
+    const {product} = user;
+    
     return <div className="">
       <div className="product-header flex column justify-center align-center">
         <div className="title flex row">
@@ -47,13 +45,12 @@ class ProductDetails extends React.Component {
         <h4>★8.2/10</h4>
       </div>
       <div className="product-img-container">
-        <img alt="" className="prime-photo" src="https://fodmap-publicsite-us-east-2.s3.amazonaws.com/production/media/images/people_eating_.original.jpg" />
-        <img alt="" src="https://cdn.pixabay.com/photo/2017/03/23/19/57/asparagus-2169305_1280.jpg" />
-        <img alt="" src="https://cdn.pixabay.com/photo/2017/11/18/17/09/strawberry-2960533_1280.jpg" />
-        <img alt="" src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg" />
-        <img alt="" src="https://cdn.pixabay.com/photo/2016/03/09/15/30/breakfast-1246686_1280.jpg" />
+        <img alt="" className="prime-photo" src={`${product.imgUrls[0]}`} />
+        <img alt="" src={`${product.imgUrls[1]}`} />
+        <img alt="" src={`${product.imgUrls[2]}`} />
+        <img alt="" src={`${product.imgUrls[3]}`} />
+        <img alt="" src={`${product.imgUrls[4]}`} />
       </div>
-
       <div className="product-main-container flex space-around">
         <div className="content flex column">
           <h2>Lorem ipsum dolor sit amet, consectetur</h2>
@@ -71,7 +68,7 @@ class ProductDetails extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    product: state.product.currProduct,
+    user: state.product.currProduct,
   };
 };
 

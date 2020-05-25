@@ -4,8 +4,8 @@ import productService from '../services/productService.js'
 export function loadProduct(userId) {
     return async dispatch => {
       try {
-        const {product} = await productService.get(userId);
-        dispatch(setProduct(product));
+        const user = await productService.get(userId);
+        dispatch(setProduct(user));
       } catch (err) {
         console.log('ProductActions: err in loadProduct', err);
       }
