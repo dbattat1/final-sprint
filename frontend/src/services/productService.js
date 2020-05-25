@@ -6,9 +6,13 @@ export default {
     update,
     getFav
 }
+// JsonServer
+// function query(cityId) {
+//     return httpService.get(`user?product.city._id=${cityId}`)
+// }
 
 function query(cityId) {
-    return httpService.get(`user?product.city._id=${cityId}`)
+    return httpService.get(`user/city/${cityId}`)
 }
 
 function queryAll() {
@@ -25,5 +29,6 @@ function get(userId) {
 }
 
 function update(user) {
+    console.log('i am in update at productservice', user._id)
     return httpService.put(`user/${user._id}`, user);
   }

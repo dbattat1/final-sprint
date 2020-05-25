@@ -3,26 +3,7 @@ import httpService from './httpService'
 export default {
     login,
     logout,
-    signup,
-    getUsers,
-    getById,
-    remove,
-    update
-}
-
-function getUsers() {
-    return httpService.get('user')
-}
-
-function getById(userId) {
-    return httpService.get(`user/${userId}`)
-}
-function remove(userId) {
-    return httpService.delete(`user/${userId}`)
-}
-
-function update(user) {
-    return httpService.put(`user/${user._id}`, user)
+    signup
 }
 
 async function login(userCred) {

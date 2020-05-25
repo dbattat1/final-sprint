@@ -8,18 +8,29 @@ module.exports = {
     getByEmail,
     remove,
     update,
-    add
+    add,
+    queryByCity
 }
 
 async function query(filterBy = {}) {
-    console.log('log');
-    
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('user')
     try {
         const users = await collection.find(criteria).toArray();
-        console.log('user',users);
+        return users
+    } catch (err) {
+        console.log('ERROR: cannot find users')
+        throw err;
+    }
+}
+
+async function queryByCity(cityId) {
+    // const criteria = _buildCriteria(filterBy)
+    const collection = await dbService.getCollection('user')
+    try {
+        const users = await collection.find({ "product.city._id": ObjectId(cityId) }).toArray();
         
+        console.log('from queryByCity at user.service', users);
         return users
     } catch (err) {
         console.log('ERROR: cannot find users')

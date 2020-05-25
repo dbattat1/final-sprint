@@ -13,6 +13,12 @@ async function getUsers(req, res) {
     res.send(users)
 }
 
+async function getUsersByCity(req, res) {
+    const users = await userService.queryByCity(req.params.id)
+    logger.debug(users);
+    res.send(users)
+}
+
 async function deleteUser(req, res) {
     await userService.remove(req.params.id)
     res.end()
@@ -28,5 +34,6 @@ module.exports = {
     getUser,
     getUsers,
     deleteUser,
-    updateUser
+    updateUser,
+    getUsersByCity
 }
