@@ -42,7 +42,13 @@ class LoginPage extends Component {
       this.setState({ email: '', password: ''  }, () => this.props.history.push(`/`));
     };
 
+    // 
+
     render() {
+      console.log(this.state)
+      console.log(this.props.loggedInUser);
+      
+
         const classes = makeStyles((theme) => ({
           paper: {
             marginTop: theme.spacing(8),

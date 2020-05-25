@@ -28,7 +28,7 @@ async function queryByCity(cityId) {
     // const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('user')
     try {
-        const users = await collection.find({ "product.city._id": ObjectId(cityId) }).toArray();
+        const users = await collection.find({ "product.city._id": cityId }).toArray();
         
         // console.log('from queryByCity at user.service', users);
         return users
