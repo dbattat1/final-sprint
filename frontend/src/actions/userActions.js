@@ -1,5 +1,5 @@
-import UserService from '../../services/UserService';
-import { loading, doneLoading } from './SystemActions';
+import UserService from '../services/userService.js';
+// import { loading, doneLoading } from './SystemActions';
 // import history from './../history';
 
 // THUNK
@@ -7,7 +7,7 @@ export function loadUsers() {
   return async dispatch => {
     try {
       // example for loading
-      dispatch(loading());
+      // dispatch(loading());
       const users = await UserService.getUsers();
       dispatch(setUsers(users));
     } catch (err) {
@@ -15,7 +15,7 @@ export function loadUsers() {
       // example for rerouting - after changing the store
       // history.push('/some/path');
     } finally {
-      dispatch(doneLoading());
+      // dispatch(doneLoading());
     }
   };
 }

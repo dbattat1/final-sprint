@@ -24,7 +24,7 @@ class Home extends Component {
       )}
 
   render() {
-    console.log('from Home page')
+    console.log('loggedin user is:', this.props.loggedInUser)
     return (
       <div className="home-page container">
 
@@ -50,6 +50,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   return {
     cities: state.city.cities,
+    loggedInUser: state.user.loggedInUser,
   };
 };
 

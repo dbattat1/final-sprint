@@ -30,7 +30,7 @@ async function queryByCity(cityId) {
     try {
         const users = await collection.find({ "product.city._id": ObjectId(cityId) }).toArray();
         
-        console.log('from queryByCity at user.service', users);
+        // console.log('from queryByCity at user.service', users);
         return users
     } catch (err) {
         console.log('ERROR: cannot find users')

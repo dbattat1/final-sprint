@@ -7,15 +7,15 @@ async function getUser(req, res) {
 }
   
 async function getUsers(req, res) {
-    console.log(req.query);
+    // console.log(req.query);
     const users = await userService.query(req.query)
-    logger.debug(users);
+    // logger.debug(users);
     res.send(users)
 }
 
 async function getUsersByCity(req, res) {
     const users = await userService.queryByCity(req.params.id)
-    logger.debug(users);
+    // logger.debug(users);
     res.send(users)
 }
 

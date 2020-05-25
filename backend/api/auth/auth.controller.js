@@ -13,7 +13,6 @@ async function login(req, res) {
 }
 
 async function signup(req, res) {
-    console.log('@@@@@@@@@@@@@@@@');
     
     try {
         const { email, password, username } = req.body

@@ -14,7 +14,34 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-export class LoginPage extends Component {
+import { connect } from "react-redux";
+
+import {
+  login
+} from '../actions/userActions.js';
+
+class LoginPage extends Component {
+    state = {
+      email: '',
+      password: ''
+    }
+
+    handleChange = ev => {
+      const { name, value } = ev.target;
+      this.setState(prevState => ({...prevState,[name]: value}));
+    };
+
+    doLogin = async ev => {
+      ev.preventDefault();
+      const { email, password } = this.state;
+      if (!email || !password) {
+        return this.setState({ msg: 'Please enter user/password' });
+      }
+      const userCreds = { email, password };
+      this.props.login(userCreds);
+      this.setState({ email: '', password: ''  }, () => this.props.history.push(`/`));
+    };
+
     render() {
         const classes = makeStyles((theme) => ({
           paper: {
@@ -35,6 +62,7 @@ export class LoginPage extends Component {
             margin: theme.spacing(3, 0, 2),
           },
         }));
+        
 
         return (
           <Container component="main" maxWidth="xs">
@@ -46,7 +74,7 @@ export class LoginPage extends Component {
               <Typography component="h1" variant="h5">
                 Sign in
               </Typography>
-              <form className={classes.form} noValidate>
+              <form className={classes.form} noValidate onSubmit={this.doLogin}>
                 <TextField
                   variant="outlined"
                   margin="normal"
@@ -56,6 +84,7 @@ export class LoginPage extends Component {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  onChange={this.handleChange}
                   autoFocus
                 />
                 <TextField
@@ -67,6 +96,7 @@ export class LoginPage extends Component {
                   label="Password"
                   type="password"
                   id="password"
+                  onChange={this.handleChange}
                   autoComplete="current-password"
                 />
                 <FormControlLabel
@@ -98,5 +128,18 @@ export class LoginPage extends Component {
           </Container>
         );
     } 
-}
+  }
+
+
+const mapStateToProps = state => {
+  return {
+    loggedInUser: state.user.loggedInUser,
+  };
+};
+
+const mapDispatchToProps = {
+  login
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
 
