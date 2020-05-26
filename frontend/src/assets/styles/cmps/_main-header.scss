@@ -1,24 +1,28 @@
-
 .main-header {
     position: fixed;
-    width: 100vw;
-    height: 1.7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     transition: 0.4s ease-out;
-    font-size: 30px;
+    padding: 0px 80px;
     .logo {
-        color: $clr1;
+        color: #fff8f8;
         font-size: rem(30px);
-        margin-left: 30px;
-        margin-top: 5px;
-        justify-self: start;
-        font-family: birly;
+        font-family: Alconica;
     }
-    .login {
-        color: $clr1;
-        margin-left: 20px;
-        margin-top: 9px;
-        font-size: rem(30px);
+    .header-nav {
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        .login {
+            // color:
+            color: #fff8f8;
+            font-size: rem(35px);
+        }
+        .events-nav-icon {
+            color: #fff8f8;
+            font-size: rem(35px);
+        }
     }
-  
 }
-

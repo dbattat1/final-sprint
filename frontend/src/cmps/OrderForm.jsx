@@ -7,8 +7,13 @@ import { addOrder } from '../actions/orderActions';
 class OrderForm extends React.Component {
     state = {
         dueDate: Date.now(),
-        quantity: 0,
+        quantity: 1,
         totalPrice: 0,
+        msg: ''
+    }
+    componentDidMount() {
+        let totalPrice = (this.state.quantity * this.props.seller.product.price)
+        this.setState({ totalPrice })
     }
 
     onDateChange = (eventDate) => {
@@ -20,7 +25,7 @@ class OrderForm extends React.Component {
         let { name, value } = ev.target;
         value = ev.target.type === 'number' ? parseInt(value) : value;
         let totalPrice = (value * this.props.seller.product.price)
-        this.setState({ [name]: value,totalPrice })
+        this.setState({ [name]: value, totalPrice })
     }
 
     handleSubmit = (ev) => {
@@ -35,6 +40,10 @@ class OrderForm extends React.Component {
         newOrder.seller = seller;
         newOrder.buyer = buyer;
         this.props.addOrder(newOrder);
+        this.setState({
+            msg: 'Booked!', quantity: 1, totalPrice: (1* this.props.seller.product.price), dueDate: Date.now()
+        })
+
         console.log('orderd!', newOrder);
     }
 
@@ -60,6 +69,7 @@ class OrderForm extends React.Component {
                     <div>Total Price: ${totalPrice}</div>
                     <button>Order</button>
                 </form>
+                {this.state.msg && <div>{this.state.msg}</div>}
             </div>
         )
     }

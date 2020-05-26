@@ -1,11 +1,7 @@
 .home-page {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "hero-home-page"
-    "cities-container"
-    "products-container";
     
     .hero {
+        grid-area: hero;
         display: flex;
         height: 80vh;
         background-image: url("https://images.unsplash.com/photo-1519671282429-b44660ead0a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
@@ -17,22 +13,36 @@
         background-attachment: fixed;
     }
 
-    // @include for-narrow-layout {
-    //     grid-template-columns: 
-    //     minmax(20px, 1fr)
-    //     minmax(auto, $mobile-breakpoint)
-    //     minmax(20px, 1fr)
-    // }
+    .products-container {
+        grid-area: top-products;
+    }
+
+    .cities-container {
+        grid-area: cities-container;
+    }
     
+    .content-container {
+        
+        display: grid;
+        grid-template-columns: 200px auto 200px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            
+            ". top-products ."
+            ". cities-container .";
+            
+    }
+
+
     // @include for-narrow-layout {
-    //     grid-template-columns: 
+    //     grid-template-columns:
     //     minmax(20px, 1fr)
     //     minmax(auto, $mobile-breakpoint)
-    //     minmax(20px, 1fr)     
+    //     minmax(20px, 1fr)
     // }
 
     // @include for-normal-layout {
-    //     grid-template-columns: 
+    //     grid-template-columns:
     //     minmax(20px, 1fr)
     //     minmax(auto, $narrow-breakpoint)
     //     minmax(20px, 1fr)
@@ -40,7 +50,7 @@
     // }
 
     // @include for-wide-layout {
-    //     grid-template-columns: 
+    //     grid-template-columns:
     //     minmax(20px, 1fr)
     //     minmax(auto, $wide-breakpoint)
     //     minmax(20px, 1fr)
