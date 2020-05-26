@@ -11,6 +11,11 @@ body {
     margin: 0;
 }
 
+.App {
+    background: #f5f6fa
+    
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -26,9 +31,7 @@ button {
     }
     border: none;
 }
-.container {
-    display: grid;
-}
+
 
 .fas.fa-star {
     cursor: pointer;

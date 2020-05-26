@@ -32,20 +32,21 @@ class Home extends Component {
     return (
       <div className="home-page container">
         <div className="hero hero-home-page" />
-      <CitySearchBar />
-        {/* <section className="search-bar"> */}
-        {/* </section> */}
-        <section className="cities-container">
-          <ul>
-            <CityList cities={this.props.cities} />
-          </ul>
-        </section>
-        <section className="products-container">
-          <h1>Top Rated</h1>
-          <ul>
-            <ProductList users={this.state.users} />
-          </ul>
-        </section>
+        <CitySearchBar />
+        <main className="content-container">
+          <section className="products-container">
+            <h1>Top Rated</h1>
+            <ul>
+              <ProductList users={this.state.users} />
+            </ul>
+          </section>
+          <section className="cities-container">
+            <h1>Top Destinations</h1>
+            <ul>
+              <CityList cities={this.props.cities} />
+            </ul>
+          </section>
+        </main>
       </div>
     );
   }
