@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import userService from '../services/userService';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,11 +21,11 @@ import {
 
 class SignupPage extends Component {
   state = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    imgUrl: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      imgUrl: '',
   }
 
   handleChange = (ev) => {
@@ -32,22 +33,27 @@ class SignupPage extends Component {
     value = ev.target.type === 'number' ? parseInt(value) : value;
     this.setState({ [name]: value });
   }
+  handleImgUpload = (ev) => {
+    userService.uploadImg(ev)
+      .then(res => this.setState({ imgUrl: res.url }))
+  };
 
   handleSubmit = (ev) => {
     ev.preventDefault();
     console.log('ev2', ev);
-    const userToAdd = this.state;
-    userToAdd.createdAt = Date.now();
-    userToAdd.isAdmin = false;
     const { email, password, firstName, lastName } = this.state;
     if (!email || !password || !firstName || !lastName) {
       return this.setState({ msg: 'All inputs are required!' });
     }
-    const signupCreds = { email, password, firstName, lastName };
-    console.log('signupCreds',signupCreds);
+    console.log('imgurl', this.state.imgUrl);
     
+    const userToAdd = this.state;
+    userToAdd.createdAt = Date.now();
+    userToAdd.isAdmin = false;
+    const signupCreds = userToAdd
+    console.log('signupCreds', signupCreds);
     this.props.signup(signupCreds);
-    this.setState({ signupCred: { email: '', password: '', firstName: '', lastName: '' } }, () => this.props.history.push(`/`));
+    this.setState({ email: '', password: '', firstName: '', lastName: '', imgUrl: '' }, () => this.props.history.push(`/`));
   }
 
 
@@ -131,6 +137,8 @@ class SignupPage extends Component {
             >
               Sign Up
           </Button>
+            <input onChange={this.handleImgUpload} type="file" />
+            <button>Save</button>
             <Grid container justify="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">

@@ -36,8 +36,10 @@ class ProductReview extends Component {
             })
     }
 
-    render() {
+    render() {  
         const { reviews } = this.state
+        console.log('reviews', reviews);
+        if (!reviews) return
         console.log('loggedInUser', this.props.loggedInUser);
         return (
             <div className="review-container flex column">
@@ -45,7 +47,7 @@ class ProductReview extends Component {
                     <div key={idx}>
                         <h1 >{review.rate}</h1>
                         <p >{review.txt}</p>
-                        <h2>{review.byUser.name}</h2>
+                        <h2>{review.byUser.name.first} {review.byUser.name.last}</h2>
                         <img>{review.byUser.createdBy}</img>
                     </div>
                 )}

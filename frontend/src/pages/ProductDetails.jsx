@@ -1,8 +1,8 @@
 import { loadProduct, updateProduct } from '../actions/productActions';
 import React from 'react';
 import { connect } from 'react-redux';
-import { EventCalendar } from '../cmps/EventCalendar'
-import ProductReview from '../cmps/ProductReview.jsx'
+import  EventCalendar from '../cmps/EventCalendar.jsx';
+import ProductReview from '../cmps/ProductReview.jsx';
 import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 import  productService  from '../services/productService.js';
@@ -61,6 +61,7 @@ class ProductDetails extends React.Component {
           {/* <ProductReview id={this.props.match.params.id} /> */}
         </div>
         <EventCalendar />
+
       </div>
     </div>;
   }
