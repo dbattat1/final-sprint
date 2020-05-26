@@ -35,9 +35,14 @@ const authRoutes = require('./api/auth/auth.routes')
 const userRoutes = require('./api/user/user.routes')
 const cityRoutes = require('./api/city/city.routes')
 
+
+
+
+
 app.use('/api/auth', authRoutes)
 app.use('/api/city', cityRoutes)
 app.use('/api/user', userRoutes)
+app.use('/api/order', orderRoutes)
 
 const logger = require('./services/logger.service')
 const port = process.env.PORT || 3030;
