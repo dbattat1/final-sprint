@@ -2,7 +2,8 @@ import httpService from './httpService';
 export default {
     query,
     queryBySeller,
-    querybyBuyer
+    querybyBuyer,
+    add
     // get,
     // update,
     // getFav
@@ -17,6 +18,10 @@ function queryBySeller(sellerId) {
 function querybyBuyer(buyerId) {
     return httpService.get(`order/buyer/${buyerId}`)
 }
+async function add(newOrder) {
+    return  httpService.post(`order`, newOrder);
+  }
+  
 
 // function queryAll() {
 //   return  httpService.get(`order`)
