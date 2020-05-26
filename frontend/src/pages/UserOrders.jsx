@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import orderService from "../services/orderService";
 import { loadOrders } from "../actions/orderActions.js";
+import  OrderList from "../cmps/OrderList.jsx";
+
 class UserOrders extends React.Component {
     state = {
         ordersBySeller: null,
+        ordersByBuyer: null,
     }
 
     componentDidMount() {
@@ -14,7 +17,6 @@ class UserOrders extends React.Component {
     }
 
     loadOrders = () => {
-        console.log('sasa');
         if (this.props.loggedInUser) {
 
             const { _id } = this.props.loggedInUser
@@ -24,15 +26,21 @@ class UserOrders extends React.Component {
                 console.log('The orders by seller id', orders)
                 this.setState({ ordersBySeller: orders });
             })
+
+            orderService.queryByBuyer(_id).then(orders => {
+                console.log('The orders by buyer id', orders)
+                this.setState({ ordersByBuyer: orders });
+            })
         }
     }
 
     render() {
-        // console.log('at UserOrder - orders', this.state.ordersBySeller);
-
         return (
             <div>
-                < h1 >It renders</h1>
+                <p>Orders I sold</p>
+                <OrderList orders={this.state.ordersBySeller} />
+                <p>Orders I bought</p>
+                <OrderList orders={this.state.ordersByBuyer} />
             </div >
         )
     }
