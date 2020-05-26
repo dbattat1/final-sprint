@@ -24,11 +24,11 @@ async function query(filterBy = {}) {
 }
 
 async function queryBySeller(sellerId) {
-    console.log(sellerId);
     
     const collection = await dbService.getCollection('order')
     try {
-        const orders = await collection.find({ "seller._id": sellerId }).toArray();
+        const orders = await collection.find({ "seller": ObjectId(sellerId) }).toArray();
+        console.log(orders);
         return orders
     } catch (err) {
         console.log('ERROR: cannot find orders')
@@ -39,7 +39,7 @@ async function queryBySeller(sellerId) {
 async function queryByBuyer(buyerId) {
     const collection = await dbService.getCollection('order')
     try {
-        const orders = await collection.find({ "byer._id": buyerId }).toArray();
+        const orders = await collection.find({ "buyer": ObjectId(buyerId) }).toArray();
         
         // console.log('from queryByCity at order.service', orders);
         return orders
