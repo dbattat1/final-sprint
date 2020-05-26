@@ -1,66 +1,61 @@
 .product-card {
     box-shadow: 0px 1px 6px -4px rgb(161, 159, 159);
-    font-family: Roboto;
+    font-family: Merry;
+    // font-family: Roboto;
     margin-inline-end: 10px;
     height: 500px;
     width: 300px;
-    img {
-        object-fit: cover;
-        height: 50%;
-    }
-
+    color: black;
+    
+    .product-card-img {
+        height: 60%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        background-size: cover;
+        
+        .product-card-price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            font-size: 1.5em;
+            width: 80px;
+            height: 30px;
+        }
+    } 
     .product-card-content {
-        margin: 0 6px 0 6px;
+        height: 40%;
+        padding: 10px;
+        
         .product-card-header {
-            // text-align: start;
+            height: 50%;
+            justify-content: space-between;
+            .product-card-title {
+                display: flex;
+                justify-content: flex-start;
+                width: 50%;
+            }
+        }
 
-            h2 {
-                font-size: rem(16px);
-                color: $clr7;
-                margin-right: 8px;
-                align-content: center;
+        .product-card-footer{
+            justify-content: space-between;
+            .product-card-tags {
+                flex-direction: column;
+                justify-content: flex-end;
             }
-            h3 {
-                font-size: rem(15px);
-                text-align: center;
-                font-weight: bold;
-                border-radius: 5px;
-                color: $clr6;
-                background-color: $clr1;
-                box-shadow: 0px 2px 6px -4px rgb(161, 159, 159);
+            .product-card-mini-host {
+                flex-direction: column;
+                align-items: center;
+                .product-card-user-img {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    background-size: cover;
+                }
             }
-            h4 {
-                font-size: rem(15px);
-                text-align: start;
-                border-radius: 10px;
-                padding: 6px;
-                color: $clr6;
-                background-color: $clr2;
-                box-shadow: 0px 2px 6px -4px rgb(161, 159, 159);
-            }
-        }
-        h3 {
-            font-size: rem(12px);
-        }
-        h4 {
-            font-size: rem(12px);
-        }
-        .host-mini-details {
-            img {
-                width: 50px;
-                height: 56px;
-                object-fit: cover;
-                border-radius: 50%;
-            }
-        }
-        .tag {
-                color: $clr6;
-                background-color: $clr1;
-                margin-inline-end: 5px;
-                border-radius: 10px;
-                padding: 6px;
-                box-shadow: 0px 0px 8px -6px rgb(95, 94, 94);
-                font-size: rem(14px);
         }
     }
+
 }

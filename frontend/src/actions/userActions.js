@@ -34,7 +34,6 @@ import userService from '../services/userService'
 export function login(userCreds) {
   return async dispatch => {
     const user = await userService.login(userCreds);
-    console.log('@@', user)
     dispatch(setUser(user));
   };
 }

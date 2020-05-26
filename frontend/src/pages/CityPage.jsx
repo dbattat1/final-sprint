@@ -35,7 +35,10 @@ class CityPage extends Component {
         >
           <p>{`${city.name}`}</p>
         </div>
+        {/* <section className="search-bar"> */}
         <TagSearchBar />
+        {/* </section> */}
+
         <ProductList
           users={this.props.products}
           onRemoveProduct={this.onRemoveProduct}
