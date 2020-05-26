@@ -5,10 +5,16 @@ async function getOrder(req, res) {
     const order = await orderService.getById(req.params.id)
     res.send(order)
 }
+
+async function getOrders(req, res) {
+    const orders = await orderService.query(req.params.id)
+    res.send(orders)
+}
   
-async function getOrderBySeller(req, res) {
-    const order = await orderService.queryBySeller(req.params.id)
-    res.send(order)
+async function getOrderBySeller(req, res) {    
+    const orders = await orderService.queryBySeller(req.params.id)
+    console.log(orders)
+    res.send(orders)
 }
 async function getOrderByBuyer(req, res) {
     const order = await orderService.queryByBuyer(req.params.id)
@@ -26,10 +32,20 @@ async function updateOrder(req, res) {
     res.send(order)
 }
 
+async function addOrder(req, res) {
+    var order = req.body;
+    // order.byUserId = req.session.user._id;
+    order = await orderService.add(order)
+    // order.byUser = req.session.user;
+    res.send(order)
+}
+
 module.exports = {
     getOrder,
     getOrderBySeller,
     getOrderByBuyer,
     deleteOrder,
     updateOrder,
+    addOrder,
+    getOrders
 }

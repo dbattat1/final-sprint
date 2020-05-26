@@ -1,4 +1,5 @@
 import { loadProduct, updateProduct } from '../actions/productActions';
+import { addOrder,updateOrder } from '../actions/orderActions';
 import React from 'react';
 import { connect } from 'react-redux';
 import OrderForm from '../cmps/OrderForm.jsx';
@@ -11,6 +12,8 @@ class ProductDetails extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadProduct(id);
+    // const order = {_id: '5ecd031c2c59292e60700339', seller: 's1', buyer: 'b1', createdAt: 123, dueDate: 123, quantity: 1, totalPrice: 30}
+    // this.props.updateOrder(order)
   }
 
   onRemoveProduct = () => {
@@ -23,7 +26,6 @@ class ProductDetails extends React.Component {
       editedUser.product = null;
       this.props.updateProduct(editedUser);
       this.props.history.push(`/${cityId}`); 
-
     })
   }
 
@@ -68,14 +70,16 @@ class ProductDetails extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.product.currProduct,
+    user: state.product.currProduct
   };
 };
 
 
 const mapDispatchToProps = {
   loadProduct,
-  updateProduct
+  updateProduct,
+  addOrder,
+  updateOrder
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProductDetails));

@@ -25,6 +25,14 @@ export default function productReducer(state = initialState, action = {}) {
                 ...state,
                 currProduct: action.product
             }
+        case 'UPDATE_PRODUCT':
+            return {
+                ...state,
+                products: state.products.map(product => {
+                    if (product._id === action.product._id) return action.product;
+                    return product;
+                })
+            }
         default:
             return state;
     }

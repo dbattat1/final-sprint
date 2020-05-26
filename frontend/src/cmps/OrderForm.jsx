@@ -33,14 +33,14 @@ class OrderForm extends React.Component {
         const newOrder = this.state;  
         console.log(newOrder);
         let { _id, name, imgUrl } = this.props.seller
-        const miniSeller = { _id, name, imgUrl }
-        console.log('mini seller', miniSeller);
-        const miniBuyer = this.getBuyer()
-        console.log('miniBuyer', miniBuyer);
+        const seller = { _id, name, imgUrl }
+        console.log('mini seller', seller);
+        const buyer = this.getBuyer()
+        console.log('miniBuyer', buyer);
         newOrder.createdAt = Date.now();
         newOrder.status = 'Active'
-        newOrder.miniSeller = miniSeller
-        newOrder.miniBuyer = miniBuyer
+        newOrder.seller = seller
+        newOrder.buyer = buyer
         console.log('orderdata', newOrder);
         this.props.addOrder(newOrder);
         // this.setState({ dueDate: '', quantity: '', totalPrice: '' }, () => console.log('orderd!')
@@ -48,8 +48,8 @@ class OrderForm extends React.Component {
     }
     getBuyer = () => { 
         let {_id, name, imgUrl } = this.props.loggedInUser;
-        const miniBuyer = { _id, name, imgUrl }
-        return miniBuyer;
+        const buyer = { _id, name, imgUrl }
+        return buyer;
     }
 
     render() {

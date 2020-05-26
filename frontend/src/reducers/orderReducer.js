@@ -20,6 +20,11 @@ export default function orderReducer(state = initialState, action = {}) {
                 ...state,
                 orders: action.orders
             }
+        case 'ORDER_ADD':
+            return { 
+                ...state, 
+                orders: [...state.orders, action.orders] 
+            }
         case 'REMOVE_ORDER':
             return {
                 ...state,

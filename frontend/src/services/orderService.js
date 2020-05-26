@@ -3,12 +3,16 @@ export default {
     query,
     queryBySeller,
     querybyBuyer,
-    add
-    // get,
-    // update,
-    // getFav
+    add,
+    update,
+    queryAll
 }
 
+
+function queryAll() {
+    return httpService.get(`order`)
+}
+// should have called it get!
 function query(orderId) {
     return httpService.get(`order/${orderId}`)
 }
@@ -19,9 +23,13 @@ function querybyBuyer(buyerId) {
     return httpService.get(`order/buyer/${buyerId}`)
 }
 async function add(newOrder) {
-    return  httpService.post(`order`, newOrder);
-  }
-  
+    return httpService.post(`order`, newOrder);
+}
+
+
+function update(order) {
+    return httpService.put(`order/${order._id}`, order);
+}
 
 // function queryAll() {
 //   return  httpService.get(`order`)
@@ -30,7 +38,7 @@ async function add(newOrder) {
 
 // function get(userId) {
 //     console.log('id',userId);
-    
+
 //     return httpService.get(`user/${userId}`)
 // }
 
