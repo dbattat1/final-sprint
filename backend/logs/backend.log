@@ -428,7 +428,104 @@ Mon, 25 May 2020 14:58:52 GMT - Info - Server is running on port: 3030
 Mon, 25 May 2020 15:00:27 GMT - Debug - auth.service - login with email: vlad@buy.com
 Mon, 25 May 2020 15:00:49 GMT - Debug - auth.service - login with email: vlad@buy.com
 Mon, 25 May 2020 15:11:04 GMT - Debug - auth.service - login with email: vlad@buy.com
+<<<<<<< HEAD
+Mon, 25 May 2020 15:15:37 GMT - Debug - auth.service - login with email: vlad@buy.com
+=======
 >>>>>>> 52bbf29a28dadde34994d50191333e4bb808a988
 Mon, 25 May 2020 15:18:31 GMT - Info - Server is running on port: 3030
+<<<<<<< HEAD
 Tue, 26 May 2020 07:58:20 GMT - Info - Server is running on port: 3030
 Tue, 26 May 2020 08:04:53 GMT - Info - Server is running on port: 3030
+=======
+>>>>>>> 834210c60474a78d0dc2e7f717e83e42b6f75e6a
+Mon, 25 May 2020 15:19:59 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:20:45 GMT - Debug - auth.service - login with email: vlad@buy.com
+Mon, 25 May 2020 15:24:42 GMT - Debug - auth.service - login with email: vlad@buy.com
+Mon, 25 May 2020 15:25:58 GMT - Debug - auth.service - login with email: vlad@buy.com
+Mon, 25 May 2020 15:27:07 GMT - Debug - auth.service - login with email: vlad@buy.com
+Mon, 25 May 2020 15:29:29 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:29:32 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:29:43 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:29:55 GMT - Debug - auth.service - login with email: vlad@buy.com
+Mon, 25 May 2020 15:30:10 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:30:26 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:30:41 GMT - Debug - auth.service - login with email: vlad@buy.com
+Mon, 25 May 2020 15:31:19 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:32:06 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:32:30 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:32:49 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:36:38 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:37:01 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:37:45 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:38:06 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:38:31 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:39:43 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:40:04 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 15:47:29 GMT - Debug - dan, dan, 
+Mon, 25 May 2020 15:47:29 GMT - Debug - auth.service - signup with email: dan, firstName: dan, lastName: dana
+Mon, 25 May 2020 15:47:30 GMT - Debug - auth.route - new account created: {"email":"dan","password":"$2a$10$FGdNHDtwoZ8V6XX7xLdRo.295PJgy3ESFhwuN7N5e6buFaIwEGSRG","name":{"firstName":"dan","lastName":"dana"},"_id":"5ecbe89200f2c51394c185d4"}
+Mon, 25 May 2020 15:48:39 GMT - Debug - d, d, 
+Mon, 25 May 2020 15:48:39 GMT - Debug - auth.service - signup with email: d, firstName: d, lastName: d
+Mon, 25 May 2020 15:48:39 GMT - Debug - auth.route - new account created: {"email":"d","password":"$2a$10$lmf8mDRy/Bifjinp.7LjTuYAJAMKuUtEgaONZbsS48q1FZW181gZS","name":{"firstName":"d","lastName":"d"},"_id":"5ecbe8d700f2c51394c185d5"}
+Mon, 25 May 2020 15:49:22 GMT - Debug - d, d, 
+Mon, 25 May 2020 15:49:22 GMT - Debug - auth.service - signup with email: d, firstName: d, lastName: d
+Mon, 25 May 2020 15:49:22 GMT - Debug - auth.route - new account created: {"email":"d","password":"$2a$10$4eIdTCg12eKlEiiaL.85M.OTuEaDWPidp/w19mGOIJ6FJmCS5lOx2","name":{"firstName":"d","lastName":"d"},"_id":"5ecbe90200f2c51394c185d6"}
+Mon, 25 May 2020 16:02:20 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 16:04:17 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 16:07:20 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 16:08:59 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 16:34:16 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 16:34:19 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 17:44:10 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 17:47:59 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 17:48:44 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 17:49:48 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 17:53:09 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 17:53:32 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 18:08:52 GMT - Info - Server is running on port: 3030
+Mon, 25 May 2020 18:12:51 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:07:03 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:08:28 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:10:07 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:29:56 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:30:33 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:31:36 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:31:49 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:31:53 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:32:33 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:32:37 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:33:05 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:34:29 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:36:43 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:38:52 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:39:21 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:39:53 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:40:12 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:40:29 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:44:28 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:44:37 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:45:23 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:45:38 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:48:11 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:48:52 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:48:56 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:49:53 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:52:34 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:52:44 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:52:49 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:54:03 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:54:51 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:54:57 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 08:56:31 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:04:17 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:04:31 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:05:01 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:05:27 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:05:50 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:06:16 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:06:25 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:07:24 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:07:37 GMT - Info - Server is running on port: 3030
+Tue, 26 May 2020 09:07:41 GMT - Info - Server is running on port: 3030
+>>>>>>> c39d6dbc14569b2faba98ce88d1594fbad49738d
+Tue, 26 May 2020 09:21:44 GMT - Info - Server is running on port: 3030

@@ -47,7 +47,7 @@ class SignupPage extends Component {
     console.log('signupCreds',signupCreds);
     
     this.props.signup(signupCreds);
-    this.setState({ signupCred: { email: '', password: '', firstName: '', lastName: '' } });
+    this.setState({ signupCred: { email: '', password: '', firstName: '', lastName: '' } }, () => this.props.history.push(`/`));
   }
 
 

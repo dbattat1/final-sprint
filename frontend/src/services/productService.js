@@ -20,16 +20,17 @@ function queryAll() {
 }
 
 function getFav(favIds){
-    return httpService.get(`user?_id=${favIds[0]}&_id=${favIds[1]}&_id=${favIds[2]}&_id=${favIds[3]}`)
+    var query = '?';
+    favIds.forEach((favId,idx) => {
+        query += `id${idx}=${favId}&`
+    });
+    return httpService.get(`user/fav/${query}`)
 }
 
 function get(userId) {
-    console.log('id',userId);
-    
     return httpService.get(`user/${userId}`)
 }
 
 function update(user) {
-    console.log('i am in update at productservice', user._id)
     return httpService.put(`user/${user._id}`, user);
   }
