@@ -30,7 +30,7 @@ class OrderForm extends React.Component {
     handleSubmit = (ev) => {
         ev.preventDefault();
         console.log(this.state);
-        const newOrder = this.state;  
+        const newOrder = this.state;
         console.log(newOrder);
         let { _id, name, imgUrl } = this.props.seller
         const seller = { _id, name, imgUrl }
@@ -38,16 +38,14 @@ class OrderForm extends React.Component {
         const buyer = this.getBuyer()
         console.log('miniBuyer', buyer);
         newOrder.createdAt = Date.now();
-        newOrder.status = 'Active'
-        newOrder.seller = seller
-        newOrder.buyer = buyer
-        console.log('orderdata', newOrder);
+        newOrder.status = 'Active';
+        newOrder.seller = seller;
+        newOrder.buyer = buyer;
         this.props.addOrder(newOrder);
-        // this.setState({ dueDate: '', quantity: '', totalPrice: '' }, () => console.log('orderd!')
-        // );
+        console.log('orderd!', newOrder);
     }
-    getBuyer = () => { 
-        let {_id, name, imgUrl } = this.props.loggedInUser;
+    getBuyer = () => {
+        let { _id, name, imgUrl } = this.props.loggedInUser;
         const buyer = { _id, name, imgUrl }
         return buyer;
     }
@@ -58,8 +56,8 @@ class OrderForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit} >
                     <EventCalendar onDateChange={this.onDateChange} />
-                    <input type="number" value={quantity} name="quantity" onChange={this.handleChange}></input>
-                    <div>Total Price: {totalPrice}</div>
+                    <input type="number" value={quantity} name="quantity" onChange={this.handleChange} min="0"></input>
+                    <div>Total Price: ${totalPrice}</div>
                     <button>Order</button>
                 </form>
             </div>
