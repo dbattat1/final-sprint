@@ -8,27 +8,27 @@ module.exports = {
     remove,
     update,
     add,
+    query
 }
 
-// async function query(filterBy = {}) {
-//     const criteria = _buildCriteria(filterBy)
-//     const collection = await dbService.getCollection('order')
-//     try {
-//         const orders = await collection.find(criteria).toArray();
-//         return orders
-//     } catch (err) {
-//         console.log('ERROR: cannot find orders')
-//         throw err;
-//     }
-// }
-
-async function queryBySeller(sellerId) {
+async function query(filterBy = {}) {
     // const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('order')
     try {
+        const orders = await collection.find().toArray();
+        return orders
+    } catch (err) {
+        console.log('ERROR: cannot find orders')
+        throw err;
+    }
+}
+
+async function queryBySeller(sellerId) {
+    console.log(sellerId);
+    
+    const collection = await dbService.getCollection('order')
+    try {
         const orders = await collection.find({ "seller._id": sellerId }).toArray();
-        
-        // console.log('from queryByCity at order.service', orders);
         return orders
     } catch (err) {
         console.log('ERROR: cannot find orders')
@@ -73,7 +73,6 @@ async function remove(orderId) {
 async function update(order) {
     const collection = await dbService.getCollection('order')
     order._id = ObjectId(order._id);
-
     try {
         await collection.replaceOne({ "_id": order._id }, { $set: order })
         return order
@@ -83,9 +82,7 @@ async function update(order) {
     }
 }
 
-async function add(order) {
-    console.log('order', order);
-    
+async function add(order) {   
     const collection = await dbService.getCollection('order')
     try {
         await collection.insertOne(order);

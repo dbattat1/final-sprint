@@ -32,7 +32,7 @@ class Home extends Component {
     return (
       <div className="home-page container">
         <div className="hero hero-home-page" />
-      <CitySearchBar />
+        <CitySearchBar />
         {/* <section className="search-bar"> */}
         {/* </section> */}
         <section className="cities-container">

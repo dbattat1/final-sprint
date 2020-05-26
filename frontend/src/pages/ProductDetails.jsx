@@ -1,4 +1,5 @@
 import { loadProduct, updateProduct } from '../actions/productActions';
+import { addOrder,updateOrder } from '../actions/orderActions';
 import React from 'react';
 import { connect } from 'react-redux';
 import  EventCalendar from '../cmps/EventCalendar.jsx';
@@ -11,6 +12,8 @@ class ProductDetails extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadProduct(id);
+    // const order = {_id: '5ecd031c2c59292e60700339', seller: 's1', buyer: 'b1', createdAt: 123, dueDate: 123, quantity: 1, totalPrice: 30}
+    // this.props.updateOrder(order)
   }
 
   onRemoveProduct = () => {
@@ -23,7 +26,6 @@ class ProductDetails extends React.Component {
       editedUser.product = null;
       this.props.updateProduct(editedUser);
       this.props.history.push(`/${cityId}`); 
-
     })
   }
 
@@ -58,7 +60,7 @@ class ProductDetails extends React.Component {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <h2>price per person: ${product.price}</h2>
-          {/* <ProductReview id={this.props.match.params.id} /> */}
+          <ProductReview id={this.props.match.params.id} />
         </div>
         <EventCalendar />
 
@@ -69,14 +71,16 @@ class ProductDetails extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.product.currProduct,
+    user: state.product.currProduct
   };
 };
 
 
 const mapDispatchToProps = {
   loadProduct,
-  updateProduct
+  updateProduct,
+  addOrder,
+  updateOrder
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProductDetails));

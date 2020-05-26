@@ -2,12 +2,17 @@ import httpService from './httpService';
 export default {
     query,
     queryBySeller,
-    querybyBuyer
-    // get,
-    // update,
-    // getFav
+    querybyBuyer,
+    add,
+    update,
+    queryAll
 }
 
+
+function queryAll(){
+    return httpService.get(`order`)
+}
+// should have called it get!
 function query(orderId) {
     return httpService.get(`order/${orderId}`)
 }
@@ -16,6 +21,14 @@ function queryBySeller(sellerId) {
 }
 function querybyBuyer(buyerId) {
     return httpService.get(`order/buyer/${buyerId}`)
+}
+
+function add(order) {
+    return httpService.post(`order`, order);
+}
+
+function update(order) {
+    return httpService.put(`order/${order._id}`, order);
 }
 
 // function queryAll() {
