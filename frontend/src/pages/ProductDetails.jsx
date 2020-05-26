@@ -2,7 +2,7 @@ import { loadProduct, updateProduct } from '../actions/productActions';
 import { addOrder,updateOrder } from '../actions/orderActions';
 import React from 'react';
 import { connect } from 'react-redux';
-import  EventCalendar from '../cmps/EventCalendar.jsx';
+import OrderForm from '../cmps/OrderForm.jsx';
 import ProductReview from '../cmps/ProductReview.jsx';
 import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
@@ -62,8 +62,7 @@ class ProductDetails extends React.Component {
           <h2>price per person: ${product.price}</h2>
           <ProductReview id={this.props.match.params.id} />
         </div>
-        <EventCalendar />
-
+        <OrderForm seller={user} />
       </div>
     </div>;
   }

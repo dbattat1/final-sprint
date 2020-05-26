@@ -9,7 +9,7 @@ export default {
 }
 
 
-function queryAll(){
+function queryAll() {
     return httpService.get(`order`)
 }
 // should have called it get!
@@ -22,10 +22,10 @@ function queryBySeller(sellerId) {
 function querybyBuyer(buyerId) {
     return httpService.get(`order/buyer/${buyerId}`)
 }
-
-function add(order) {
-    return httpService.post(`order`, order);
+async function add(newOrder) {
+    return httpService.post(`order`, newOrder);
 }
+
 
 function update(order) {
     return httpService.put(`order/${order._id}`, order);
@@ -38,7 +38,7 @@ function update(order) {
 
 // function get(userId) {
 //     console.log('id',userId);
-    
+
 //     return httpService.get(`user/${userId}`)
 // }
 

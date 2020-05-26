@@ -12,29 +12,30 @@ export function loadOrders() {
 }
 
 export function loadOrder(orderId) {
-    console.log('order id', orderId);
-    return async dispatch => {
-      try {
-        const order = await orderService.query(orderId);
-        console.log('order action', order);
-        
-        dispatch(setOrder(order));
-      } catch (err) {
-        console.log('OrderActions: err in loadOrder', err);
-      }
-    };
-  }
+  console.log('order id', orderId);
+  return async dispatch => {
+    try {
+      const order = await orderService.query(orderId);
+      console.log('order action', order);
 
-  export function addOrder(order) {
-    return async dispatch => {
-      try {
-        const addedOrder = await orderService.add(order);
-        dispatch(_addOrder(addedOrder));
-      } catch (err) {
-        console.log('OrderActions: err in addOrder', err);
-      }
-    };
-  }
+      dispatch(setOrder(order));
+    } catch (err) {
+      console.log('OrderActions: err in loadOrder', err);
+    }
+  };
+}
+
+export function addOrder(newOrder) {
+  return async dispatch => {
+    try {
+      const addedOrder = await orderService.add(newOrder);
+      console.log('order action', newOrder);
+      dispatch(_addOrder(addedOrder));
+    } catch (err) {
+      console.log('OrderActions: err in loadOrder', err);
+    }
+  };
+}
 
   export function updateOrder(order) {
     return async dispatch => {
