@@ -1,24 +1,46 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import orderService from "../services/orderService";
+import { loadOrders } from "../actions/orderActions.js";
+import  OrderList from "../cmps/OrderList.jsx";
 
-import { loadOrder } from "../actions/orderActions.js";
 class UserOrders extends React.Component {
-    // state = {
-    //     rating: null,
-    // }
+    state = {
+        ordersBySeller: null,
+        ordersByBuyer: null,
+    }
 
     componentDidMount() {
-        const { id } = this.props.match.params;
-        this.props.loadOrder(id);
+        // this.props.loadOrders();
+        // this.setState({ rating: this.props.orders })
+        this.loadOrders();
     }
-    
-    render() {
-        const { order } = this.props
-        console.log('order', order);
 
+    loadOrders = () => {
+        if (this.props.loggedInUser) {
+
+            const { _id } = this.props.loggedInUser
+            console.log('_id is', this.props.loggedInUser._id);
+
+            orderService.queryBySeller(_id).then(orders => {
+                console.log('The orders by seller id', orders)
+                this.setState({ ordersBySeller: orders });
+            })
+
+            orderService.queryByBuyer(_id).then(orders => {
+                console.log('The orders by buyer id', orders)
+                this.setState({ ordersByBuyer: orders });
+            })
+        }
+    }
+
+    render() {
         return (
             <div>
-                {order && < h1 > order: {order.totalPrice}</h1>}
+                <p>Orders I sold</p>
+                <OrderList orders={this.state.ordersBySeller} />
+                <p>Orders I bought</p>
+                <OrderList orders={this.state.ordersByBuyer} />
             </div >
         )
     }
@@ -26,11 +48,11 @@ class UserOrders extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        order: state.order.currOrder,
+        loggedInUser: state.user.loggedInUser,
     };
 };
 const mapDispatchToProps = {
-    loadOrder,
+    loadOrders,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserOrders);

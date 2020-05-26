@@ -8,9 +8,11 @@ export default class EventCalendar extends React.Component {
         date: new Date()
     }
     
-    onChange = (ev) => {
-        console.log('log', ev);
-        
+    onChange = (date) => {
+        this.setState({date})
+        const eventDate = +date
+        this.props.onDateChange(eventDate)
+        console.log(eventDate);
     }
     
     render() {
@@ -23,7 +25,7 @@ export default class EventCalendar extends React.Component {
                         orientation="landscape"
                         variant="static"
                         openTo="date"
-                        // value={this.state.date}
+                        value={this.state.date}
                         onChange={this.onChange}
                     /> 
                      </MuiPickersUtilsProvider> 

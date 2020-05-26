@@ -16,12 +16,12 @@ function query(cityId) {
 }
 
 function queryAll() {
-  return  httpService.get(`user`)
+    return httpService.get(`user`)
 }
 
-function getFav(favIds){
+function getFav(favIds) {
     var query = '?';
-    favIds.forEach((favId,idx) => {
+    favIds.forEach((favId, idx) => {
         query += `id${idx}=${favId}&`
     });
     return httpService.get(`user/fav/${query}`)
@@ -33,4 +33,4 @@ function get(userId) {
 
 function update(user) {
     return httpService.put(`user/${user._id}`, user);
-  }
+}
