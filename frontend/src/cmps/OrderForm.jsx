@@ -20,23 +20,16 @@ class OrderForm extends React.Component {
         let { name, value } = ev.target;
         value = ev.target.type === 'number' ? parseInt(value) : value;
         let totalPrice = (value * this.props.seller.product.price)
-        this.setState({ [name]: value }, () => this.setState({ totalPrice }),
-            () => console.log('state after change', this.state)
-        );
-        // this.setState({ totalPrice })
-
+        this.setState({ [name]: value,totalPrice })
     }
 
     handleSubmit = (ev) => {
         ev.preventDefault();
-        console.log(this.state);
         const newOrder = this.state;
         console.log(newOrder);
-        let { _id, name, imgUrl } = this.props.seller
-        const seller = { _id, name, imgUrl }
-        console.log('mini seller', seller);
-        const buyer = this.getBuyer()
-        console.log('miniBuyer', buyer);
+        const seller = this.getMiniSeller();
+        const buyer = this.getMiniBuyer();
+        console.log('miniBuyer', buyer, 'mini seller', seller);
         newOrder.createdAt = Date.now();
         newOrder.status = 'Active';
         newOrder.seller = seller;
@@ -44,10 +37,17 @@ class OrderForm extends React.Component {
         this.props.addOrder(newOrder);
         console.log('orderd!', newOrder);
     }
-    getBuyer = () => {
+
+    getMiniBuyer = () => {
         let { _id, name, imgUrl } = this.props.loggedInUser;
         const buyer = { _id, name, imgUrl }
         return buyer;
+    }
+
+    getMiniSeller = () => {
+        let { _id, name, imgUrl } = this.props.seller
+        const seller = { _id, name, imgUrl }
+        return seller;
     }
 
     render() {
@@ -62,13 +62,12 @@ class OrderForm extends React.Component {
                 </form>
             </div>
         )
-
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        loggedInUser: state.user.loggedInUser,
+        loggedInUser: state.user.loggedInUser
     };
 };
 
