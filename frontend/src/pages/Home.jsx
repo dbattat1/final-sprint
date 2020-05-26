@@ -12,7 +12,12 @@ class Home extends Component {
   };
   componentDidMount() {
     this.props.loadCities();
-    const favIds = ["5ecbb83a0c2535f563044b9b", "5ecbb83a0c2535f563044ba4", "5ecbb83a0c2535f563044b9f", "5ecbb83a0c2535f563044ba0"];
+    const favIds = [
+      "5ecbb83a0c2535f563044b9b",
+      "5ecbb83a0c2535f563044ba4",
+      "5ecbb83a0c2535f563044b9f",
+      "5ecbb83a0c2535f563044ba0",
+    ];
     this.getFavUsers(favIds);
   }
 
@@ -23,11 +28,13 @@ class Home extends Component {
   };
 
   render() {
-    console.log('loggedin user is:', this.props.loggedInUser)
+    console.log("loggedin user is:", this.props.loggedInUser);
     return (
       <div className="home-page container">
-        <div className="hero hero-home-page"></div>
-        <CitySearchBar />
+        <div className="hero hero-home-page" />
+      <CitySearchBar />
+        {/* <section className="search-bar"> */}
+        {/* </section> */}
         <section className="cities-container">
           <ul>
             <CityList cities={this.props.cities} />
