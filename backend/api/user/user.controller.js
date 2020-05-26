@@ -1,5 +1,7 @@
 const userService = require('./user.service')
 const logger = require('../../services/logger.service')
+const url = require('url');
+const querystring = require('querystring');
 
 async function getUser(req, res) {
     const user = await userService.getById(req.params.id)
@@ -19,6 +21,11 @@ async function getUsersByCity(req, res) {
     res.send(users)
 }
 
+async function getFavUsers(req, res){
+    const users = await userService.queryFav(Object.values(req.query))
+    res.send(users)
+}
+
 async function deleteUser(req, res) {
     await userService.remove(req.params.id)
     res.end()
@@ -35,5 +42,6 @@ module.exports = {
     getUsers,
     deleteUser,
     updateUser,
-    getUsersByCity
+    getUsersByCity,
+    getFavUsers
 }

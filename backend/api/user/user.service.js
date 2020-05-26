@@ -9,7 +9,8 @@ module.exports = {
     remove,
     update,
     add,
-    queryByCity
+    queryByCity,
+    queryFav
 }
 
 async function query(filterBy = {}) {
@@ -31,6 +32,20 @@ async function queryByCity(cityId) {
         const users = await collection.find({ "product.city._id": cityId }).toArray();
         
         // console.log('from queryByCity at user.service', users);
+        return users
+    } catch (err) {
+        console.log('ERROR: cannot find users')
+        throw err;
+    }
+}
+
+async function queryFav(favs) {
+    // const criteria = _buildCriteria(filterBy)
+    const collection = await dbService.getCollection('user')
+    const orStatement = favs.map(fav => {return {"_id": ObjectId(fav)}} )
+    try {
+        const users = await collection.find({ $or: orStatement }).toArray();
+        // console.log('from queryFavs at user.service', users);
         return users
     } catch (err) {
         console.log('ERROR: cannot find users')
