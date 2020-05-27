@@ -620,3 +620,9 @@ Tue, 26 May 2020 16:22:20 GMT - Info - Server is running on port: 3030
 Tue, 26 May 2020 15:20:26 GMT - Info - Server is running on port: 3030
 >>>>>>> 1b28c542ecb854f9e739365710f589ecea161f76
 Tue, 26 May 2020 16:28:22 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 06:12:33 GMT - Debug - mun@buy.com, muki, 
+Wed, 27 May 2020 06:12:33 GMT - Debug - auth.service - signup with email: mun@buy.com, firstName: muki, lastName: puki. imgUrl: 
+Wed, 27 May 2020 06:12:33 GMT - Debug - auth.route - new account created: {"email":"mun@buy.com","password":"$2a$10$wZkLWNxOkgO1QPigKFzCSOXQcxkmGxT6RRcCXh36.a6MaxFBLQhDW","name":{"firstName":"muki","lastName":"puki"},"imgUrl":"","_id":"5ece04d1d66f8c4accca263a"}
+Wed, 27 May 2020 09:18:24 GMT - Debug - niso@buy.com, Niso, 
+Wed, 27 May 2020 09:18:24 GMT - Debug - auth.service - signup with email: niso@buy.com, firstName: Niso, lastName: Nis. imgUrl: 
+Wed, 27 May 2020 09:18:24 GMT - Debug - auth.route - new account created: {"email":"niso@buy.com","password":"$2a$10$6N29AallUfEIGQzLu8NsLO5HCaEIDIU382qeJkuXoXb51UawYaVI2","name":{"firstName":"Niso","lastName":"Nis"},"imgUrl":"","_id":"5ece3060d66f8c4accca263e"}
