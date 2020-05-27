@@ -15,9 +15,19 @@ function query(cityId) {
     return httpService.get(`user/city/${cityId}`)
 }
 
-function queryAll() {
+function queryAll(filterBy) {
     return httpService.get(`user`)
 }
+
+function queryAllFilter(filterBy) {
+    var queryStr = `?name=${filterBy.name}&`;
+    return httpService.get(`user`)
+}
+
+function query(filterBy) {
+    var queryStr = `?name=${filterBy.name}&sort=anaAref`;
+    return HttpService.get(`review${queryStr}`);
+  }
 
 function getFav(favIds) {
     var query = '?';

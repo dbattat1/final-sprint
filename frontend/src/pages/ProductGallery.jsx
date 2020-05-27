@@ -5,16 +5,24 @@ import { ProductList } from "../cmps/ProductList.jsx";
 import TagSearchBar from "../cmps/TagSeacrhBar";
 
 class ProductGallery extends Component {
-
+  state = {
+    products: null
+  }
+  
   componentDidMount() {
     this.props.loadAllProducts();
+    // console.log(this.props.products);
+  }
+
+  onChangeList = (filterBy) => {
+      
   }
 
   render() {
     console.log("PRODUCTS", this.props.products);
     return (
       <div className="product-gallery container">
-        {/* <TagSearchBar /> */}
+        <TagSearchBar />
         // Another search bar
         <ProductList
           users={this.props.products}
