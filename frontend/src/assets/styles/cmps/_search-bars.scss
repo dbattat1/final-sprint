@@ -2,12 +2,15 @@
 .city-search-bar {
     bottom: 60vh;
     position: sticky;
-    top: 7px !important;
+    top: 5px !important;
     z-index: 100;
+    margin-top: 20px;
     .ui.button {
-        box-shadow: 0px -1px 21px 3px rgba(163,148,163,1);
-        // top: -47vh;
-        left: 44.7vw;
+        left: 39.7vw;
+        width: 400px;
+        background: #ffffff none;
+        border: 3px solid silver;
+
         
     }
 }

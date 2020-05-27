@@ -30,7 +30,9 @@ class Header extends React.Component {
   render() {
     return (
       <div className="main-header" id="header">
+        <Link to="/">
         <div className="logo">HEAT</div>
+        </Link>
         <div className="header-nav">
           <Link to="/">
             <RestaurantIcon
@@ -42,12 +44,12 @@ class Header extends React.Component {
             </Link>
           )}
           {this.props.loggedInUser && (
-            <Link to="/">
-              <AccountCircleIcon
+            <Link to="/"
+              // <AccountCircleIcon
                 onClick={this.props.logout}
                 className="logout"
-              />
-              LogOut
+              >
+              Log-out
             </Link>
           )}
         </div>
