@@ -14,7 +14,7 @@ class ProductGallery extends Component {
     console.log("PRODUCTS", this.props.products);
     return (
       <div className="product-gallery container">
-        <TagSearchBar />
+        {/* <TagSearchBar /> */}
         // Another search bar
         <ProductList
           users={this.props.products}
