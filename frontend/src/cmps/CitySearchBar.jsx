@@ -31,6 +31,7 @@ class CitySearchBar extends Component {
             search
             labeled
             floating
+            size="huge"
             value=""
             options={this.getCitiesForDropDown()}
             onChange={this.handleChange.bind(this)}

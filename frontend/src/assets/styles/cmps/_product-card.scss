@@ -13,6 +13,7 @@
         align-items: flex-end;
         justify-content: flex-end;
         background-size: cover;
+        border-radius: 30px;
         
         .product-card-price {
             display: flex;
@@ -23,6 +24,7 @@
             font-size: 1.5em;
             width: 80px;
             height: 30px;
+            border-radius: 0 0 20px;
         }
     } 
     .product-card-content {
