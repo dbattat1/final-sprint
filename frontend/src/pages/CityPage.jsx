@@ -13,7 +13,6 @@ class CityPage extends Component {
     this.props.loadProducts(id);
   }
 
-
   onRemoveProduct = (user) => {
     const editedUser = { ...user };
     editedUser.product = null;
@@ -21,7 +20,6 @@ class CityPage extends Component {
     const { id } = this.props.match.params;
     this.props.loadProducts(id);
   }
-
 
   render() {
     const { city } = this.props;

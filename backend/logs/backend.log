@@ -624,3 +624,4 @@ Wed, 27 May 2020 06:07:42 GMT - Info - Server is running on port: 3030
 Wed, 27 May 2020 08:20:35 GMT - Debug - bb,  b, 
 Wed, 27 May 2020 08:20:35 GMT - Debug - auth.service - signup with email: bb, firstName:  b, lastName: bbb. imgUrl: 
 Wed, 27 May 2020 08:20:35 GMT - Debug - auth.route - new account created: {"email":"bb","password":"$2a$10$BLixqOE7OVC84R.jNjC/2uJcGrLa/tUtoVWgOJw/N7Githahu2tPm","name":{"firstName":" b","lastName":"bbb"},"imgUrl":"","_id":"5ece22d3b1b02b0cd0b44fe4"}
+Wed, 27 May 2020 11:42:29 GMT - Info - Server is running on port: 3030

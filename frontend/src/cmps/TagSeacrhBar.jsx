@@ -16,7 +16,7 @@ class TagSearchBar extends Component {
 
   render() {
     return (
-      <div className="tag-search-bar">
+      <div className="">
           <Select
             placeholder="Filter Events"
             size="huge"

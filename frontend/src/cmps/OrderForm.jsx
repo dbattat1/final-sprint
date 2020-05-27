@@ -24,7 +24,7 @@ class OrderForm extends React.Component {
         console.log(this.props.seller.product.price);
         let { name, value } = ev.target;
         value = ev.target.type === 'number' ? parseInt(value) : value;
-        let totalPrice = (value * this.props.seller.product.price)
+        let totalPrice = (this.state.quantity * this.props.seller.product.price)
         this.setState({ [name]: value, totalPrice })
     }
 
@@ -41,7 +41,7 @@ class OrderForm extends React.Component {
         newOrder.buyer = buyer;
         this.props.addOrder(newOrder);
         this.setState({
-            msg: 'Booked!', quantity: 1, totalPrice: (1* this.props.seller.product.price), dueDate: Date.now()
+            msg: 'Booked!', quantity: 1, totalPrice: (1 * this.props.seller.product.price), dueDate: Date.now()
         })
 
         console.log('orderd!', newOrder);
@@ -59,18 +59,28 @@ class OrderForm extends React.Component {
         return seller;
     }
 
+    changeQuantity = (number) => {
+        console.log(number, 'ev');
+        this.setState(prevState => ({ quantity: prevState.quantity + number }), () => {
+            let totalPrice = (this.state.quantity * this.props.seller.product.price)
+            this.setState({totalPrice })
+        }
+        )
+    }
     render() {
         const { quantity, totalPrice } = this.state
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
                     <EventCalendar onDateChange={this.onDateChange} />
-                    <input type="number" value={quantity} name="quantity" onChange={this.handleChange} min="0"></input>
+                    <button type="button" onClick={() => this.changeQuantity(-1)}>-</button>
+                    <input value={quantity} name="quantity" readOnly min="0"></input>
+                    <button type="button" onClick={() => this.changeQuantity(1)}>+</button>
                     <div>Total Price: ${totalPrice}</div>
                     <button>Order</button>
                 </form>
                 {this.state.msg && <div>{this.state.msg}</div>}
-            </div>
+            </div >
         )
     }
 }
