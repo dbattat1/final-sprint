@@ -7,8 +7,13 @@ import { addOrder } from '../actions/orderActions';
 class OrderForm extends React.Component {
     state = {
         dueDate: Date.now(),
-        quantity: 0,
+        quantity: 1,
         totalPrice: 0,
+        msg: ''
+    }
+    componentDidMount() {
+        let totalPrice = (this.state.quantity * this.props.seller.product.price)
+        this.setState({ totalPrice })
     }
 
     onDateChange = (eventDate) => {
@@ -20,34 +25,38 @@ class OrderForm extends React.Component {
         let { name, value } = ev.target;
         value = ev.target.type === 'number' ? parseInt(value) : value;
         let totalPrice = (value * this.props.seller.product.price)
-        this.setState({ [name]: value }, () => this.setState({ totalPrice }),
-            () => console.log('state after change', this.state)
-        );
-        // this.setState({ totalPrice })
-
+        this.setState({ [name]: value, totalPrice })
     }
 
     handleSubmit = (ev) => {
         ev.preventDefault();
-        console.log(this.state);
         const newOrder = this.state;
         console.log(newOrder);
-        let { _id, name, imgUrl } = this.props.seller
-        const seller = { _id, name, imgUrl }
-        console.log('mini seller', seller);
-        const buyer = this.getBuyer()
-        console.log('miniBuyer', buyer);
+        const seller = this.getMiniSeller();
+        const buyer = this.getMiniBuyer();
+        console.log('miniBuyer', buyer, 'mini seller', seller);
         newOrder.createdAt = Date.now();
         newOrder.status = 'Active';
         newOrder.seller = seller;
         newOrder.buyer = buyer;
         this.props.addOrder(newOrder);
+        this.setState({
+            msg: 'Booked!', quantity: 1, totalPrice: (1* this.props.seller.product.price), dueDate: Date.now()
+        })
+
         console.log('orderd!', newOrder);
     }
-    getBuyer = () => {
+
+    getMiniBuyer = () => {
         let { _id, name, imgUrl } = this.props.loggedInUser;
         const buyer = { _id, name, imgUrl }
         return buyer;
+    }
+
+    getMiniSeller = () => {
+        let { _id, name, imgUrl } = this.props.seller
+        const seller = { _id, name, imgUrl }
+        return seller;
     }
 
     render() {
@@ -60,15 +69,15 @@ class OrderForm extends React.Component {
                     <div>Total Price: ${totalPrice}</div>
                     <button>Order</button>
                 </form>
+                {this.state.msg && <div>{this.state.msg}</div>}
             </div>
         )
-
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        loggedInUser: state.user.loggedInUser,
+        loggedInUser: state.user.loggedInUser
     };
 };
 
