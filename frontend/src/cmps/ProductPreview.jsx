@@ -20,7 +20,7 @@ export function ProductPreview(props) {
         <div className="product-card-content">
           <div className="product-card-header flex">
             <p className="product-card-title">{product.title}</p>
-            <p className="product-card-rate">✩{rate}/5</p>
+            {rate && <p className="product-card-rate">✩{rate}/5</p>}
           </div>
           <div className="product-card-footer flex">
             <div className="product-card-mini-host flex">

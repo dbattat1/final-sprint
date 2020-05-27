@@ -23,7 +23,17 @@ export function loadProduct(userId) {
       }
     };
   }
-
+  export function loadProductsByFilter(filterBy) {
+    return async dispatch => {
+      try {
+        const users = await productService.queryAllFilter(filterBy);
+        const products = users;
+        dispatch(setProducts(products));
+      } catch (err) {
+        console.log('ProductActions: err in loadProducts', err);
+      }
+    };
+  }
   export function loadAllProducts() {
     return async dispatch => {
       try {

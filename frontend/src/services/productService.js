@@ -15,9 +15,15 @@ function query(cityId) {
     return httpService.get(`user/city/${cityId}`)
 }
 
-function queryAll() {
+function queryAll(filterBy) {
     return httpService.get(`user`)
 }
+
+function queryAllFilter(filterBy) {
+    var queryStr = `city=${filterBy.city}&category=${filterBy.category}`;
+    return httpService.get(`user?${queryStr}`)
+}
+
 
 function getFav(favIds) {
     var query = '?';
