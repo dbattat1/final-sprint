@@ -4,23 +4,8 @@ import { Header, Image, Table } from 'semantic-ui-react'
 
 export function OrderPreview(props) {
     const { order } = props;
-    console.log('in order prev', order);
 
     return (
-        <Table basic='very' celled collapsing>
-            <Table.Header>
-                <Table.Row>
-                    <Table.HeaderCell>Buyer</Table.HeaderCell>
-                    <Table.HeaderCell>Seller</Table.HeaderCell>
-                    <Table.HeaderCell>Status</Table.HeaderCell>
-                    <Table.HeaderCell>Due Date</Table.HeaderCell>
-                    <Table.HeaderCell>Quantity</Table.HeaderCell>
-                    <Table.HeaderCell>Total Amount</Table.HeaderCell>
-                    <Table.HeaderCell>Created At</Table.HeaderCell>
-                </Table.Row>
-            </Table.Header>
-
-            <Table.Body>
                 <Table.Row>
                     <Table.Cell>
                         <Header as='h4' image>
@@ -44,7 +29,6 @@ export function OrderPreview(props) {
                     <Table.Cell>{order.totalPrice}</Table.Cell>
                     <Table.Cell>{new Date(order.createdAt).toDateString()}</Table.Cell>
                 </Table.Row>
-            </Table.Body>
-        </Table>
+         
     );
 }
