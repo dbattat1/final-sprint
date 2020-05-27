@@ -20,15 +20,15 @@ class UserOrders extends React.Component {
         if (this.props.loggedInUser) {
 
             const { _id } = this.props.loggedInUser
-            console.log('_id is', this.props.loggedInUser._id);
+            // console.log('_id is', this.props.loggedInUser._id);
 
             orderService.queryBySeller(_id).then(orders => {
-                console.log('The orders by seller id', orders)
+                // console.log('The orders by seller id', orders)
                 this.setState({ ordersBySeller: orders });
             })
 
             orderService.queryByBuyer(_id).then(orders => {
-                console.log('The orders by buyer id', orders)
+                // console.log('The orders by buyer id', orders)
                 this.setState({ ordersByBuyer: orders });
             })
         }
@@ -36,7 +36,7 @@ class UserOrders extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="user-orders-container">
                 <p>Orders I sold</p>
                 <OrderList orders={this.state.ordersBySeller} />
                 <p>Orders I bought</p>
