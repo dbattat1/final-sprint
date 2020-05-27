@@ -20,14 +20,10 @@ function queryAll(filterBy) {
 }
 
 function queryAllFilter(filterBy) {
-    var queryStr = `?name=${filterBy.name}&`;
-    return httpService.get(`user`)
+    var queryStr = `city=${filterBy.city}&category=${filterBy.category}`;
+    return httpService.get(`user?${queryStr}`)
 }
 
-function query(filterBy) {
-    var queryStr = `?name=${filterBy.name}&sort=anaAref`;
-    return HttpService.get(`review${queryStr}`);
-  }
 
 function getFav(favIds) {
     var query = '?';
