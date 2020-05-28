@@ -49,9 +49,9 @@ class ProductDetails extends React.Component {
           </div>
           <div className="product-page-edit">
             <Link to={`/edit/${this.props.match.params.id}`}>
-              <EditIcon />
+              <EditIcon className="product-page-edit-icon" />
             </Link>
-            <DeleteIcon onClick={this.onRemoveProduct} />
+            <DeleteIcon className="product-page-edit-icon" onClick={this.onRemoveProduct} />
           </div>
         </section>
 

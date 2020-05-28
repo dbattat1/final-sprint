@@ -18,16 +18,16 @@ async function login(email, password) {
     return user;
 }
 
-async function signup(email, password, firstName, lastName, imgUrl) {
+async function signup(email, password, first, last, imgUrl) {
     console.log('got here');
     
-    logger.debug(`auth.service - signup with email: ${email}, firstName: ${firstName}, lastName: ${lastName}. imgUrl: ${imgUrl}`)
-    if (!email || !password || !firstName|| !lastName) return Promise.reject('email, username and password are required!')
+    logger.debug(`auth.service - signup with email: ${email}, first: ${first}, last: ${last}. imgUrl: ${imgUrl}`)
+    if (!email || !password || !first|| !last) return Promise.reject('email, username and password are required!')
 
     const hash = await bcrypt.hash(password, saltRounds)
     const name = {
-        firstName,
-        lastName
+        first,
+        last
     }
     return userService.add({email, password: hash, name, imgUrl})
 }

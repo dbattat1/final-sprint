@@ -76,11 +76,17 @@ class OrderForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit} >
           <EventCalendar onDateChange={this.onDateChange} />
-          <button type="button" onClick={() => this.changeQuantity(-1)}>-</button>
-          <input value={quantity} name="quantity" readOnly min="0"></input>
-          <button type="button" onClick={() => this.changeQuantity(1)}>+</button>
-          <div>Total Price: ${totalPrice}</div>
-          <button>Order</button>
+          <div className="order-controller">
+            <div className="order-quantity">
+              <button type="button" onClick={() => this.changeQuantity(-1)}>-</button>
+              <input value={quantity} name="quantity" readOnly min="0"></input>
+              <button type="button" onClick={() => this.changeQuantity(1)}>+</button>
+            </div>
+            <div className="order-final">
+              <div>Total Price: ${totalPrice}</div>
+              <button>Order</button>
+            </div>
+          </div>
         </form>
         {this.state.msg && <div>{this.state.msg}</div>}
       </div >
