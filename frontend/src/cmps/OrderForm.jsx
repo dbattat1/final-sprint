@@ -20,6 +20,31 @@ class OrderForm extends React.Component {
     this.setState({ dueDate: eventDate });
   };
 
+<<<<<<< HEAD
+    handleChange = (ev) => {
+        console.log(this.props.seller.product.price);
+        let { name, value } = ev.target;
+        value = ev.target.type === 'number' ? parseInt(value) : value;
+        let totalPrice = (this.state.quantity * this.props.seller.product.price)
+        this.setState({ [name]: value, totalPrice })
+    }
+
+    handleSubmit = (ev) => {
+        ev.preventDefault();
+        const newOrder = this.state;
+        console.log(newOrder);
+        const seller = this.getMiniSeller();
+        const buyer = this.getMiniBuyer();
+        console.log('miniBuyer', buyer, 'mini seller', seller);
+        newOrder.createdAt = Date.now();
+        newOrder.status = 'Active';
+        newOrder.seller = seller;
+        newOrder.buyer = buyer;
+        this.props.addOrder(newOrder);
+        this.setState({
+            msg: 'Booked!', quantity: 1, totalPrice: (1 * this.props.seller.product.price), dueDate: Date.now()
+        })
+=======
   handleChange = (ev) => {
     console.log(this.props.seller.product.price);
     let { name, value } = ev.target;
@@ -46,6 +71,7 @@ class OrderForm extends React.Component {
       totalPrice: 1 * this.props.seller.product.price,
       dueDate: Date.now(),
     });
+>>>>>>> 4e5b200c23dae3f37b4826d9b58eaedc3cfa6dc5
 
     console.log("orderd!", newOrder);
   };
@@ -62,6 +88,32 @@ class OrderForm extends React.Component {
     return seller;
   };
 
+<<<<<<< HEAD
+    changeQuantity = (number) => {
+        console.log(number, 'ev');
+        this.setState(prevState => ({ quantity: prevState.quantity + number }), () => {
+            let totalPrice = (this.state.quantity * this.props.seller.product.price)
+            this.setState({totalPrice })
+        }
+        )
+    }
+    render() {
+        const { quantity, totalPrice } = this.state
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit} >
+                    <EventCalendar onDateChange={this.onDateChange} />
+                    <button type="button" onClick={() => this.changeQuantity(-1)}>-</button>
+                    <input value={quantity} name="quantity" readOnly min="0"></input>
+                    <button type="button" onClick={() => this.changeQuantity(1)}>+</button>
+                    <div>Total Price: ${totalPrice}</div>
+                    <button>Order</button>
+                </form>
+                {this.state.msg && <div>{this.state.msg}</div>}
+            </div >
+        )
+    }
+=======
   render() {
     const { quantity, totalPrice } = this.state;
     return (
@@ -86,6 +138,7 @@ class OrderForm extends React.Component {
       </div>
     );
   }
+>>>>>>> 4e5b200c23dae3f37b4826d9b58eaedc3cfa6dc5
 }
 
 const mapStateToProps = (state) => {

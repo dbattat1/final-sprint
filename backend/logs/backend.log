@@ -632,7 +632,15 @@ Wed, 27 May 2020 06:07:42 GMT - Info - Server is running on port: 3030
 Wed, 27 May 2020 08:20:35 GMT - Debug - bb,  b, 
 Wed, 27 May 2020 08:20:35 GMT - Debug - auth.service - signup with email: bb, firstName:  b, lastName: bbb. imgUrl: 
 Wed, 27 May 2020 08:20:35 GMT - Debug - auth.route - new account created: {"email":"bb","password":"$2a$10$BLixqOE7OVC84R.jNjC/2uJcGrLa/tUtoVWgOJw/N7Githahu2tPm","name":{"firstName":" b","lastName":"bbb"},"imgUrl":"","_id":"5ece22d3b1b02b0cd0b44fe4"}
+<<<<<<< HEAD
+Wed, 27 May 2020 11:42:29 GMT - Info - Server is running on port: 3030
+=======
 >>>>>>> 399e9e01754c17a133991cc7c89d34e1ffcd1068
+<<<<<<< HEAD
+>>>>>>> e6cf6cb9738baf7eae601a0398a567ac5241fa9d
+Wed, 27 May 2020 21:54:16 GMT - Info - Server is running on port: 3030
+Thu, 28 May 2020 06:31:37 GMT - Info - Server is running on port: 3030
+=======
 <<<<<<< HEAD
 Wed, 27 May 2020 10:17:46 GMT - Info - Server is running on port: 3030
 =======
@@ -664,3 +672,5 @@ Wed, 27 May 2020 18:18:42 GMT - Info - Server is running on port: 3030
 Wed, 27 May 2020 18:19:01 GMT - Info - Server is running on port: 3030
 >>>>>>> 772916de114d4dd803b9b07f4645540f950f6dd5
 Thu, 28 May 2020 10:09:06 GMT - Info - Server is running on port: 3030
+>>>>>>> 4e5b200c23dae3f37b4826d9b58eaedc3cfa6dc5
+Thu, 28 May 2020 10:54:57 GMT - Info - Server is running on port: 3030

@@ -8,7 +8,6 @@ export function ProductList(props) {
         console.log('filtered', usersWithProds);
     }
     
-    
     return (
         <ul className="flex space-between product-container-city">
             {props.users && usersWithProds.map((user, idx) => <ProductPreview user={user} key={idx}  />)}

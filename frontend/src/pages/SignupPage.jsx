@@ -140,7 +140,8 @@ class SignupPage extends Component {
             >
               Sign Up
           </Button>
-            <input onChange={this.handleImgUpload} type="file" />
+          <label htmlFor="imgUpload">Img</label>
+            <input id ="imgUpload" onChange={this.handleImgUpload} type="file" style={{display:'none'}} />
             <button>Save</button>
             <Grid container justify="flex-end">
               <Grid item>

@@ -1,63 +1,126 @@
 .product-card {
-    box-shadow: 0px 1px 6px -4px rgb(161, 159, 159);
+    // box-shadow: 0px 1px 6px -4px rgb(161, 159, 159);
+    box-shadow: 0px 1px 6px -4px rgb(143, 141, 141);
     font-family: Merry;
     // font-family: Roboto;
     margin-inline-end: 10px;
-    height: 500px;
+    height: 450px;
     width: 300px;
     color: black;
-    
+
     .product-card-img {
         height: 60%;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
         background-size: cover;
-        border-radius: 30px;
-        
+        border-radius: 15px 15px 15px 0;
+
         .product-card-price {
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: black;
             color: white;
-            font-size: 1.5em;
-            width: 80px;
+            font-size: 1.3em;
+            width: 70px;
             height: 30px;
             border-radius: 0 0 20px;
         }
-    } 
+    }
     .product-card-content {
         height: 40%;
-        padding: 10px;
-        
         .product-card-header {
-            height: 50%;
-            justify-content: space-between;
+            height: 34%;
+            padding-right: 20px;
+            padding-left: 12px;
+            padding-top: 14px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+
             .product-card-title {
-                display: flex;
-                justify-content: flex-start;
-                width: 50%;
+                font-size: rem(23px);
+                font-weight: bold;
+                color: #6d6a6a;
+                margin-right: 12px;
+            }
+            .product-card-city {
+                margin-top: 8px;
+                font-size: rem(14px);
+                color: rgb(143, 142, 135);
+                font-weight: lighter;
+            }
+            .product-card-rate {
+                align-self: start;
+                font-size: rem(16px);
+                font-weight: bold;
+                color: #6d6a6a;
+                span {
+                    color: #28a94d;
+                    margin-right: 2px;
+                }
             }
         }
-
-        .product-card-footer{
-            justify-content: space-between;
-            .product-card-tags {
-                flex-direction: column;
-                justify-content: flex-end;
-            }
-            .product-card-mini-host {
-                flex-direction: column;
+        .product-card-tags {
+            margin-left: 10px;
+            // flex-grow: 1;
+            height: 30%;
+            align-items: center;
+            justify-items: center;
+            .tag {
                 align-items: center;
+                display: flex;
+                margin-inline-end: 5px;
+                font-weight: 500;
+                font-size: rem(14px);
+                text-align: center;
+                justify-content: center;
+                // color: #78dc91;
+                // border: 0.5px solid #9edead;
+                // padding: 4px;
+                border-radius: 6px;
+                padding: 5px;
+                color: rgb(255, 255, 255);
+                background-color: #28a94d;
+                // box-shadow: 0px 0px 8px -6px rgb(95, 94, 94);
+            }
+        }
+        .product-card-footer {
+            height: 33%;
+            border-top: solid 1px rgb(240, 235, 237);
+            justify-content: space-around;
+
+            .product-card-mini-host {
+                margin-left: 16px;
+                align-items: center;
+                font-size: rem(10px);
+                i {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-right: 20px;
+                    flex-grow: 1;
+                    align-self: center;
+                    font-size: rem(16px);
+                    color: rgb(143, 142, 135);
+                }
                 .product-card-user-img {
-                    width: 75px;
-                    height: 75px;
+                    width: 44px;
+                    height: 44px;
                     border-radius: 50%;
-                    background-size: cover;
+                    object-fit: cover;
+                    margin-right: 8px;
+                }
+                .hosted-by {
+                    font-size: rem(12px);
+                    color: rgb(143, 142, 135);
+                }
+                .host-name {
+                    align-self: center;
+                    font-size: rem(14px);
+                    color: rgb(143, 142, 135);
+                    font-weight: 600;
                 }
             }
         }
     }
-
 }
