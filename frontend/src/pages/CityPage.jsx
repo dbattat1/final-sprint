@@ -6,7 +6,7 @@ import { ProductList } from "../cmps/ProductList.jsx";
 import { TagSearchBar } from "../cmps/TagSeacrhBar";
 import { Link } from "react-router-dom";
 import Header from "../cmps/Header";
-// import { MDBSpinner } from 'mdbreact';
+import { Spinner } from 'react-bootstrap'
 
 class CityPage extends Component {
   state = {
@@ -48,7 +48,10 @@ class CityPage extends Component {
     console.log("The state is ", this.state);
     const categories=[{ value: '', text: 'All experiences' },{ value: 'Culinary tour', text: 'Culinary tour' }, { value: 'Cooking workshop', text: 'Cooking workshop' }, 
       { value: 'Dining experience', text: 'Dining experience' }];
-    if (!city || !(this.props.products)) return "Loading";
+    // if (!city || !(this.props.products)) return "Loading";
+    if (!city || !(this.props.products)) return <Spinner animation="border" role="status">
+      <span className="sr-only">Loading...</span>
+    </Spinner>;
     return (
       <div className="city-page container">
         <Header pathname={this.props.location.pathname} />
