@@ -11,7 +11,7 @@ class CityPage extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadCity(id);
-    this.props.loadProducts(id);
+    this.props.loadProducts({city: id, category:''});
   }
 
   onRemoveProduct = (user) => {
@@ -38,7 +38,7 @@ class CityPage extends Component {
           <p>{`${city.name}`}</p>
         </div>
         {/* <section className="search-bar"> */}
-        <TagSearchBar />
+        {/* <TagSearchBar /> */}
         {/* </section> */}
 
         <ProductList

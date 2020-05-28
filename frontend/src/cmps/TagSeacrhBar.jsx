@@ -1,43 +1,32 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Select } from "semantic-ui-react";
-import { loadCities } from "../actions/cityActions";
 
-class TagSearchBar extends Component {
-  componentDidMount() {
-    this.props.loadCities();
+export class TagSearchBar extends Component {
+  state = {
+      city: '',
+      category: ''
   }
-
-  getCitiesForDropDown() {
-    return this.props.cities.map((city) => {
-      return { value: city._id, text: city.name };
-    });
-  }
+  
+  // handleChange = (e, {value}) => {
+  //   this.props.onChangeFilterBy(value);
+    
+  // }
 
   render() {
     return (
       <div className="tag-search-bar">
-          <Select
-            placeholder="Filter Events"
-            size="huge"
-            value=""
-            options={this.getCitiesForDropDown()}
-            onChange={() => console.log(this.value)}
-          />
-        
+        <Select
+          placeholder={this.props.placeholder}
+          size="huge"
+          closeOnChange
+         
+          name={this.props.name}
+          value={this.props.value}
+          options={this.props.options}
+          onChange={this.props.handleChange}
+        />
       </div>
     );
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    cities: state.city.cities,
-  };
-};
-
-const mapDispatchToProps = {
-  loadCities,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TagSearchBar);
