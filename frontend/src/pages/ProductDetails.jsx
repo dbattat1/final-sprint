@@ -34,15 +34,18 @@ class ProductDetails extends React.Component {
       return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
     const { product } = user;
     const reducer = (acc, curr) => acc + curr;
-    const rateArr = product.reviews.map((review) => review.rate);
-    const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
-
+    const hasReviews = !(!product.reviews || product.reviews.length === 0);
+     
+    if (hasReviews) {
+      const rateArr = product.reviews.map((review) => review.rate);
+      const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
+    }
     return (
       <div className="product-page">
         <Header pathname={this.props.location.pathname} />
         <section className="product-page-header">
           <div className="product-page-title">
-            <div>{product.title} &nbsp; &nbsp; <span>★</span>{rate}</div>
+            <div>{product.title} &nbsp; &nbsp; {hasReviews && <div><span>★</span> rate</div>}</div>
             <div className="product-page-city">{product.city.name}</div>
           </div>
           <div className="product-page-edit">
@@ -64,17 +67,17 @@ class ProductDetails extends React.Component {
             className="prod-img prod-img-1"
             style={{ backgroundImage: `url(${product.imgUrls[1]})` }}
           />
-                    
+
           <div
             className="prod-img prod-img-2"
             style={{ backgroundImage: `url(${product.imgUrls[2]})` }}
           />
-                    
+
           <div
             className="prod-img prod-img-3"
             style={{ backgroundImage: `url(${product.imgUrls[3]})` }}
           />
-                    
+
           <div
             className="prod-img prod-img-4"
             style={{ backgroundImage: `url(${product.imgUrls[4]})` }}
