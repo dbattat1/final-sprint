@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import { withRouter } from "react-router";
-import EventCalendar from './EventCalendar';
-import { addOrder } from '../actions/orderActions';
+import EventCalendar from "./EventCalendar";
+import { addOrder } from "../actions/orderActions";
 
 class OrderForm extends React.Component {
-    state = {
-        dueDate: Date.now(),
-        quantity: 1,
-        totalPrice: 0,
-        msg: ''
-    }
-    componentDidMount() {
-        let totalPrice = (this.state.quantity * this.props.seller.product.price)
-        this.setState({ totalPrice })
-    }
+  state = {
+    dueDate: Date.now(),
+    quantity: 1,
+    totalPrice: 0,
+    msg: "",
+  };
+  componentDidMount() {
+    let totalPrice = this.state.quantity * this.props.seller.product.price;
+    this.setState({ totalPrice });
+  }
 
-    onDateChange = (eventDate) => {
-        this.setState({ dueDate: eventDate })
-    }
+  onDateChange = (eventDate) => {
+    this.setState({ dueDate: eventDate });
+  };
 
+<<<<<<< HEAD
     handleChange = (ev) => {
         console.log(this.props.seller.product.price);
         let { name, value } = ev.target;
@@ -43,22 +44,51 @@ class OrderForm extends React.Component {
         this.setState({
             msg: 'Booked!', quantity: 1, totalPrice: (1 * this.props.seller.product.price), dueDate: Date.now()
         })
+=======
+  handleChange = (ev) => {
+    console.log(this.props.seller.product.price);
+    let { name, value } = ev.target;
+    value = ev.target.type === "number" ? parseInt(value) : value;
+    let totalPrice = value * this.props.seller.product.price;
+    this.setState({ [name]: value, totalPrice });
+  };
 
-        console.log('orderd!', newOrder);
-    }
+  handleSubmit = (ev) => {
+    ev.preventDefault();
+    const newOrder = this.state;
+    console.log(newOrder);
+    const seller = this.getMiniSeller();
+    const buyer = this.getMiniBuyer();
+    console.log("miniBuyer", buyer, "mini seller", seller);
+    newOrder.createdAt = Date.now();
+    newOrder.status = "Active";
+    newOrder.seller = seller;
+    newOrder.buyer = buyer;
+    this.props.addOrder(newOrder);
+    this.setState({
+      msg: "Booked!",
+      quantity: 1,
+      totalPrice: 1 * this.props.seller.product.price,
+      dueDate: Date.now(),
+    });
+>>>>>>> 4e5b200c23dae3f37b4826d9b58eaedc3cfa6dc5
 
-    getMiniBuyer = () => {
-        let { _id, name, imgUrl } = this.props.loggedInUser;
-        const buyer = { _id, name, imgUrl }
-        return buyer;
-    }
+    console.log("orderd!", newOrder);
+  };
 
-    getMiniSeller = () => {
-        let { _id, name, imgUrl } = this.props.seller
-        const seller = { _id, name, imgUrl }
-        return seller;
-    }
+  getMiniBuyer = () => {
+    let { _id, name, imgUrl } = this.props.loggedInUser;
+    const buyer = { _id, name, imgUrl };
+    return buyer;
+  };
 
+  getMiniSeller = () => {
+    let { _id, name, imgUrl } = this.props.seller;
+    const seller = { _id, name, imgUrl };
+    return seller;
+  };
+
+<<<<<<< HEAD
     changeQuantity = (number) => {
         console.log(number, 'ev');
         this.setState(prevState => ({ quantity: prevState.quantity + number }), () => {
@@ -83,17 +113,44 @@ class OrderForm extends React.Component {
             </div >
         )
     }
+=======
+  render() {
+    const { quantity, totalPrice } = this.state;
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+            <EventCalendar
+              className="form-calendar"
+              onDateChange={this.onDateChange}
+            />
+          <input
+            className="form-quantity"
+            type="number"
+            value={quantity}
+            name="quantity"
+            onChange={this.handleChange}
+            min="0"
+          ></input>
+          <div className="form-total-price">Total Price: ${totalPrice}</div>
+          <button>Order</button>
+        </form>
+        {this.state.msg && <div>{this.state.msg}</div>}
+      </div>
+    );
+  }
+>>>>>>> 4e5b200c23dae3f37b4826d9b58eaedc3cfa6dc5
 }
 
 const mapStateToProps = (state) => {
-    return {
-        loggedInUser: state.user.loggedInUser
-    };
+  return {
+    loggedInUser: state.user.loggedInUser,
+  };
 };
 
-
 const mapDispatchToProps = {
-    addOrder
-}
+  addOrder,
+};
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OrderForm));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(OrderForm)
+);

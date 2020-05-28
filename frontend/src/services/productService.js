@@ -1,27 +1,32 @@
 import httpService from './httpService';
 export default {
+    // query,
     query,
-    queryAll,
     get,
     update,
-    getFav
+    getFav,
+    // queryAllFilter
 }
 // JsonServer
 // function query(cityId) {
 //     return httpService.get(`user?product.city._id=${cityId}`)
 // }
 
-function query(cityId) {
-    return httpService.get(`user/city/${cityId}`)
-}
+// ToDo - change that
+// function query(cityId) {
+//     return httpService.get(`user/city/${cityId}`)
+// }
 
-function queryAll(filterBy) {
-    return httpService.get(`user`)
-}
+// function queryAll(filterBy) {
+//     return httpService.get(`user`)
+// }
 
-function queryAllFilter(filterBy) {
-    var queryStr = `city=${filterBy.city}&category=${filterBy.category}`;
-    return httpService.get(`user?${queryStr}`)
+function query(filterBy) {
+    if (!filterBy) return httpService.get(`user`)
+    // console.log('filterBy', filterBy)
+    var queryStr = `?city=${filterBy.city}&category=${filterBy.category}`;
+    // console.log('queryStr', queryStr)
+    return httpService.get(`user${queryStr}`)
 }
 
 

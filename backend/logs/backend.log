@@ -636,6 +636,41 @@ Wed, 27 May 2020 08:20:35 GMT - Debug - auth.route - new account created: {"emai
 Wed, 27 May 2020 11:42:29 GMT - Info - Server is running on port: 3030
 =======
 >>>>>>> 399e9e01754c17a133991cc7c89d34e1ffcd1068
+<<<<<<< HEAD
 >>>>>>> e6cf6cb9738baf7eae601a0398a567ac5241fa9d
 Wed, 27 May 2020 21:54:16 GMT - Info - Server is running on port: 3030
 Thu, 28 May 2020 06:31:37 GMT - Info - Server is running on port: 3030
+=======
+<<<<<<< HEAD
+Wed, 27 May 2020 10:17:46 GMT - Info - Server is running on port: 3030
+=======
+Wed, 27 May 2020 15:20:17 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 15:20:22 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 15:20:46 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:12:08 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:30:33 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:30:38 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:30:53 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:31:18 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:31:53 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:33:00 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:34:03 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:34:48 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:35:51 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:37:40 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:38:02 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:38:37 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:46:07 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:47:52 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:48:21 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:50:02 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:52:55 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 17:55:42 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 18:09:35 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 18:16:36 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 18:18:42 GMT - Info - Server is running on port: 3030
+Wed, 27 May 2020 18:19:01 GMT - Info - Server is running on port: 3030
+>>>>>>> 772916de114d4dd803b9b07f4645540f950f6dd5
+Thu, 28 May 2020 10:09:06 GMT - Info - Server is running on port: 3030
+>>>>>>> 4e5b200c23dae3f37b4826d9b58eaedc3cfa6dc5
+Thu, 28 May 2020 10:54:57 GMT - Info - Server is running on port: 3030

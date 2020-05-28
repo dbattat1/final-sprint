@@ -3,8 +3,11 @@
     bottom: 60vh;
     position: sticky;
     top: 5px !important;
-    z-index: 100;
+    z-index: 101;
     margin-top: 20px;
+    display: flex;
+    width: 300px;
+    justify-self: center;
     .ui.button {
         left: 39.7vw;
         width: 400px;

@@ -1,32 +1,30 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Header from "../cmps/Header";
 
 class UserUsers extends React.Component {
-    state = {
-        // msgByCreator: null,
-        // msgByResponder: null,
-    }
+  state = {
+    // msgByCreator: null,
+    // msgByResponder: null,
+  };
 
-    componentDidMount() {
-        // this.props.loadUsers();
-        // this.setState({ rating: this.props.users })
-    }
+  componentDidMount() {
+    // this.props.loadUsers();
+    // this.setState({ rating: this.props.users })
+  }
 
-    render() {
-        return (
-            <div className="messege-center-container">
-                <div>messege center</div>
-            </div >
-        )
-    }
+  render() {
+    return (
+      <div className="messege-center-container">
+        <Header pathname={this.props.location.pathname} />
+
+        <div>messege center</div>
+      </div>
+    );
+  }
 }
 
-const mapStateToProps = (state) => {
-
-};
-const mapDispatchToProps = {
-
-};
+const mapStateToProps = (state) => {};
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessegeCenter);

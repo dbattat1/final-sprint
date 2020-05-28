@@ -11,40 +11,40 @@ export function loadProduct(userId) {
       }
     };
   }
-  export function loadProducts(cityId) {
+  // export function loadProducts(cityId) {
+  //   return async dispatch => {
+  //     try {
+  //       const users = await productService.query(cityId);
+  //       const products = users;
+  //       // const products = _makeProductFromUsers(users);
+  //       dispatch(setProducts(products));
+  //     } catch (err) {
+  //       console.log('ProductActions: err in loadProducts', err);
+  //     }
+  //   };
+  // }
+  export function loadProducts(filterBy) {
     return async dispatch => {
       try {
-        const users = await productService.query(cityId);
+        const users = await productService.query(filterBy);
         const products = users;
-        // const products = _makeProductFromUsers(users);
         dispatch(setProducts(products));
       } catch (err) {
         console.log('ProductActions: err in loadProducts', err);
       }
     };
   }
-  export function loadProductsByFilter(filterBy) {
-    return async dispatch => {
-      try {
-        const users = await productService.queryAllFilter(filterBy);
-        const products = users;
-        dispatch(setProducts(products));
-      } catch (err) {
-        console.log('ProductActions: err in loadProducts', err);
-      }
-    };
-  }
-  export function loadAllProducts() {
-    return async dispatch => {
-      try {
-        const users = await productService.queryAll();
-        const products = users;
-        dispatch(setAllProducts(products));
-      } catch (err) {
-        console.log('ProductActions: err in loadProducts', err);
-      }
-    };
-  }
+  // export function loadAllProducts() {
+  //   return async dispatch => {
+  //     try {
+  //       const users = await productService.queryAll();
+  //       const products = users;
+  //       dispatch(setAllProducts(products));
+  //     } catch (err) {
+  //       console.log('ProductActions: err in loadProducts', err);
+  //     }
+  //   };
+  // }
 
   export function updateProduct(user) {
     return async dispatch => {
