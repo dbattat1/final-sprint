@@ -710,8 +710,12 @@ Thu, 28 May 2020 17:13:41 GMT - Info - Server is running on port: 3030
 Thu, 28 May 2020 17:14:00 GMT - Debug - sasa@sasa.com, sasa, 
 Thu, 28 May 2020 17:14:00 GMT - Debug - auth.service - signup with email: sasa@sasa.com, first: sasa, last: sasa. imgUrl: 
 Thu, 28 May 2020 17:14:02 GMT - Debug - auth.route - new account created: {"email":"sasa@sasa.com","password":"$2a$10$m.DQuLMOu0h62I2EcREdie3d/jP/FmsPQhaCNfLZhW5cfZ4SN002C","name":{"first":"sasa","last":"sasa"},"imgUrl":"","_id":"5ecff159c7dd670b8861cbe9"}
+<<<<<<< HEAD
 >>>>>>> 55701c5520d888bfda87978d8f0124c4f10b99cc
 Thu, 28 May 2020 17:16:03 GMT - Info - Server is running on port: 3030
 Thu, 28 May 2020 17:17:37 GMT - Debug - may@buy.com, May, 
 Thu, 28 May 2020 17:17:37 GMT - Debug - auth.service - signup with email: may@buy.com, first: May, last: Tidjar. imgUrl: 
 Thu, 28 May 2020 17:17:41 GMT - Debug - auth.route - new account created: {"email":"may@buy.com","password":"$2a$10$43QXXpDP/6iyWo1jEldK3eNuHc1EGGKHoXWEcDAppSnMMK.cbEmf6","name":{"first":"May","last":"Tidjar"},"imgUrl":"","_id":"5ecff232d47ead4900bb3a74"}
+=======
+Thu, 28 May 2020 19:05:08 GMT - Info - Server is running on port: 3030
+>>>>>>> 8d6fe0ea06084b9efed2cfc9faddad36b7728630
