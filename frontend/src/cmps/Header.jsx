@@ -3,14 +3,15 @@ import { Navbar } from "./Navbar.jsx";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import ListAltIcon from "@material-ui/icons/ListAlt";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { logout } from "../actions/userActions.js";
 
 class Header extends React.Component {
   componentDidMount() {
     if (this.props.pathname === "/") {
       window.addEventListener("scroll", this.handleScroll);
-    };
-
+    }
   }
 
   componentWillUnmount() {
@@ -18,8 +19,6 @@ class Header extends React.Component {
   }
 
   handleScroll = () => {
-    console.log("handle scroll of header:", this.props.pathname);
-
     if (
       document.body.scrollTop > 450 ||
       document.documentElement.scrollTop > 450
@@ -36,7 +35,6 @@ class Header extends React.Component {
   };
 
   render() {
-   
     return (
       <div
         className={
@@ -47,19 +45,24 @@ class Header extends React.Component {
           <div className="logo">HEAT</div>
         </Link>
         <div className="header-nav">
+          {this.props.loggedInUser && (
+            <div className="welcome-user-nav">
+              Hello {this.props.loggedInUser.name.first}
+            </div>
+          )}
+          {this.props.loggedInUser && (
+            <Link to="/order">
+              <ListAltIcon className="order-icon-nav" />
+            </Link>
+          )}
           {!this.props.loggedInUser && (
             <Link to="/login">
-              <AccountCircleIcon className="login" />
+              <AccountCircleIcon className="login-icon-nav" />
             </Link>
           )}
           {this.props.loggedInUser && (
-            <Link
-              to="/"
-              // <AccountCircleIcon
-              onClick={this.props.logout}
-              className="logout"
-            >
-              Log-out
+            <Link to="/">
+              <ExitToAppIcon className="logout-icon-nav" onClick={this.props.logout} />
             </Link>
           )}
         </div>

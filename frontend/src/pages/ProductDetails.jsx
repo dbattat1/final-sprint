@@ -7,15 +7,13 @@ import ProductReview from "../cmps/ProductReview.jsx";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import productService from "../services/productService.js";
-import Header from '../cmps/Header';
-
+import Header from "../cmps/Header";
 
 class ProductDetails extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadProduct(id);
   }
-
 
   onRemoveProduct = () => {
     const { id } = this.props.match.params;
@@ -32,17 +30,20 @@ class ProductDetails extends React.Component {
 
   render() {
     const { user } = this.props;
-    if (!user) return <div style={{height:4000, width:"100%"}}>Loading...</div>
+    if (!user)
+      return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
     const { product } = user;
+    const reducer = (acc, curr) => acc + curr;
+    const rateArr = product.reviews.map((review) => review.rate);
+    const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
 
     return (
       <div className="product-page">
-      <Header pathname={this.props.location.pathname}/>  
+        <Header pathname={this.props.location.pathname} />
         <section className="product-page-header">
           <div className="product-page-title">
-            <div>{product.title}</div>
-            <div>★8.2/10</div>
-            <div>{product.city.name}</div>
+            <div>{product.title} &nbsp; &nbsp; <span>★</span>{rate}</div>
+            <div className="product-page-city">{product.city.name}</div>
           </div>
           <div className="product-page-edit">
             <Link to={`/edit/${this.props.match.params.id}`}>
@@ -55,11 +56,29 @@ class ProductDetails extends React.Component {
         </section>
 
         <div className="product-page-img-container">
-          <div className="prime-photo" style={{backgroundImage: `url(${product.imgUrls[0]})`}}/>
-          <img className="prod-img-1" src={`${product.imgUrls[1]}`} />
-          <img className="prod-img-2" src={`${product.imgUrls[2]}`} />
-          <img className="prod-img-3" src={`${product.imgUrls[3]}`} />
-          <img className="prod-img-4" src={`${product.imgUrls[4]}`} />
+          <div
+            className="prime-photo"
+            style={{ backgroundImage: `url(${product.imgUrls[0]})` }}
+          />
+          <div
+            className="prod-img prod-img-1"
+            style={{ backgroundImage: `url(${product.imgUrls[1]})` }}
+          />
+                    
+          <div
+            className="prod-img prod-img-2"
+            style={{ backgroundImage: `url(${product.imgUrls[2]})` }}
+          />
+                    
+          <div
+            className="prod-img prod-img-3"
+            style={{ backgroundImage: `url(${product.imgUrls[3]})` }}
+          />
+                    
+          <div
+            className="prod-img prod-img-4"
+            style={{ backgroundImage: `url(${product.imgUrls[4]})` }}
+          />
         </div>
         <main className="product-page-main">
           <div className="product-page-content">
