@@ -687,3 +687,23 @@ Thu, 28 May 2020 16:31:54 GMT - Debug - auth.route - new account created: {"emai
 Thu, 28 May 2020 14:02:55 GMT - Info - Server is running on port: 3030
 >>>>>>> ce5c7a2a547e82ba764bfe98dc28815cdad7ffcd
 >>>>>>> a0cb871f0aa9f750e05e7f68156044d57572199b
+Thu, 28 May 2020 17:05:14 GMT - Debug - Gogo@sasa.com, undefined, 
+Thu, 28 May 2020 17:05:14 GMT - Debug - auth.service - signup with email: Gogo@sasa.com, firstName: undefined, lastName: undefined. imgUrl: 
+Thu, 28 May 2020 17:05:14 GMT - Error - [SIGNUP] email, username and password are required!
+Thu, 28 May 2020 17:07:48 GMT - Debug - arvin@buy.com, undefined, 
+Thu, 28 May 2020 17:07:48 GMT - Debug - auth.service - signup with email: arvin@buy.com, firstName: undefined, lastName: undefined. imgUrl: 
+Thu, 28 May 2020 17:07:48 GMT - Error - [SIGNUP] email, username and password are required!
+Thu, 28 May 2020 17:09:12 GMT - Debug - jojo@sasa.com, undefined, 
+Thu, 28 May 2020 17:09:12 GMT - Debug - auth.service - signup with email: jojo@sasa.com, firstName: undefined, lastName: undefined. imgUrl: 
+Thu, 28 May 2020 17:09:12 GMT - Error - [SIGNUP] email, username and password are required!
+Thu, 28 May 2020 17:10:09 GMT - Debug - jojo@buy.com, joj, 
+Thu, 28 May 2020 17:10:09 GMT - Debug - auth.service - signup with email: jojo@buy.com, firstName: joj, lastName: jojo. imgUrl: 
+Thu, 28 May 2020 17:10:09 GMT - Debug - auth.route - new account created: {"email":"jojo@buy.com","password":"$2a$10$8b7qCjr5z.nMo/7etNnjLuT/xrcO2S4rxqx4Fe/pZZf7YZx.VmfxW","name":{"firstName":"joj","lastName":"jojo"},"imgUrl":"","_id":"5ecff071d94d861934821b76"}
+Thu, 28 May 2020 17:12:27 GMT - Debug - sasa@sasa.com, undefined, 
+Thu, 28 May 2020 17:12:27 GMT - Debug - auth.service - signup with email: sasa@sasa.com, firstName: undefined, lastName: undefined. imgUrl: 
+Thu, 28 May 2020 17:12:27 GMT - Error - [SIGNUP] email, username and password are required!
+Thu, 28 May 2020 17:13:12 GMT - Info - Server is running on port: 3030
+Thu, 28 May 2020 17:13:41 GMT - Info - Server is running on port: 3030
+Thu, 28 May 2020 17:14:00 GMT - Debug - sasa@sasa.com, sasa, 
+Thu, 28 May 2020 17:14:00 GMT - Debug - auth.service - signup with email: sasa@sasa.com, first: sasa, last: sasa. imgUrl: 
+Thu, 28 May 2020 17:14:02 GMT - Debug - auth.route - new account created: {"email":"sasa@sasa.com","password":"$2a$10$m.DQuLMOu0h62I2EcREdie3d/jP/FmsPQhaCNfLZhW5cfZ4SN002C","name":{"first":"sasa","last":"sasa"},"imgUrl":"","_id":"5ecff159c7dd670b8861cbe9"}

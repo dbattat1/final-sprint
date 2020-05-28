@@ -23,8 +23,8 @@ import Header from '../cmps/Header';
 
 class SignupPage extends Component {
   state = {
-      firstName: '',
-      lastName: '',
+      first: '',
+      last: '',
       email: '',
       password: '',
       imgUrl: '',
@@ -43,8 +43,8 @@ class SignupPage extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     console.log('ev2', ev);
-    const { email, password, firstName, lastName } = this.state;
-    if (!email || !password || !firstName || !lastName) {
+    const { email, password, first, last } = this.state;
+    if (!email || !password || !first || !last) {
       return this.setState({ msg: 'All inputs are required!' });
     }
     console.log('imgurl', this.state.imgUrl);
@@ -55,7 +55,7 @@ class SignupPage extends Component {
     const signupCreds = userToAdd
     console.log('signupCreds', signupCreds);
     this.props.signup(signupCreds);
-    this.setState({ email: '', password: '', firstName: '', lastName: '', imgUrl: '' }, () => this.props.history.push(`/`));
+    this.setState({ email: '', password: '', first: '', last: '', imgUrl: '' }, () => this.props.history.push(`/`));
   }
 
 
@@ -76,12 +76,12 @@ class SignupPage extends Component {
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="fname"
-                  name="firstName"
+                  name="first"
                   variant="outlined"
                   className="no-outlined"
                   required
                   fullWidth
-                  id="firstName"
+                  id="first"
                   label="First Name"
                   autoFocus
                   onChange={this.handleChange}
@@ -92,9 +92,9 @@ class SignupPage extends Component {
                   variant="outlined"
                   required
                   fullWidth
-                  id="lastName"
+                  id="last"
                   label="Last Name"
-                  name="lastName"
+                  name="last"
                   autoComplete="lname"
                   onChange={this.handleChange}
                 />
