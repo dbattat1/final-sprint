@@ -5,31 +5,37 @@
     justify-content: space-between;
     width: 100%;
     transition: 0.4s ease-out;
-    padding: 0px 80px;
+    padding: 0px 50px;
     z-index: 100;
+    height: 4.7em;
     .logo {
         color: #fff8f8;
         font-size: rem(30px);
         font-family: Alconica;
     }
     .header-nav {
-        width: 200px;
+        width: 300px;
         display: flex;
         justify-content: space-evenly;
-        .login {
-            // color:
+        >* {
             color: #fff8f8;
-            font-size: rem(35px);
-        }
-        .logout {
-            color: #fff8f8;
-            font-size: rem(25px);
             display: flex;
             align-items: center;
+            // font-size: rem(35px);  
         }
-        .events-nav-icon {
-            color: #fff8f8;
-            font-size: rem(35px);
+        .welcome-user-nav {
+            font-family: Ubuntu-medium;
+            font-size: rem(28px);  
+            color: #35eb33
+        }
+        .login-icon-nav {
+            font-size: rem(33px);
+        }
+        .logout-icon-nav {
+            font-size: rem(33px);
+        }
+        .order-icon-nav {
+            font-size: rem(33px);
         }
     }
 }
@@ -54,23 +60,28 @@
         font-family: Alconica;
     }
     .header-nav {
-        width: 200px;
+        width: 300px;
         display: flex;
         justify-content: space-evenly;
-        .login {
-            // color:
+        >* {
             color: #fff8f8;
-            font-size: rem(35px);
-        }
-        .logout {
-            color: #fff8f8;
-            font-size: rem(25px);
             display: flex;
             align-items: center;
+            // font-size: rem(35px);  
         }
-        .events-nav-icon {
-            color: #fff8f8;
-            font-size: rem(35px);
+        .welcome-user-nav {
+            font-family: Ubuntu-medium;
+            font-size: rem(28px);  
+            color: #35eb33
+        }
+        .login-icon-nav {
+            font-size: rem(33px);
+        }
+        .logout-icon-nav {
+            font-size: rem(33px);
+        }
+        .order-icon-nav {
+            font-size: rem(33px);
         }
     }
 }

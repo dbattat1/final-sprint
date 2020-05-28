@@ -1,0 +1,25 @@
+
+.product-gallery-container {
+    width: 88vw;
+    margin: 0 auto;
+    box-sizing: unset;
+    h1 {
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+        justify-self: center;
+    }
+    ul {
+        flex-wrap: wrap;
+
+        .product-card {
+            margin-bottom: 38px;
+            .product-card-header {
+                flex-grow: 1;
+            }
+            .product-card-footer {
+                flex-grow: 1;
+            }
+        }
+    }
+}
