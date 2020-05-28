@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage.jsx';
 import SignupPage from './pages/SignupPage.jsx';
 import ProductGallery from './pages/ProductGallery.jsx'
 import UserOrders from './pages/UserOrders';
+import UserProfile from './pages/UserOrders';
 
 const history = createBrowserHistory();
 history.listen((location, action) => {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/login" component={LoginPage} exact />
           <Route path="/gallery" component={ProductGallery} exact />
           <Route path="/signup" component={SignupPage} exact />
+          <Route path='/profile' component={UserProfile} exact />
           <Route path='/order/:id?' component={UserOrders} exact />
           <Route path='/edit/:id?' component={EditProduct} exact />
           <Route path="/:id" component={CityPage} exact />
