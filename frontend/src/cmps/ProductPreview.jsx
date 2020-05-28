@@ -17,31 +17,36 @@ export function ProductPreview(props) {
         >
           <div className="product-card-price">${product.price}</div>
         </div>
-        <div className="product-card-content">
-          <div className="product-card-header flex">
-            <p className="product-card-title">{product.title}</p>
-            {rate && <p className="product-card-rate">✩{rate}/5</p>}
-          </div>
-          <div className="product-card-footer flex">
-            <div className="product-card-mini-host flex">
-              <div
-                className="product-card-user-img"
-                style={{ backgroundImage: `url(${user.imgUrl})` }}
-              />
-              <p>By {user.name.first}</p>
+        <div className="product-card-content flex column">
+          <div className="product-card-header">
+            <div className="flex ">
+              <div className="product-card-title">{product.title}</div>
+              {rate && <div className="product-card-rate"><span>★</span>{rate}</div>}
             </div>
-            <ul className="product-card-tags flex">
-              {product.tags &&
-                product.tags.slice(0, 3).map((tag, idx) => (
-                  <li className="tag" key={idx}>
-                    {tag}
-                  </li>
-                ))}
-            </ul>
+            <div className="product-card-city">in {product.city.name}</div>
+            {/* </div> */}
+          </div>
+          <ul className="product-card-tags flex">
+            {product.tags &&
+              product.tags.slice(0, 3).map((tag, idx) => (
+                <li className="tag" key={idx}>
+                  {tag}
+                </li>
+              ))}
+          </ul>
+          <div className="product-card-footer flex column">
+            <div className="product-card-mini-host flex">
+              <img src={user.imgUrl} className="product-card-user-img"></img>
+              <div>
+                <div className="hosted-by">Hosted by</div>
+                <div className="host-name">{user.name.first}</div>
+              </div>
+                <i class="angle double down icon"></i>
+            </div>
           </div>
         </div>
       </Link>
-    </li>
+    </li >
   );
 }
 
