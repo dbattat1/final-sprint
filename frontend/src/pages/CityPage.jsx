@@ -8,24 +8,30 @@ import { Link } from "react-router-dom";
 import Header from "../cmps/Header";
 
 class CityPage extends Component {
+  state = {
+    city: '',
+    category: ''
+  }
+
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadCity(id);
     this.props.loadProducts({city: id, category:''});
+    this.setState({city: id})
   }
 
-  onRemoveProduct = (user) => {
-    const editedUser = { ...user };
-    editedUser.product = null;
-    this.props.removeProduct(editedUser);
-    const { id } = this.props.match.params;
-    this.props.loadProducts(id);
-  };
+  // onRemoveProduct = (user) => {
+  //   const editedUser = { ...user };
+  //   editedUser.product = null;
+  //   this.props.removeProduct(editedUser);
+  //   const { id } = this.props.match.params;
+  //   this.props.loadProducts(id);
+  // };
 
   render() {
     const { city } = this.props;
     console.log("PRODUCTS", this.props.products);
-    console.log('from city page' ,this.props.location.pathname);
+    console.log("The state is ", this.state);
     if (!city) return "Loading";
     return (
       <div className="city-page container">
@@ -38,12 +44,12 @@ class CityPage extends Component {
           <p>{`${city.name}`}</p>
         </div>
         {/* <section className="search-bar"> */}
-        {/* <TagSearchBar /> */}
+        <TagSearchBar />
         {/* </section> */}
 
         <ProductList
           users={this.props.products}
-          onRemoveProduct={this.onRemoveProduct}
+          // onRemoveProduct={this.onRemoveProduct}
         />
         <section className="city-info">
           <p>{city.info}</p>

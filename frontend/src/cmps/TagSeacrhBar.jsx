@@ -20,7 +20,6 @@ export class TagSearchBar extends Component {
           placeholder={this.props.placeholder}
           size="huge"
           closeOnChange
-         
           name={this.props.name}
           value={this.props.value}
           options={this.props.options}
