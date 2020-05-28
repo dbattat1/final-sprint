@@ -15,11 +15,11 @@ async function getUsers(req, res) {
     res.send(users)
 }
 
-async function getUsersByCity(req, res) {
-    const users = await userService.queryByCity(req.params.id)
-    // logger.debug(users);
-    res.send(users)
-}
+// async function getUsersByCity(req, res) {
+//     const users = await userService.queryByCity(req.params.id)
+//     // logger.debug(users);
+//     res.send(users)
+// }
 
 async function getFavUsers(req, res){
     const users = await userService.queryFav(Object.values(req.query))
@@ -42,6 +42,6 @@ module.exports = {
     getUsers,
     deleteUser,
     updateUser,
-    getUsersByCity,
+    // getUsersByCity,
     getFavUsers
 }

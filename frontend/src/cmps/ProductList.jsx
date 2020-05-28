@@ -5,7 +5,6 @@ export function ProductList(props) {
     let usersWithProds = null;
     if (props.users) {
         usersWithProds = props.users.filter((user) => user.product)
-        console.log('filtered', usersWithProds);
     }
     
     return (
