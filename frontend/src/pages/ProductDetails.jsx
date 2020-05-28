@@ -4,6 +4,8 @@ import React from "react";
 import { connect } from "react-redux";
 import OrderForm from "../cmps/OrderForm.jsx";
 import ProductReview from "../cmps/ProductReview.jsx";
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import productService from "../services/productService.js";
@@ -47,11 +49,9 @@ class ProductDetails extends React.Component {
           </div>
           <div className="product-page-edit">
             <Link to={`/edit/${this.props.match.params.id}`}>
-              <button>✎</button>
+              <EditIcon />
             </Link>
-            <button onClick={this.onRemoveProduct}>
-              <i className="trash icon"></i>
-            </button>
+            <DeleteIcon onClick={this.onRemoveProduct} />
           </div>
         </section>
 

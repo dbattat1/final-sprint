@@ -29,6 +29,12 @@
         }
         .product-page-edit {
             grid-area: product-page-edit;
+            width: 12%;
+            display: flex;
+            align-items: center;
+            >* {
+                color: red;
+            }
         }
     }
 
