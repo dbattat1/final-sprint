@@ -22,7 +22,7 @@ export default class EventCalendar extends React.Component {
                  {/* <MuiPickersUtilsProvider >  */}
                     <DatePicker
                         autoOk
-                        orientation="landscape"
+                        orientation="vertical"
                         variant="static"
                         openTo="date"
                         value={this.state.date}

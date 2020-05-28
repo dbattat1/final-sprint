@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import { updateProduct } from '../actions/productActions.js';
 import productService from '../services/productService.js';
 import { Link } from 'react-router-dom';
-import { Button, Dropdown, Input, Form, TextArea } from 'semantic-ui-react'
+import { Button, Dropdown, Input, Form, TextArea } from 'semantic-ui-react';
+import Header from '../cmps/Header';
+
 
 class EditProduct extends Component {
     state = {
@@ -71,6 +73,8 @@ class EditProduct extends Component {
         const { title, price, description } = this.state;
         return (
             <div className="edit-product align-center justify-center column">
+            <Header pathname={this.props.location.pathname}/>  
+                
                 <h1>Product Edit/Add</h1>
                 <Form onSubmit={this.handleSubmit}>
                     <div>

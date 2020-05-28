@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { loadAllProducts} from "../actions/productActions.js";
 import { ProductList } from "../cmps/ProductList.jsx";
 import TagSearchBar from "../cmps/TagSeacrhBar";
+import Header from '../cmps/Header';
 
 class ProductGallery extends Component {
 
@@ -14,6 +15,8 @@ class ProductGallery extends Component {
     console.log("PRODUCTS", this.props.products);
     return (
       <div className="product-gallery container">
+      <Header pathname={this.props.location.pathname}/>  
+
         {/* <TagSearchBar /> */}
         // Another search bar
         <ProductList

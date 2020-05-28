@@ -18,6 +18,8 @@ import {
   logout,
   signup
 } from '../actions/userActions';
+import Header from '../cmps/Header';
+
 
 class SignupPage extends Component {
   state = {
@@ -60,6 +62,7 @@ class SignupPage extends Component {
   render() {
     return (
       <Container component="main" maxWidth="xs">
+      <Header pathname={this.props.location.pathname}/>  
         <CssBaseline />
         <div className="paper">
           <Avatar className="avatar">

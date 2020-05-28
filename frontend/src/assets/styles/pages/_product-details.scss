@@ -1,41 +1,83 @@
 .product-page {
-        
     display: grid;
-    grid-template-columns: 300px 2fr 1fr 300px;
+    grid-template-columns: auto 1320px auto;
     grid-template-rows: auto;
     grid-template-areas:
-    
-    ". product-page-title product-page-edit ."
-    ". product-page-imgs product-page-imgs ."
-    ". product-page-content order-form ."
-    ". product-page-reviews . .";
-    
+        ". product-page-header ."
+        ". product-page-imgs ."
+        ". product-page-main ."
+        ". product-page-reviews .";
+
     .product-page-header {
         grid-area: product-page-header;
-    }
-    .product-page-edit {
-        grid-area: product-page-edit;
-    }
-    .product-page-title {
-        grid-area: product-page-title;
-    }
-    .product-page-img-container {
-        grid-area: product-page-imgs;
-        img {
-            width: 250px
+        margin-top: 125px;
+
+        .product-page-title {
+            grid-area: product-page-title;
+        }
+        .product-page-edit {
+            grid-area: product-page-edit;
         }
     }
+
+    .product-page-img-container {
+        grid-area: product-page-imgs;
+        padding: 45px 0px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-gap: 5px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "prime-img  img-1  img-2"
+            "prime-img  img-3  img-4";
+
+        .prime-photo {
+            grid-area: prime-img;
+            width: 100%;
+            background-size: cover;
+        }
+        img {
+            width: 100%;
+            background-size: contain;
+        }
+        .prod-img-1 {
+            grid-area: img-1;
+        }
+        .prod-img-2 {
+            grid-area: img-2;
+        }
+        .prod-img-3 {
+            grid-area: img-3;
+        }
+        .prod-img-4 {
+            grid-area: img-4;
+        }
+    }
+
     .product-page-main {
         grid-area: product-page-main;
+        display: grid;
+        grid-template-columns:
+            2fr
+            1fr
+            1fr;
+        grid-gap: 5px;
+        grid-template-rows: auto;
+        grid-template-areas: "product-page-content . order-form";
+
+        .product-page-content {
+            grid-area: product-page-content;
+        }
+        .order-form {
+            grid-area: order-form;
+            display: flex;
+            position: sticky;
+            top: 10px;
+            justify-content: flex-end;
+        }
     }
-    .product-page-content {
-        grid-area: product-page-content;
-    }
-    .order-form {
-        grid-area: order-form;
-    }
+
     .product-page-reviews {
         grid-area: product-page-reviews;
     }
-      
 }

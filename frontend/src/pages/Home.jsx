@@ -5,6 +5,10 @@ import CityList from "../cmps/CityList";
 import { ProductList } from "../cmps/ProductList";
 import CitySearchBar from "../cmps/CitySearchBar";
 import productService from "../services/productService";
+import Header from '../cmps/Header';
+
+
+document.body.classList.add('home');
 
 class Home extends Component {
   state = {
@@ -67,9 +71,9 @@ class Home extends Component {
   };
 
   render() {
-    console.log("loggedin user is:", this.props.loggedInUser);
     return (
       <div className="home-page container">
+      <Header pathname={this.props.location.pathname}/>  
         <div className="hero hero-home-page" />
         <CitySearchBar />
         <main className="content-container">

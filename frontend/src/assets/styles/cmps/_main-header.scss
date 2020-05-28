@@ -6,6 +6,48 @@
     width: 100%;
     transition: 0.4s ease-out;
     padding: 0px 80px;
+    z-index: 100;
+    .logo {
+        color: #fff8f8;
+        font-size: rem(30px);
+        font-family: Alconica;
+    }
+    .header-nav {
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        .login {
+            // color:
+            color: #fff8f8;
+            font-size: rem(35px);
+        }
+        .logout {
+            color: #fff8f8;
+            font-size: rem(25px);
+            display: flex;
+            align-items: center;
+        }
+        .events-nav-icon {
+            color: #fff8f8;
+            font-size: rem(35px);
+        }
+    }
+}
+
+.main-header-regular {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: 0.4s ease-out;
+    padding: 0px 80px;
+    z-index: 100;
+    background: #636e72;
+    box-shadow: #dcdcdc 0 2px 10px;
+    height: 3.7em;
+
+
     .logo {
         color: #fff8f8;
         font-size: rem(30px);

@@ -7,14 +7,15 @@ import ProductReview from "../cmps/ProductReview.jsx";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import productService from "../services/productService.js";
+import Header from '../cmps/Header';
+
 
 class ProductDetails extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadProduct(id);
-    // const order = {_id: '5ecd031c2c59292e60700339', seller: 's1', buyer: 'b1', createdAt: 123, dueDate: 123, quantity: 1, totalPrice: 30}
-    // this.props.updateOrder(order)
   }
+
 
   onRemoveProduct = () => {
     const { id } = this.props.match.params;
@@ -31,11 +32,12 @@ class ProductDetails extends React.Component {
 
   render() {
     const { user } = this.props;
-    if (!user) return "Loading...";
+    if (!user) return <div style={{height:4000, width:"100%"}}>Loading...</div>
     const { product } = user;
 
     return (
       <div className="product-page">
+      <Header pathname={this.props.location.pathname}/>  
         <section className="product-page-header">
           <div className="product-page-title">
             <div>{product.title}</div>
@@ -53,11 +55,11 @@ class ProductDetails extends React.Component {
         </section>
 
         <div className="product-page-img-container">
-          <img alt="" className="prime-photo" src={`${product.imgUrls[0]}`} />
-          <img alt="" src={`${product.imgUrls[1]}`} />
-          <img alt="" src={`${product.imgUrls[2]}`} />
-          <img alt="" src={`${product.imgUrls[3]}`} />
-          <img alt="" src={`${product.imgUrls[4]}`} />
+          <div className="prime-photo" style={{backgroundImage: `url(${product.imgUrls[0]})`}}/>
+          <img className="prod-img-1" src={`${product.imgUrls[1]}`} />
+          <img className="prod-img-2" src={`${product.imgUrls[2]}`} />
+          <img className="prod-img-3" src={`${product.imgUrls[3]}`} />
+          <img className="prod-img-4" src={`${product.imgUrls[4]}`} />
         </div>
         <main className="product-page-main">
           <div className="product-page-content">
