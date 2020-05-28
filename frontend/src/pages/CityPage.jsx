@@ -3,29 +3,50 @@ import { connect } from "react-redux";
 import { loadCity } from "../actions/cityActions.js";
 import { loadProducts, updateProduct } from "../actions/productActions.js";
 import { ProductList } from "../cmps/ProductList.jsx";
-import TagSearchBar from "../cmps/TagSeacrhBar";
+import { TagSearchBar } from "../cmps/TagSeacrhBar";
 import { Link } from "react-router-dom";
 import Header from "../cmps/Header";
 
 class CityPage extends Component {
+  state = {
+    city: '',
+    category: ''
+  }
+
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadCity(id);
     this.props.loadProducts({city: id, category:''});
+    this.setState({city: id})
   }
 
-  onRemoveProduct = (user) => {
-    const editedUser = { ...user };
-    editedUser.product = null;
-    this.props.removeProduct(editedUser);
-    const { id } = this.props.match.params;
-    this.props.loadProducts(id);
-  };
+  handleChange = (e, {value, name}) => {
+
+    // console.log(value, name);
+    
+    // let { name, value } = e.target;
+    // value = e.target.type === 'number' ? parseInt(value) : value;
+    this.setState({ [name]: value }, () => {
+      let filterBy = this.state
+      this.props.loadProducts(filterBy);
+    });
+};
+
+
+  // onRemoveProduct = (user) => {
+  //   const editedUser = { ...user };
+  //   editedUser.product = null;
+  //   this.props.removeProduct(editedUser);
+  //   const { id } = this.props.match.params;
+  //   this.props.loadProducts(id);
+  // };
 
   render() {
     const { city } = this.props;
     console.log("PRODUCTS", this.props.products);
-    console.log('from city page' ,this.props.location.pathname);
+    console.log("The state is ", this.state);
+    const categories=[{ value: '', text: 'All experiences' },{ value: 'Culinary tour', text: 'Culinary tour' }, { value: 'Cooking workshop', text: 'Cooking workshop' }, 
+      { value: 'Dining experience', text: 'Dining experience' }];
     if (!city) return "Loading";
     return (
       <div className="city-page container">
@@ -38,12 +59,12 @@ class CityPage extends Component {
           <p>{`${city.name}`}</p>
         </div>
         {/* <section className="search-bar"> */}
-        {/* <TagSearchBar /> */}
+        <TagSearchBar options={categories} name={'category'} handleChange={this.handleChange} placeholder={'Choose category'} />
         {/* </section> */}
 
         <ProductList
           users={this.props.products}
-          onRemoveProduct={this.onRemoveProduct}
+          // onRemoveProduct={this.onRemoveProduct}
         />
         <section className="city-info">
           <p>{city.info}</p>

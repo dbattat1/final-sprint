@@ -41,7 +41,7 @@ export function ProductPreview(props) {
                 <div className="hosted-by">Hosted by</div>
                 <div className="host-name">{user.name.first}</div>
               </div>
-                <i class="angle double down icon"></i>
+                <i className="angle double down icon"></i>
             </div>
           </div>
         </div>

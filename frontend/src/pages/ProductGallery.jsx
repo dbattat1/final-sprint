@@ -14,10 +14,9 @@ class ProductGallery extends Component {
   }
   
   componentDidMount() {
-    // this.props.loadAllProducts();
-    // console.log(this.props.products);
     this.props.loadCities();
-    this.onChangeFilterBy();
+    let filterBy = this.state
+    this.props.loadProducts(filterBy);
   }
   
   getCitiesForDropDown() {
@@ -25,15 +24,6 @@ class ProductGallery extends Component {
     return options.concat(this.props.cities.map((city) => {
       return { value: city._id, text: city.name };
     }));
-  }
-  
-  onChangeFilterBy = () => {
-    // let filterBy = {city: '5ecac62d860e88985ad9510a', category: 'Culinary tour'}
-    // filterBy = {city: '', category: ''}
-    // filterBy = {}
-    // this.setState(prevState => ({...prevState, filterBy: filterBy }))
-    let filterBy = this.state
-    this.props.loadProducts(filterBy);
   }
 
   handleChange = (e, {value, name}) => {
