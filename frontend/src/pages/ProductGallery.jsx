@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { loadProducts} from "../actions/productActions.js";
+import { loadProducts } from "../actions/productActions.js";
 import { ProductList } from "../cmps/ProductList.jsx";
 import Header from '../cmps/Header';
 import { TagSearchBar } from "../cmps/TagSeacrhBar";
@@ -12,13 +12,13 @@ class ProductGallery extends Component {
     city: '',
     category: ''
   }
-  
+
   componentDidMount() {
     this.props.loadCities();
     let filterBy = this.state
     this.props.loadProducts(filterBy);
   }
-  
+
   getCitiesForDropDown() {
     let options = [{ value: '', text: 'All cities' }]
     return options.concat(this.props.cities.map((city) => {
@@ -26,34 +26,33 @@ class ProductGallery extends Component {
     }));
   }
 
-  handleChange = (e, {value, name}) => {
-
+  handleChange = (e, { value, name }) => {
     console.log(value, name);
-    
-    // let { name, value } = e.target;
-    // value = e.target.type === 'number' ? parseInt(value) : value;
     this.setState({ [name]: value }, () => {
       let filterBy = this.state
       this.props.loadProducts(filterBy);
     });
-};
+  };
 
   render() {
     console.log("PRODUCTS", this.props.products);
     console.log('the state is', this.state);
-    
-    const categories=[{ value: '', text: 'All experiences' },{ value: 'Culinary tour', text: 'Culinary tour' }, { value: 'Cooking workshop', text: 'Cooking workshop' }, 
-      { value: 'Dining experience', text: 'Dining experience' }];
+
+    const categories = [{ value: '', text: 'All Experiences' }, { value: 'Culinary tour', text: 'Culinary Tour' }, { value: 'Cooking orkshop', text: 'Cooking Workshop' },
+    { value: 'Dining experience', text: 'Dining Experience' }];
     return (
-      <div className="product-gallery container">
-      <Header pathname={this.props.location.pathname}/>  
+      <div>
+        <Header pathname={this.props.location.pathname} />
         <div className="tag-search container flex">
-        <TagSearchBar options={this.getCitiesForDropDown()} name={'city'} handleChange={this.handleChange} placeholder={'Choose city'} />
-        <TagSearchBar options={categories} name={'category'} handleChange={this.handleChange} placeholder={'Choose category'} />
+          <TagSearchBar options={this.getCitiesForDropDown()} name={'city'} handleChange={this.handleChange} placeholder={'Choose city'} />
+          <TagSearchBar options={categories} name={'category'} handleChange={this.handleChange} placeholder={'Choose category'} />
         </div>
-        <ProductList
-          users={this.props.products}
-        />
+          <h1 className="">Find Culinary Adventures, Meet Amazing Tastes With Our Worldwide Hosts </h1>
+        <div className="product-gallery-container flex justify-center">
+          <ProductList
+            users={this.props.products}
+          />
+        </div>
       </div>
     );
   }
@@ -66,9 +65,9 @@ const mapStateToProps = (state) => {
   };
 };
 const mapDispatchToProps = {
-    loadProducts,
-    loadCities,
-    // loadProductsByFilter
+  loadProducts,
+  loadCities,
+  // loadProductsByFilter
 };
 
 

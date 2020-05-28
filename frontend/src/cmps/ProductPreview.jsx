@@ -8,6 +8,7 @@ export function ProductPreview(props) {
   const rateArr = product.reviews.map((review) => review.rate);
   const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
 
+
   return (
     <li className="product-card">
       <Link to={`/user/${user._id}`}>
@@ -21,7 +22,7 @@ export function ProductPreview(props) {
           <div className="product-card-header">
             <div className="flex ">
               <div className="product-card-title">{product.title}</div>
-              {rate && <div className="product-card-rate"><span>★</span>{rate}</div>}
+              <div className="product-card-rate"><span>★</span>{rate}</div>
             </div>
             <div className="product-card-city">in {product.city.name}</div>
             {/* </div> */}
@@ -41,7 +42,7 @@ export function ProductPreview(props) {
                 <div className="hosted-by">Hosted by</div>
                 <div className="host-name">{user.name.first}</div>
               </div>
-                <i className="angle double down icon"></i>
+              <i className="angle double down icon"></i>
             </div>
           </div>
         </div>

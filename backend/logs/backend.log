@@ -674,6 +674,10 @@ Wed, 27 May 2020 18:19:01 GMT - Info - Server is running on port: 3030
 Thu, 28 May 2020 10:09:06 GMT - Info - Server is running on port: 3030
 >>>>>>> 4e5b200c23dae3f37b4826d9b58eaedc3cfa6dc5
 Thu, 28 May 2020 10:54:57 GMT - Info - Server is running on port: 3030
+<<<<<<< HEAD
 Thu, 28 May 2020 16:31:54 GMT - Debug - zoe@buy.com, zoe, 
 Thu, 28 May 2020 16:31:54 GMT - Debug - auth.service - signup with email: zoe@buy.com, firstName: zoe, lastName: zozo. imgUrl: 
 Thu, 28 May 2020 16:31:54 GMT - Debug - auth.route - new account created: {"email":"zoe@buy.com","password":"$2a$10$i2ktp4/vn7tcciMtoNRfvOyZOv9jaEjy.t5Zl03rpoecZWzGYwSGy","name":{"firstName":"zoe","lastName":"zozo"},"imgUrl":"","_id":"5ecfe77ac6158369b87d26ce"}
+=======
+Thu, 28 May 2020 14:02:55 GMT - Info - Server is running on port: 3030
+>>>>>>> ce5c7a2a547e82ba764bfe98dc28815cdad7ffcd
