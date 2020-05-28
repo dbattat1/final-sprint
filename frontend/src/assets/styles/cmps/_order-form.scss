@@ -1,0 +1,21 @@
+.order-form {
+    grid-area: order-form;
+    display: flex;
+    position: sticky;
+    top: 10px;
+    justify-content: flex-end;
+
+    .order-controller {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .order-quantity {
+            width: 50%;
+
+            input {
+                width: 70%;
+            }
+        }
+    }
+}
