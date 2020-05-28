@@ -64,12 +64,12 @@ export function loadProduct(userId) {
     };
   }
   
-  function setAllProducts(products) {
-    return {
-      type: 'SET_ALL_PRODUCTS',
-      products
-    };
-  }
+  // function setAllProducts(products) {
+  //   return {
+  //     type: 'SET_ALL_PRODUCTS',
+  //     products
+  //   };
+  // }
   function setProduct(product) {
     return {
       type: 'SET_PRODUCT',
