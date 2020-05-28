@@ -26,7 +26,7 @@ export function ProductPreview(props) {
           <div className="product-card-header">
             <div className="flex ">
               <div className="product-card-title">{product.title}</div>
-              <div className="product-card-rate">{hasReviews && <div><span>★</span> rate</div>}</div>
+              <div className="product-card-rate">{hasReviews && <p><span>★</span> rate</p>}</div>
             </div>
             <div className="product-card-city">in {product.city.name}</div>
             {/* </div> */}
