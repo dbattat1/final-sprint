@@ -14,7 +14,11 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
+    console.log('###', filterBy)
     const criteria = _buildCriteria(filterBy)
+    console.log('@@@', criteria);
+
+    
     const collection = await dbService.getCollection('user')
     try {
         const users = await collection.find(criteria).toArray();
@@ -112,12 +116,15 @@ async function add(user) {
 }
 
 function _buildCriteria(filterBy) {
-    const criteria = {};
-    if (filterBy.txt) {
-        criteria.username = filterBy.txt
+    let criteria = {};
+    if (filterBy.city ) {
+        criteria[`product.city._id`] = filterBy.city
     }
-    if (filterBy.minBalance) {
-        criteria.balance = { $gte: +filterBy.minBalance }
+    if (filterBy.category ) {
+        criteria[`product.category`] = filterBy.category 
+    }
+    if ( filterBy.category === 'undefined'|| filterBy.city === 'undefined'){
+        criteria = {}
     }
     return criteria;
 }
