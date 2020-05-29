@@ -9,7 +9,7 @@ export function OrderPreview(props) {
                 <Table.Row>
                     <Table.Cell>
                         <Header as='h4' image>
-                            <Image src={order.buyer.imgUrl} rounded size='mini' />
+                            <Image src={order.buyer.imgUrl} circular size='mini' />
                             <Header.Content>
                                 {order.buyer.name.first + ' ' + order.buyer.name.last}
                             </Header.Content>
@@ -17,7 +17,7 @@ export function OrderPreview(props) {
                     </Table.Cell>
                     <Table.Cell>
                         <Header as='h4' image>
-                            <Image src={order.seller.imgUrl} rounded size='mini' />
+                            <Image src={order.seller.imgUrl} circular size='mini' />
                             <Header.Content>
                                 {order.seller.name.first + ' ' + order.seller.name.last}
                             </Header.Content>
