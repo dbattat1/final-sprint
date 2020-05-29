@@ -17,7 +17,7 @@
         font-family: "Teko", sans-serif;
         color: white;
         font-size: 4em;
-        text-shadow: -1px 1px 20px rgba(39,33,33,0.89);
+        text-shadow: -1px 1px 20px rgba(39, 33, 33, 0.89);
     }
     .product-container-city {
         margin-left: 15px;
@@ -25,13 +25,54 @@
 
     .city-info {
         display: flex;
-        justify-content: center;
-        padding: 20px 50px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+
+        // padding: 20px 50px;
+
+        .city-txt {
+            line-height: 2.9rem;
+            font-size: 25px;
+            padding: 65px 20vw 65px 20vw;
+            .city-about {
+                font-size: 40px;
+                color: #423f3f;
+            }
+        }
 
         .city-imgs-container {
-            img {
-                width: 400px;
-                height: 300px;
+            display: grid;
+            height: 450px;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
+            width: 85vw;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "img-1  img-1  img-1 img-2"
+                "img-1  img-1  img-1 img-2"
+                "img-3  img-3  img-4 img-4"
+                "img-3  img-3  img-4 img-4";
+            > * {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .img-1 {
+                grid-area: img-1;
+            }
+            .img-2 {
+                grid-area: img-2;
+            }
+            .img-3 {
+                grid-area: img-3;
+            }
+            .img-4 {
+                grid-area: img-4;
+            }
+            .img-5 {
+                grid-area: img-5;
             }
         }
     }
@@ -65,4 +106,67 @@
     //     minmax(20px, 1fr)
     //     ;
     // }
+}
+
+.city-attraction-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .top-attraction-header {
+        font-size: 36px;
+        color: #423f3f;
+    }
+    .city-attractions {
+        display: grid;
+        grid-gap: 15px;
+        width: 800px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "card-1  card-2"
+            "card-3  card-4";
+        .attraction-card {
+            width: 100%;
+            .attraction-name {
+                font-size: 1.6rem;
+                color: #404040;
+            }
+            .attraction-description {
+                font-size: 17px;
+                color: #606060;
+            }
+        }
+        .card-1 {
+            grid-area: card-1;
+        }
+        .card-2 {
+            grid-area: card-2;
+        }
+        .card-3 {
+            grid-area: card-3;
+        }
+        .card-4 {
+            grid-area: card-4;
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            border-radius: 5px;
+        }
+    }
+}
+@media screen and (max-width: 820px) {
+    .city-attraction-wrapper {
+        .city-attractions {
+            display: grid;
+            grid-gap: 15px;
+            width: 80vw;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "card-1"
+                "card-2"
+                "card-3"
+                "card-4";
+        }
+    }
 }

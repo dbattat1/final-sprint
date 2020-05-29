@@ -24,6 +24,7 @@ export class TagSearchBar extends Component {
           value={this.props.value}
           options={this.props.options}
           onChange={this.props.handleChange}
+          color={'rgba(76, 68, 68, 0.87)'}
         />
       </div>
     );
