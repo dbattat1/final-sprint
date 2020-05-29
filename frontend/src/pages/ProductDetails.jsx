@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import productService from "../services/productService.js";
 import Header from "../cmps/Header";
+import { Spinner } from 'react-bootstrap'
+
 
 class ProductDetails extends React.Component {
   componentDidMount() {
@@ -33,7 +35,10 @@ class ProductDetails extends React.Component {
   render() {
     const { user } = this.props;
     if (!user)
-      return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
+      // return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
+      return <Spinner animation="border" role="status">
+      <span className="sr-only">Loading...</span>
+    </Spinner>;
     const { product } = user;
     const hasReviews = !(!product.reviews || product.reviews.length === 0);
     

@@ -12,7 +12,7 @@ import LoginPage from './pages/LoginPage.jsx';
 import SignupPage from './pages/SignupPage.jsx';
 import ProductGallery from './pages/ProductGallery.jsx'
 import UserOrders from './pages/UserOrders';
-import UserProfile from './pages/UserOrders';
+import UserProfile from './pages/UserProfile';
 
 const history = createBrowserHistory();
 history.listen((location, action) => {

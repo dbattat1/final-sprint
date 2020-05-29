@@ -7,10 +7,10 @@ export function ProductPreview(props) {
   const reducer = (acc, curr) => acc + curr;
 
   const hasReviews = !(!product.reviews || product.reviews.length === 0);
-
+  let rate;
   if (hasReviews) {
     const rateArr = product.reviews.map((review) => review.rate);
-    const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
+    rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
   }
 
   return (
@@ -26,7 +26,7 @@ export function ProductPreview(props) {
           <div className="product-card-header">
             <div className="flex ">
               <div className="product-card-title">{product.title}</div>
-              <div className="product-card-rate">{hasReviews && <div><span>★</span> rate</div>}</div>
+              <div className="product-card-rate">{hasReviews && <React.Fragment><span>★</span> {rate}</React.Fragment>}</div>
             </div>
             <div className="product-card-city">in {product.city.name}</div>
             {/* </div> */}
