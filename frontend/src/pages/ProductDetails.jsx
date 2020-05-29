@@ -44,7 +44,6 @@ class ProductDetails extends React.Component {
     
     if (hasReviews) {
       const reducer = (acc, curr) => acc + curr;
-      
       const rateArr = product.reviews.map((review) => review.rate);
       const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
     }
