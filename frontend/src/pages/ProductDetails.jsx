@@ -35,10 +35,11 @@ class ProductDetails extends React.Component {
     if (!user)
       return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
     const { product } = user;
-    const reducer = (acc, curr) => acc + curr;
     const hasReviews = !(!product.reviews || product.reviews.length === 0);
-     
+    
     if (hasReviews) {
+      const reducer = (acc, curr) => acc + curr;
+      
       const rateArr = product.reviews.map((review) => review.rate);
       const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
     }
@@ -47,7 +48,7 @@ class ProductDetails extends React.Component {
         <Header pathname={this.props.location.pathname} />
         <section className="product-page-header">
           <div className="product-page-title">
-            <div>{product.title} &nbsp; &nbsp; {hasReviews && <div><span>★</span> rate</div>}</div>
+            <div>{product.title} &nbsp; &nbsp; {hasReviews && <div><span>★</span>{rate}</div>}</div>
             <div className="product-page-city">{product.city.name}</div>
           </div>
           <div className="product-page-edit">
