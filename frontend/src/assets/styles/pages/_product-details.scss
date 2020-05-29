@@ -8,16 +8,26 @@
         ". product-page-main ."
         ". product-page-reviews .";
 
+    .product-page-spacing-vert {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            border-right: 2px solid #636e72;
+            height: 90%;
+        }
+    }
+
     .product-page-header {
         grid-area: product-page-header;
         margin-top: 125px;
         display: flex;
         justify-content: space-between;
-        padding: 0px 108px 0px 90px;;
+        padding: 0px 108px 0px 90px;
 
         .product-page-title {
             grid-area: product-page-title;
-            font-family: Merry;
+            font-family: Merry-Bold;
             font-size: rem(33px);
             line-height: 1.5em;
             span {
@@ -26,6 +36,7 @@
             }
             .product-page-city {
                 font-size: rem(23px);
+                font-family: Merry-Italic;
             }
         }
         .product-page-edit {
@@ -60,7 +71,7 @@
 
     .product-page-img-container {
         grid-area: product-page-imgs;
-        padding: 12px 0px;
+        padding: 0px 0px 60px;
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-gap: 5px;
@@ -115,8 +126,41 @@
 
         .product-page-content {
             grid-area: product-page-content;
+            border-bottom: 2px solid #636e72;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 0px;
+            .product-page-prod-details {
+                height: 33%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between
+            }
+
+            .product-page-user-details {
+                display: flex;
+                align-items: center;
+                .product-page-user-img {
+                    height: 120px;
+                    background-size: cover;
+                    background-position: center;
+                    width: 120px;
+                    border-radius: 28%;
+                }
+                .product-page-user-info {
+                    margin-left: 30px;
+                    line-height: 2em;
+                    .product-page-user-name {
+                        font-family: Merry-Bold;
+                        font-size: 1.4em;
+                    }
+                    .product-page-user-bio {
+                        font-family: Merry-Italic;
+                    }
+                }
+            }
         }
-      
     }
 
     .product-page-reviews {

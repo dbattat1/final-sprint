@@ -4,14 +4,13 @@ import React from "react";
 import { connect } from "react-redux";
 import OrderForm from "../cmps/OrderForm.jsx";
 import ProductReview from "../cmps/ProductReview.jsx";
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import productService from "../services/productService.js";
 import Header from "../cmps/Header";
-import { Spinner } from 'react-bootstrap'
-
+import { Spinner } from "react-bootstrap";
 
 class ProductDetails extends React.Component {
   componentDidMount() {
@@ -36,30 +35,43 @@ class ProductDetails extends React.Component {
     const { user } = this.props;
     if (!user)
       // return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
-      return <Spinner animation="border" role="status">
-      <span className="sr-only">Loading...</span>
-    </Spinner>;
+      return (
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      );
     const { product } = user;
     const hasReviews = !(!product.reviews || product.reviews.length === 0);
-    
+
+    let rate;
     if (hasReviews) {
       const reducer = (acc, curr) => acc + curr;
       const rateArr = product.reviews.map((review) => review.rate);
-      const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
+      rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
     }
     return (
       <div className="product-page">
         <Header pathname={this.props.location.pathname} />
         <section className="product-page-header">
           <div className="product-page-title">
-            <div>{product.title} &nbsp; &nbsp; {hasReviews && <div><span>★</span>{rate}</div>}</div>
+            <div>
+              {product.title} &nbsp; &nbsp;{" "}
+              {hasReviews && (
+                <React.Fragment>
+                  <span>★</span> {rate}
+                </React.Fragment>
+              )}
+            </div>
             <div className="product-page-city">{product.city.name}</div>
           </div>
           <div className="product-page-edit">
             <Link to={`/edit/${this.props.match.params.id}`}>
               <EditIcon className="product-page-edit-icon" />
             </Link>
-            <DeleteIcon className="product-page-edit-icon" onClick={this.onRemoveProduct} />
+            <DeleteIcon
+              className="product-page-edit-icon"
+              onClick={this.onRemoveProduct}
+            />
           </div>
         </section>
 
@@ -90,14 +102,25 @@ class ProductDetails extends React.Component {
         </div>
         <main className="product-page-main">
           <div className="product-page-content">
-            <h2>Lorem ipsum dolor sit amet, consectetur</h2>
-            <p>
-              {product.description}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
-            </p>
+            <div className="product-page-prod-details">
+              <h2>{product.description}</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
+            <div className="product-page-user-details">
+              <div className="product-page-user-img" style={{ backgroundImage: `url(${user.imgUrl})` }}></div>
+              <div className="product-page-user-info">
+                <div className="product-page-user-name">{user.name.first} {user.name.last}</div>
+                <div className="product-page-user-bio">"{user.bio}"</div>
+              </div>
+            </div>
+          </div>
+          <div className="product-page-spacing-vert">
+            <p>&nbsp; &nbsp;</p>
           </div>
           <div className="order-form">
             <OrderForm seller={user} />
