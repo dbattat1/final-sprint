@@ -142,10 +142,12 @@
                 display: flex;
                 align-items: center;
                 .product-page-user-img {
-                    height: 120px;
+                    max-width: 120px;
+                    max-height: 120px;
+                    min-width: 120px;
+                    min-height: 120px;
                     background-size: cover;
                     background-position: center;
-                    width: 120px;
                     border-radius: 28%;
                 }
                 .product-page-user-info {
