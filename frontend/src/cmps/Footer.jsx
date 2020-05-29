@@ -11,8 +11,9 @@ class Footer extends React.Component {
     render() {
         return (
             // <div className="main-footer">
-            <div  className= {this.props.history.location.pathname === "/" ? "main-footer" : "main-footer-test"}>
-                <h1 className="logo">Heat</h1>
+            // <div  className= {this.props.history.location.pathname === "/" ? "main-footer" : "main-footer-test"}>
+            <div  className="main-footer">
+                <div className="logo">HEAT</div>
                 <small>©2020 all rights reserved</small>
             </div>
         );
