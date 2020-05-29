@@ -29,8 +29,8 @@ class UserProfile extends React.Component {
     return (
       <div className="user-profile-container">
         <Header pathname={this.props.location.pathname} />
-        <List className="profile-menu">
-          <ListItem>
+        <List component="nav" className="profile-menu">
+          <ListItem button>
             <ListItemAvatar>
               <Avatar>
                 <ImageIcon />
@@ -39,7 +39,7 @@ class UserProfile extends React.Component {
             <ListItemText primary="Photos" secondary="Jan 9, 2014" />
           </ListItem>
           <Divider variant="inset" component="li" />
-          <ListItem>
+          <ListItem button>
             <ListItemAvatar>
               <Avatar>
                 <WorkIcon />
@@ -48,7 +48,7 @@ class UserProfile extends React.Component {
             <ListItemText primary="Work" secondary="Jan 7, 2014" />
           </ListItem>
           <Divider variant="inset" component="li" />
-          <ListItem>
+          <ListItem button>
             <ListItemAvatar>
               <Avatar>
                 <BeachAccessIcon />
