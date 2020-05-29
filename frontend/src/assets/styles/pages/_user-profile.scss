@@ -1,5 +1,13 @@
-.profile-menu
-{
-    width: 100%;
-    max-width: 360px;
+.user-profile-container {
+    padding-top: 60px;
+    width: 88vw;
+    margin: 0 auto;
+    box-sizing: unset;
+    .profile-menu {
+        width: 100%;
+        max-width: 360px;
+    }
+    .profile-main-content {
+        padding-left: 20px
+    }
 }

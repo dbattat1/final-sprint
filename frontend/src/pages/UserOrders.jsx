@@ -33,16 +33,11 @@ class UserOrders extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Header pathname={this.props.location.pathname} />
-
-        <div className="user-orders-container">
-          <p>Orders I sold</p>
-          <OrderList orders={this.state.ordersBySeller} />
-          <p>Orders I bought</p>
-          <OrderList orders={this.state.ordersByBuyer} />
-        </div>
-      </React.Fragment>
+      <div className="user-orders-container">
+        {/* <Header pathname={this.props.location.pathname} /> */}  
+        {this.props.ordersTypes === 'seller' && <OrderList orders={this.state.ordersBySeller} />}
+        {this.props.ordersTypes === 'buyer' && <OrderList orders={this.state.ordersByBuyer} />}
+      </div>
     );
   }
 }

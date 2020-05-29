@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import EventCalendar from "./EventCalendar";
 import { addOrder } from "../actions/orderActions";
+// import Swal from "sweetalert2";
 
 class OrderForm extends React.Component {
   state = {
     dueDate: Date.now(),
     quantity: 1,
     totalPrice: 0,
-    msg: "",
   };
   componentDidMount() {
     let totalPrice = this.state.quantity * this.props.seller.product.price;
@@ -40,12 +40,12 @@ class OrderForm extends React.Component {
     newOrder.seller = seller;
     newOrder.buyer = buyer;
     this.props.addOrder(newOrder);
-    this.setState({
-      msg: "Booked!",
-      quantity: 1,
-      totalPrice: 1 * this.props.seller.product.price,
-      dueDate: Date.now(),
-    });
+    // Swal.fire('Booked! Have fun :)');
+    // this.setState({
+    //   quantity: 1,
+    //   totalPrice: 1 * this.props.seller.product.price,
+    //   dueDate: Date.now(),
+    // });
 
     console.log("orderd!", newOrder);
   };
@@ -76,6 +76,7 @@ class OrderForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit} >
           <EventCalendar onDateChange={this.onDateChange} />
+          <div className="pax-query">How many people?</div>
           <div className="order-controller">
             <div className="order-quantity">
               <button type="button" onClick={() => this.changeQuantity(-1)}>-</button>
@@ -83,12 +84,11 @@ class OrderForm extends React.Component {
               <button type="button" onClick={() => this.changeQuantity(1)}>+</button>
             </div>
             <div className="order-final">
-              <div>Total Price: ${totalPrice}</div>
-              <button>Order</button>
+              <div>${totalPrice}</div>
+              <button>Book Now</button>
             </div>
           </div>
         </form>
-        {this.state.msg && <div>{this.state.msg}</div>}
       </div >
     )
   }

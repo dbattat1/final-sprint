@@ -51,7 +51,7 @@ class Header extends React.Component {
             </div>
           )}
           {this.props.loggedInUser && (
-            <Link to="/order">
+            <Link to="/profile">
               <ListAltIcon className="order-icon-nav" />
             </Link>
           )}

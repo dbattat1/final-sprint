@@ -44,11 +44,11 @@ class ProductGallery extends Component {
       <div>
         <Header pathname={this.props.location.pathname} />
         <div className="product-gallery-container">
+          <h1 className="">Find Culinary Adventures, Meet Amazing Tastes With Our Worldwide Hosts </h1>
           <div className="tag-search container flex">
             <TagSearchBar options={this.getCitiesForDropDown()} name={'city'} handleChange={this.handleChange} placeholder={'Choose city'} />
             <TagSearchBar options={categories} name={'category'} handleChange={this.handleChange} placeholder={'Choose category'} />
           </div>
-          <h1 className="">Find Culinary Adventures, Meet Amazing Tastes With Our Worldwide Hosts </h1>
           <div className="product-gallery-content flex justify-center">
             <ProductList
               users={this.props.products}
