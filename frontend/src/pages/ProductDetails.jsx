@@ -42,17 +42,18 @@ class ProductDetails extends React.Component {
     const { product } = user;
     const reducer = (acc, curr) => acc + curr;
     const hasReviews = !(!product.reviews || product.reviews.length === 0);
-     
+    
+    let rate; 
     if (hasReviews) {
       const rateArr = product.reviews.map((review) => review.rate);
-      const rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
+      rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
     }
     return (
       <div className="product-page">
         <Header pathname={this.props.location.pathname} />
         <section className="product-page-header">
           <div className="product-page-title">
-            <div>{product.title} &nbsp; &nbsp; {hasReviews && <div><span>★</span> rate</div>}</div>
+            <div>{product.title} &nbsp; &nbsp; {hasReviews && <React.Fragment><span>★</span> {rate}</React.Fragment>}</div>
             <div className="product-page-city">{product.city.name}</div>
           </div>
           <div className="product-page-edit">

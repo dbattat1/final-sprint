@@ -9,16 +9,12 @@ module.exports = {
     remove,
     update,
     add,
-    queryByCity,
+    // queryByCity,
     queryFav
 }
 
 async function query(filterBy = {}) {
-    console.log('###', filterBy)
     const criteria = _buildCriteria(filterBy)
-    console.log('@@@', criteria);
-
-    
     const collection = await dbService.getCollection('user')
     try {
         const users = await collection.find(criteria).toArray();
@@ -29,19 +25,19 @@ async function query(filterBy = {}) {
     }
 }
 
-async function queryByCity(cityId) {
-    // const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection('user')
-    try {
-        const users = await collection.find({ "product.city._id": cityId }).toArray();
+// async function queryByCity(cityId) {
+//     // const criteria = _buildCriteria(filterBy)
+//     const collection = await dbService.getCollection('user')
+//     try {
+//         const users = await collection.find({ "product.city._id": cityId }).toArray();
         
-        // console.log('from queryByCity at user.service', users);
-        return users
-    } catch (err) {
-        console.log('ERROR: cannot find users')
-        throw err;
-    }
-}
+//         // console.log('from queryByCity at user.service', users);
+//         return users
+//     } catch (err) {
+//         console.log('ERROR: cannot find users')
+//         throw err;
+//     }
+// }
 
 async function queryFav(favs) {
     // const criteria = _buildCriteria(filterBy)
