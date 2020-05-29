@@ -1,5 +1,6 @@
 import React from 'react'
 import { OrderPreview } from './OrderPreview.jsx';
+
 import { Header, Image, Table } from 'semantic-ui-react'
 
 
@@ -12,9 +13,9 @@ export default function OrderList(props) {
                     <Table.HeaderCell>Seller</Table.HeaderCell>
                     <Table.HeaderCell>Status</Table.HeaderCell>
                     <Table.HeaderCell>Due Date</Table.HeaderCell>
-                    <Table.HeaderCell>Quantity</Table.HeaderCell>
-                    <Table.HeaderCell>Total Amount</Table.HeaderCell>
-                    <Table.HeaderCell>Created At</Table.HeaderCell>
+                    <Table.HeaderCell>Participants</Table.HeaderCell>
+                    <Table.HeaderCell>Total Price</Table.HeaderCell>
+                    <Table.HeaderCell>Ordered At</Table.HeaderCell>
                 </Table.Row>
             </Table.Header>
             <Table.Body>

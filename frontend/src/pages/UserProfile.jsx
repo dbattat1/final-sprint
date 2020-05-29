@@ -10,13 +10,20 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import ImageIcon from '@material-ui/icons/Image';
-import WorkIcon from '@material-ui/icons/Work';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 import Divider from '@material-ui/core/Divider';
+import MessageIcon from '@material-ui/icons/Message';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import UserOrders from './UserOrders';
+import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
+import PersonalDetails from './PersonalDetails.jsx'
 
 class UserProfile extends React.Component {
-  state = {};
+  state = {
+    isOrder: '',
+    isPersonal: 'tt',
+    isMesseges: ''
+  };
 
   componentDidMount() { }
   useStyles = makeStyles((theme) => ({
@@ -25,40 +32,62 @@ class UserProfile extends React.Component {
     },
   }));
 
+  openOrders = (tab) => {
+    this.setState({isPersonal: '', isMesseges: ''})
+    if (!tab || tab === 'buyer') {
+      this.setState({ isOrder: 'buyer' })
+    }
+    else this.setState({ isOrder: 'seller' })
+  }
+
   render() {
     return (
-      <div className="user-profile-container">
+      <div>
         <Header pathname={this.props.location.pathname} />
-        <List className="profile-menu">
-          <ListItem>
-            <ListItemAvatar>
-              <Avatar>
-                <ImageIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary="Photos" secondary="Jan 9, 2014" />
-          </ListItem>
-          <Divider variant="inset" component="li" />
-          <ListItem>
-            <ListItemAvatar>
-              <Avatar>
-                <WorkIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary="Work" secondary="Jan 7, 2014" />
-          </ListItem>
-          <Divider variant="inset" component="li" />
-          <ListItem>
-            <ListItemAvatar>
-              <Avatar>
-                <BeachAccessIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary="Vacation" secondary="July 20, 2014" />
-          </ListItem>
-        </List>
-
-      </div>
+        <div className="user-profile-container flex">
+          <List component="nav" className="profile-menu">
+            <ListItem button>
+              <ListItemAvatar>
+                <Avatar>
+                  <AccountCircleIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary="Profile" />
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem button>
+              <ListItemAvatar>
+                <Avatar>
+                  <LocalGroceryStoreIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary="Orders" onClick={this.openOrders} />
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem button>
+              <ListItemAvatar>
+                <Avatar>
+                  <MessageIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary="Messeges" />
+            </ListItem>
+          </List>
+          <div className="profile-main-content">
+            {this.state.isOrder && <div>
+              <div className="ui secondary pointing menu">
+                <div onClick={() => this.openOrders('buyer')}
+                  className={`item ${this.state.isOrder === "buyer" ? "active" : ''}`} >My Orders</div>
+                <div onClick={() => this.openOrders('seller')} className={`item ${this.state.isOrder === "seller" ? "active" : ''}`}>My Sales</div>
+              </div>
+              <div className="ui segment">
+                {<UserOrders ordersTypes={this.state.isOrder} />}
+              </div>
+            </div>}
+            {this.state.isPersonal && <PersonalDetails />}
+          </div>
+        </div>
+      </div >
     );
   }
 }
