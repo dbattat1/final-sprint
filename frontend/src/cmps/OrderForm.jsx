@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import EventCalendar from "./EventCalendar";
 import { addOrder } from "../actions/orderActions";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 class OrderForm extends React.Component {
   state = {
@@ -40,12 +40,12 @@ class OrderForm extends React.Component {
     newOrder.seller = seller;
     newOrder.buyer = buyer;
     this.props.addOrder(newOrder);
-    // Swal.fire('Booked! Have fun :)');
-    // this.setState({
-    //   quantity: 1,
-    //   totalPrice: 1 * this.props.seller.product.price,
-    //   dueDate: Date.now(),
-    // });
+    Swal.fire('Booked! Have fun :)');
+    this.setState({
+      quantity: 1,
+      totalPrice: 1 * this.props.seller.product.price,
+      dueDate: Date.now(),
+    });
 
     console.log("orderd!", newOrder);
   };
