@@ -8,9 +8,8 @@ import ProductDetails from './pages/ProductDetails';
 import Header from './cmps/Header.jsx';
 import  Footer  from './cmps/Footer.jsx';
 import EditProduct from './pages/EditProduct.jsx';
-import LoginPage from './pages/LoginPage.jsx';
-import SignupPage from './pages/SignupPage.jsx';
-import ProductGallery from './pages/ProductGallery.jsx'
+import ProductGallery from './pages/ProductGallery.jsx';
+import AuthPage from './pages/AuthPage';
 // import UserOrders from './pages/UserOrders';
 import UserProfile from './pages/UserProfile';
 
@@ -25,9 +24,9 @@ function App() {
       
         {/* <Header /> */}
         <Switch>
-          <Route path="/login" component={LoginPage} exact />
+          <Route path="/auth" component={AuthPage} exact />
           <Route path="/gallery" component={ProductGallery} exact />
-          <Route path="/signup" component={SignupPage} exact />
+          <Route path="/auth/signup" component={AuthPage} exact />
           <Route path="/profile" component={UserProfile} exact />
           {/* <Route path='/order/:id?' component={UserOrders} exact /> */}
           <Route path='/edit/:id?' component={EditProduct} exact />

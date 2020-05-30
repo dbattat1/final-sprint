@@ -5,30 +5,32 @@
     align-items: center;
     .avatar {
         margin: 1px;
-        background-color: $clr1;
+        background-color: rgb(72, 72, 72);
     }
 }
 .form {
     width: 100%;
     margin-top: 3px;
     .MuiInputLabel-root.Mui-focused {
-        color: $clr1;
+        color: white;
     }
     .MuiOutlinedInput-root.Mui-focused {
         .MuiOutlinedInput-notchedOutline {
-            border-color: $clr1;
+            border-color: rgb(72, 72, 72);
         }
     }
+
     .no-outlined {
         input {
-            outline-color: $clr1;
+            outline-color: rgb(72, 72, 72);
         }
     }
     .form-outline {
-        background-color: $clr1;
+        background-color: rgb(72, 72, 72);
     }
     .submit {
         margin: 3px 0 2px;
-        background-color: $clr1;
+        background-color: rgb(72, 72, 72);
+        color: white;
     }
 }

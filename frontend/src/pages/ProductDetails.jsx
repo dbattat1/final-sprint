@@ -3,7 +3,7 @@ import { addOrder, updateOrder } from "../actions/orderActions";
 import React from "react";
 import { connect } from "react-redux";
 import OrderForm from "../cmps/OrderForm.jsx";
-import ProductReview from "../cmps/ProductReview.jsx";
+// import ProductReview from "../cmps/ProductReview.jsx";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
@@ -136,7 +136,7 @@ class ProductDetails extends React.Component {
           </div>
         </main>
         <section className="product-page-reviews">
-          <ProductReview id={this.props.match.params.id} />
+          {/* <ProductReview id={this.props.match.params.id} /> */}
         </section>
       </div>
     );

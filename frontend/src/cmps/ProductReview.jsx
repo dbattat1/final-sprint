@@ -6,14 +6,14 @@ import { ReviewAdd } from "../cmps/ReviewAdd.jsx";
 import Button from "@material-ui/core/Button";
 
 class ProductReview extends Component {
-  state = {
-    reviews: [],
-    isAddReviewOn: false,
-    // loggedInUser: null
-  };
-  componentDidMount() {
-    this.loadUser();
-  }
+    state = {
+        reviews: [],
+        isAddReviewOn: false,
+        // loggedInUser: null   
+    }
+    componentDidMount() {
+        this.loadUser();
+    }
 
   loadUser() {
     const { id } = this.props;
