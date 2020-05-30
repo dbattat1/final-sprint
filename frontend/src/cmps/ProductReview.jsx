@@ -10,7 +10,7 @@ class ProductReview extends Component {
     state = {
         reviews: [],
         isAddReviewOn: false,
-        // loggedInUser: null 
+        // loggedInUser: null   
     }
     componentDidMount() {
         this.loadUser();
