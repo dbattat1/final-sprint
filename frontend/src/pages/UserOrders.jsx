@@ -4,17 +4,21 @@ import orderService from "../services/orderService";
 import { loadOrders } from "../actions/orderActions.js";
 import OrderList from "../cmps/OrderList.jsx";
 import Header from "../cmps/Header";
+import SocketService from "../services/SocketService";
 
 class UserOrders extends React.Component {
   state = {
     ordersBySeller: null,
     ordersByBuyer: null,
+    ordersTypes: 'buyer'
   };
 
   componentDidMount() {
     // this.props.loadOrders();
     // this.setState({ rating: this.props.orders })
+    SocketService.setup();
     this.loadOrders();
+    SocketService.on('setOrders', this.loadOrders);
   }
 
   loadOrders = () => {
@@ -31,12 +35,24 @@ class UserOrders extends React.Component {
     }
   };
 
+  openOrders = (tab) => {
+    if (!tab || tab === 'buyer') {
+      this.setState({ ordersTypes: 'buyer' })
+    }
+    else this.setState({ ordersTypes: 'seller' })
+  }
+
   render() {
     return (
       <div className="user-orders-container">
-        {/* <Header pathname={this.props.location.pathname} /> */}  
-        {this.props.ordersTypes === 'seller' && <OrderList orders={this.state.ordersBySeller} />}
-        {this.props.ordersTypes === 'buyer' && <OrderList orders={this.state.ordersByBuyer} />}
+        {/* <Header pathname={this.props.location.pathname} /> */}
+        <div className="ui secondary pointing menu">
+          <div onClick={() => this.openOrders('buyer')}
+            className={`item ${this.state.isOrder === "buyer" ? "active" : ''}`} >My Orders</div>
+          <div onClick={() => this.openOrders('seller')} className={`item ${this.state.isOrder === "seller" ? "active" : ''}`}>My Sales</div>
+        </div>
+        {this.state.ordersTypes === 'seller' && <OrderList orders={this.state.ordersBySeller} />}
+        {this.state.ordersTypes === 'buyer' && <OrderList orders={this.state.ordersByBuyer} />}
       </div>
     );
   }

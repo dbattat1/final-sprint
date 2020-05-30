@@ -17,30 +17,30 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import UserOrders from './UserOrders';
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import PersonalDetails from './PersonalDetails.jsx'
+import MessageCenter from './MessageCenter.jsx'
 
 class UserProfile extends React.Component {
   state = {
-    isOrder: '',
-    isPersonal: 'tt',
-    isMesseges: ''
+    currTab: 'personal'
   };
 
-  componentDidMount() { }
+  componentDidMount() {
+
+  }
   useStyles = makeStyles((theme) => ({
     root: {
       backgroundColor: theme.palette.background.paper,
     },
+
   }));
 
-  openOrders = (tab) => {
-    this.setState({isPersonal: '', isMesseges: ''})
-    if (!tab || tab === 'buyer') {
-      this.setState({ isOrder: 'buyer' })
-    }
-    else this.setState({ isOrder: 'seller' })
+  openTab = (tab) => {
+    this.setState({ currTab: tab }, () => console.log('state', this.state)
+    );
   }
 
   render() {
+    const { currTab } = this.state
     return (
       <div>
         <Header pathname={this.props.location.pathname} />
@@ -52,7 +52,7 @@ class UserProfile extends React.Component {
                   <AccountCircleIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Profile" />
+              <ListItemText primary="Profile" onClick={() => this.openTab('personal')} />
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem button>
@@ -61,7 +61,7 @@ class UserProfile extends React.Component {
                   <LocalGroceryStoreIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Orders" onClick={this.openOrders} />
+              <ListItemText primary="Orders" onClick={() => this.openTab('order')} />
             </ListItem>
             <Divider variant="inset" component="li" />
             <ListItem button>
@@ -70,21 +70,15 @@ class UserProfile extends React.Component {
                   <MessageIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Messeges" />
+              <ListItemText primary="Messeges" onClick={() => this.openTab('messeges')} />
             </ListItem>
           </List>
           <div className="profile-main-content">
-            {this.state.isOrder && <div>
-              <div className="ui secondary pointing menu">
-                <div onClick={() => this.openOrders('buyer')}
-                  className={`item ${this.state.isOrder === "buyer" ? "active" : ''}`} >My Orders</div>
-                <div onClick={() => this.openOrders('seller')} className={`item ${this.state.isOrder === "seller" ? "active" : ''}`}>My Sales</div>
-              </div>
-              <div className="ui segment">
-                {<UserOrders ordersTypes={this.state.isOrder} />}
-              </div>
-            </div>}
-            {this.state.isPersonal && <PersonalDetails />}
+            <div className="ui segment flex">
+              {currTab === 'order' && <UserOrders />}
+              {currTab === 'personal' && <PersonalDetails />}
+              {currTab === 'messeges' && <MessageCenter />}
+            </div>
           </div>
         </div>
       </div >

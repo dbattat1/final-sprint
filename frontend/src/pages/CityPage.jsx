@@ -44,8 +44,6 @@ class CityPage extends Component {
 
   render() {
     const { city } = this.props;
-    // console.log("PRODUCTS", this.props.products);
-    // console.log("The state is ", this.state);
     const categories = [{ value: '', text: 'All experiences' }, { value: 'Culinary tour', text: 'Culinary tour' }, { value: 'Cooking workshop', text: 'Cooking workshop' },
     { value: 'Dining experience', text: 'Dining experience' }];
     // if (!city || !(this.props.products)) return "Loading";

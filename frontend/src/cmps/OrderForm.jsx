@@ -4,6 +4,7 @@ import { withRouter } from "react-router";
 import EventCalendar from "./EventCalendar";
 import { addOrder } from "../actions/orderActions";
 import Swal from "sweetalert2";
+import SocketService from "../services/SocketService";
 
 class OrderForm extends React.Component {
   state = {
@@ -14,6 +15,7 @@ class OrderForm extends React.Component {
   componentDidMount() {
     let totalPrice = this.state.quantity * this.props.seller.product.price;
     this.setState({ totalPrice });
+    SocketService.setup()
   }
 
   onDateChange = (eventDate) => {
@@ -46,7 +48,7 @@ class OrderForm extends React.Component {
       totalPrice: 1 * this.props.seller.product.price,
       dueDate: Date.now(),
     });
-
+    SocketService.emit('makeOrder','17')
     console.log("orderd!", newOrder);
   };
 

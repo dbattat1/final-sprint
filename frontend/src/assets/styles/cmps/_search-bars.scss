@@ -5,6 +5,7 @@
     top: 1.3vh;
     z-index: 101;
     margin-top: 20px;
+    z-index: 101;
     display: flex;
     width: 500px;
     left: 36vw;
@@ -18,6 +19,7 @@
     .ui.selection {
         width: 30vw;
         background: #ffffff none;
+        // left:50vw;
         border-radius: 4px 0 0 4px !important;
     }
 
