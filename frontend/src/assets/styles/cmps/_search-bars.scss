@@ -1,30 +1,30 @@
 .city-search-bar {
-    bottom: 60vh;
+    // bottom: 60vh;
+    bottom: 29vw;
     position: sticky;
-    top: 5px !important;
+    top: 1.3vh;
+    z-index: 101;
     margin-top: 20px;
     z-index: 101;
     display: flex;
-    // width: 40vw;
-    justify-self: center;
-    // max-width: 30vw;
+    width: 500px;
+    left: 36vw;
+
+    .ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text {
+        color: rgba(50, 60, 96, 0.87);
+        font-family: Ubuntu-medium;
+        font-size: 1.2em;
+    }
+
     .ui.selection {
-        // margin: 0 0 0 auto;
         width: 30vw;
         background: #ffffff none;
         // left:50vw;
         border-radius: 4px 0 0 4px !important;
-        // border: 3px solid silver;
-        // font-size: 1.2em;
     }
-    .ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text {
-        color:rgb(70, 68, 68)
-    }
-    .ui.button{
-        // margin: 0 auto 0 0;
+
+    .ui.button {
         border-radius: 0 4px 4px 0;
-        // width: 30vw;
-        // font-size: 1.2em;
     }
 
     .form-control {

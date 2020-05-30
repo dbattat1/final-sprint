@@ -19,8 +19,6 @@ async function login(email, password) {
 }
 
 async function signup(email, password, first, last, imgUrl) {
-    console.log('got here');
-    
     logger.debug(`auth.service - signup with email: ${email}, first: ${first}, last: ${last}. imgUrl: ${imgUrl}`)
     if (!email || !password || !first|| !last) return Promise.reject('email, username and password are required!')
 

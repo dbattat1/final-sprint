@@ -7,7 +7,7 @@
     transition: 0.4s ease-out;
     padding: 0px 50px;
     z-index: 100;
-    height: 6.5vh;
+    height: 61px;
     .logo {
         color: #fff8f8;
         font-size: rem(30px);
@@ -36,15 +36,26 @@
         .login-icon-nav {
             z-index: 102;
             font-size: rem(33px);
-            
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .logout-icon-nav {
             z-index: 102;
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .order-icon-nav {
             z-index: 102;
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
     }
 }
@@ -59,7 +70,7 @@
     padding: 0px 80px;
     z-index: 100;
     background: #636e72;
-    height: 6.5vh;
+    height: 61px;
 
     .MuiSvgIcon-root {
         z-index: 102;
@@ -88,14 +99,26 @@
         .login-icon-nav {
             z-index: 102;
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .logout-icon-nav {
             z-index: 102;
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .order-icon-nav {
             z-index: 102;
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
     }
 }

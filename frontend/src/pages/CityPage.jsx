@@ -71,7 +71,7 @@ class CityPage extends Component {
         <section className="city-info">
           <div className="city-txt">
             <p className="city-about">About {`${city.name}`}</p>
-            <p>{city.info}</p>
+            <p className="city-info-txt">{city.info}</p>
           </div>
           <div className="city-imgs-container">
             <div className="img-1" style={{ backgroundImage: `url(${city.imgUrls[0]})` }} />
@@ -84,22 +84,22 @@ class CityPage extends Component {
     <p className = "top-attraction-header">Top Attractions in {`${city.name}`}</p>
           <section className="city-attractions">
             <div className="attraction-card card-1">
-              <img className="img-1" src={city.attractions[0].imgUrl} />
+              <img src={city.attractions[0].imgUrl} />
               <p className="attraction-name">{`${city.attractions[0].name}`}</p>
               <p className="attraction-description">{`${city.attractions[0].description}`}</p>
             </div>
             <div className="attraction-card card-2">
-              <img className="img-1" src={city.attractions[1].imgUrl} />
+              <img src={city.attractions[1].imgUrl} />
               <p className="attraction-name">{`${city.attractions[1].name}`}</p>
               <p className="attraction-description">{`${city.attractions[1].description}`}</p>
             </div>
             <div className="attraction-card card-3">
-              <img className="img-1" src={city.attractions[2].imgUrl} />
+              <img src={city.attractions[2].imgUrl} />
               <p className="attraction-name">{`${city.attractions[2].name}`}</p>
               <p className="attraction-description">{`${city.attractions[2].description}`}</p>
             </div>
             <div className="attraction-card card-4">
-              <img className="img-1" src={city.attractions[3].imgUrl} />
+              <img src={city.attractions[3].imgUrl} />
               <p className="attraction-name">{`${city.attractions[3].name}`}</p>
               <p className="attraction-description">{`${city.attractions[3].description}`}</p>
             </div>
