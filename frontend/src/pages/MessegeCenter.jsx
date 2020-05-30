@@ -24,7 +24,11 @@ class UserUsers extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {};
-const mapDispatchToProps = {};
+const mapStateToProps = (state) => {
+  return {
+  loggedInUser: state.user.loggedInUser,
+  }
+};
+// const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessegeCenter);
