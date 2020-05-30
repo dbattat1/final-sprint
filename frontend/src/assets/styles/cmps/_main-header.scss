@@ -30,12 +30,24 @@
         }
         .login-icon-nav {
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .logout-icon-nav {
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .order-icon-nav {
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
     }
 }
@@ -76,12 +88,24 @@
         }
         .login-icon-nav {
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .logout-icon-nav {
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
         .order-icon-nav {
             font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+            &:hover {
+                font-size: rem(35px);
+            }
         }
     }
 }

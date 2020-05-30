@@ -23,7 +23,7 @@ class Header extends React.Component {
       document.body.scrollTop > 450 ||
       document.documentElement.scrollTop > 450
     ) {
-      document.querySelector(".main-header").style.background = "#2F2F2F";
+      document.querySelector(".main-header").style.background = "#636e72";
       document.querySelector(".main-header").style.boxShadow =
         "#dcdcdc 0 2px 10px";
       document.querySelector(".main-header").style.height = "3.7em";
