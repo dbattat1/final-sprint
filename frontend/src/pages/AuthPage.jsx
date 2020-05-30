@@ -43,7 +43,7 @@ export default class AuthPage extends Component {
         }));
 
         return (
-            <div class="background-container">
+            <div className="background-container">
                 {/* <Header pathname={this.props.location.pathname} /> */}
                 <Container component="main" maxWidth="xs" className="signin-container">
                     <CssBaseline />

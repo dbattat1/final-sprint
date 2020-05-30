@@ -9,7 +9,7 @@ import { logout } from "../actions/userActions.js";
 
 class Header extends React.Component {
   componentDidMount() {
-    if (this.props.pathname === "/") {
+    if (this.props.pathname === "/" || this.props.pathname === `/${this.props.city}`) {
       window.addEventListener("scroll", this.handleScroll);
     }
   }
@@ -39,7 +39,7 @@ class Header extends React.Component {
     return (
       <div
         className={
-          this.props.pathname === "/" ? "main-header" : "main-header-regular"
+          this.props.pathname === "/" || this.props.pathname === `/${this.props.city}` ? "main-header" : "main-header-regular"
         }
       >
         <Link to="/">
