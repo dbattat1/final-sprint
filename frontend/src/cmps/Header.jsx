@@ -23,14 +23,14 @@ class Header extends React.Component {
       document.body.scrollTop > 450 ||
       document.documentElement.scrollTop > 450
     ) {
-      document.querySelector(".main-header").style.background = "#2F2F2F";
+      document.querySelector(".main-header").style.background = "#636e72";
       document.querySelector(".main-header").style.boxShadow =
-        "#dcdcdc 0 2px 10px";
-      document.querySelector(".main-header").style.height = "3.7em";
+        "0 1px 3px #0000006b";
+      // document.querySelector(".main-header").style.height = "3.7em";
     } else {
       document.querySelector(".main-header").style.background = "none";
       document.querySelector(".main-header").style.boxShadow = "none";
-      document.querySelector(".main-header").style.height = "4.7em";
+      // document.querySelector(".main-header").style.height = "4.7em";
     }
   };
 
@@ -56,7 +56,7 @@ class Header extends React.Component {
             </Link>
           )}
           {!this.props.loggedInUser && (
-            <Link to="/login">
+            <Link to="/auth">
               <AccountCircleIcon className="login-icon-nav" />
             </Link>
           )}

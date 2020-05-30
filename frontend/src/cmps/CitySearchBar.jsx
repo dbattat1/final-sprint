@@ -1,41 +1,46 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Dropdown } from "semantic-ui-react";
+import { Dropdown, Button } from "semantic-ui-react";
 import { loadCities } from "../actions/cityActions";
 import { withRouter } from "react-router";
 
 class CitySearchBar extends Component {
+
+  state = {
+    curCity: null
+  }
+
   componentDidMount() {
     this.props.loadCities();
   }
 
   getCitiesForDropDown() {
     return this.props.cities.map((city) => {
-      return { value: city._id, text: city.name };
+      return { value: city._id, text: city.name, key: city._id };
     });
   }
 
-  handleChange = (e, {value}) => {
-    if (value) {
-       this.props.history.push(`/${value}`);   
+  selectCity = () => {
+    if (this.state.curCity) {
+      this.props.history.push(`/${this.state.curCity}`);
     }
   }
 
+
   render() {
+    const options = this.getCitiesForDropDown()
     return (
       <div className="city-search-bar">
-          <Dropdown className="icon"
-            text="Where do you want to eat?"
-            icon="search"
-            button
-            search
-            labeled
-            floating
-            size="huge"
-            value=""
-            options={this.getCitiesForDropDown()}
-            onChange={this.handleChange.bind(this)}
-          />
+        <Dropdown className="icon"
+          placeholder="Where Do You Want To Eat?"
+          search
+          labeled
+          selection
+          floating
+          options={options}
+          onChange={(e, { value }) => { this.setState({ curCity: value }) }}
+        />
+        <Button positive onClick={this.selectCity}>Eat!</Button>
       </div>
     );
   }

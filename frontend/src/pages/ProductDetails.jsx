@@ -62,7 +62,9 @@ class ProductDetails extends React.Component {
                 </React.Fragment>
               )}
             </div>
-            <div className="product-page-city">{product.city.name}</div>
+            <Link to={`/${product.city._id}`}>
+              <div className="product-page-city">{product.city.name}</div>
+            </Link>
           </div>
           {((this.props.loggedInUser && this.props.loggedInUser.isAdmin) || user._id === (this.props.loggedInUser && this.props.loggedInUser._id))  && <div className="product-page-edit">
               <Link to={`/edit/${this.props.match.params.id}`}>
@@ -103,7 +105,9 @@ class ProductDetails extends React.Component {
         <main className="product-page-main">
           <div className="product-page-content">
             <div className="product-page-prod-details">
-              <h2>{product.description}</h2>
+              <h2>{product.category}</h2>
+              <h3>{product.description}</h3>
+              <h3>So what's cooking?</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -112,9 +116,14 @@ class ProductDetails extends React.Component {
               </p>
             </div>
             <div className="product-page-user-details">
-              <div className="product-page-user-img" style={{ backgroundImage: `url(${user.imgUrl})` }}></div>
+              <div
+                className="product-page-user-img"
+                style={{ backgroundImage: `url(${user.imgUrl})` }}
+              ></div>
               <div className="product-page-user-info">
-                <div className="product-page-user-name">{user.name.first} {user.name.last}</div>
+                <div className="product-page-user-name">
+                  {user.name.first} {user.name.last}
+                </div>
                 <div className="product-page-user-bio">"{user.bio}"</div>
               </div>
             </div>

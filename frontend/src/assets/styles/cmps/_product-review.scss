@@ -2,5 +2,54 @@
     .add-btn {
         background-color: $clr1;
         width: 50px;
+        margin-bottom: 35px;
+    }
+
+    .buyer-review {
+        display: flex;
+        justify-content: space-between;
+        background-color: #caccce63;
+        margin-bottom: 20px;
+        width: 58%;
+        border-radius: 25px;
+        padding: 15px 25px;
+        .buyer-review-img {
+            max-width: 100px;
+            max-height: 100px;
+            min-width: 100px;
+            min-height: 100px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            border: 2px solid white;
+        }
+
+        .buyer-review-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 80%;
+            .buyer-review-main-top {
+                display: flex;
+                justify-content: space-between;
+                .buyer-review-name {
+                    font-family: Merry-Bold;
+                    font-size: 1.2em;
+                    color: #3f51b5;
+                }
+                
+                .buyer-review-rate {
+                    font-size: 1.8em;
+                    color: #FFC107;
+                }
+            }
+            
+            .buyer-review-txt {
+                font-family: Merry-BoldItalic;
+                font-size: 1em;
+                letter-spacing: 1px;
+                color: #525252;
+            }
+        }
     }
 }
