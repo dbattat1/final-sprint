@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, Dropdown, Input, Form, TextArea } from "semantic-ui-react";
-// import { connect } from 'react-redux';
 import ReviewRate from "./ReviewRate.jsx";
 import { connect } from "react-redux";
 
@@ -56,6 +55,7 @@ class ReviewAdd extends Component {
                 type="text"
                 name="txt"
                 required
+                autocomplete="off"
                 placeholder={`Tell us about your experience, ${name}`}
                 onChange={this.handleChange}
               />
