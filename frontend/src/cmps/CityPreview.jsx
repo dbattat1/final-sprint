@@ -8,7 +8,7 @@ export function CityPreview(props) {
     <Link to={`/${city._id}`}>
       <li
         className="city-card"
-        style={{ backgroundImage: `url(${city.thumbnailUrl})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${city.thumbnailUrl})` }}
       >
         <div className="city-card-name">{city.name}</div>
       </li>

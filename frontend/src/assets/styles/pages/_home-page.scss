@@ -2,7 +2,8 @@
     .hero {
         display: flex;
         height: 80vh;
-        background-image: url("https://drive.google.com/uc?id=1l0S5NKKvAxPqBAHnlxs1LvgYXjdv1CcI");
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://drive.google.com/uc?id=1l0S5NKKvAxPqBAHnlxs1LvgYXjdv1CcI");
+        // background-image: url("https://drive.google.com/uc?id=1l0S5NKKvAxPqBAHnlxs1LvgYXjdv1CcI");
         background-position: bottom;
         background-repeat: no-repeat;
         width: 100%;
