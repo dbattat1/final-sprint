@@ -95,10 +95,4 @@ const mapDispatchToProps = {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductReview);
 
-// getStars = () => {
-//     var res = '';
-//     for (var i = 0; i < review.rate ; i++) {
-//         res += GradeIcon;
-//     }
-//     return res;
-// }
+
