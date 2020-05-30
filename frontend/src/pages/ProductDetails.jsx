@@ -32,19 +32,19 @@ class ProductDetails extends React.Component {
   };
 
   render() {
-    const { user } = this.props;
+    const { user } = this.props;   
     if (!user)
-      // return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
-      return (
-        <Spinner animation="border" role="status">
+    // return <div style={{ height: 4000, width: "100%" }}>Loading...</div>;
+    return (
+      <Spinner animation="border" role="status">
           <span className="sr-only">Loading...</span>
         </Spinner>
       );
-    const { product } = user;
-    const hasReviews = !(!product.reviews || product.reviews.length === 0);
-
-    let rate;
-    if (hasReviews) {
+      const { product } = user;
+      const hasReviews = !(!product.reviews || product.reviews.length === 0);
+      
+      let rate;
+      if (hasReviews) {
       const reducer = (acc, curr) => acc + curr;
       const rateArr = product.reviews.map((review) => review.rate);
       rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
@@ -64,15 +64,15 @@ class ProductDetails extends React.Component {
             </div>
             <div className="product-page-city">{product.city.name}</div>
           </div>
-          <div className="product-page-edit">
-            <Link to={`/edit/${this.props.match.params.id}`}>
+          {((this.props.loggedInUser && this.props.loggedInUser.isAdmin) || user._id === (this.props.loggedInUser && this.props.loggedInUser._id))  && <div className="product-page-edit">
+              <Link to={`/edit/${this.props.match.params.id}`}>
               <EditIcon className="product-page-edit-icon" />
             </Link>
-            <DeleteIcon
-              className="product-page-edit-icon"
-              onClick={this.onRemoveProduct}
-            />
-          </div>
+              <DeleteIcon
+                className="product-page-edit-icon"
+                onClick={this.onRemoveProduct}
+              />
+          </div>}
         </section>
 
         <div className="product-page-img-container">
@@ -137,6 +137,7 @@ class ProductDetails extends React.Component {
 const mapStateToProps = (state) => {
   return {
     user: state.product.currProduct,
+    loggedInUser: state.user.loggedInUser,
   };
 };
 

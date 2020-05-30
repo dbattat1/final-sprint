@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import productService from '../services/productService.js';
 import { loadProducts, updateProduct } from '../actions/productActions.js';
-import { ReviewAdd } from '../cmps/ReviewAdd.jsx'
+import ReviewAdd from '../cmps/ReviewAdd.jsx'
 import Button from '@material-ui/core/Button';
 
 
