@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import productService from "../services/productService.js";
 import { loadProducts, updateProduct } from "../actions/productActions.js";
-import { ReviewAdd } from "../cmps/ReviewAdd.jsx";
-import Button from "@material-ui/core/Button";
+import ReviewAdd from "../cmps/ReviewAdd.jsx";
 
 class ProductReview extends Component {
     state = {
@@ -23,7 +22,7 @@ class ProductReview extends Component {
     });
   }
   onOpenAdd = () => {
-    this.setState({ isAddReviewOn: true });
+    this.setState({ isAddReviewOn: (!this.state.isAddReviewOn) ? true : false });
   };
   onAddReview = (newReview) => {
     this.setState((prevState) => ({
@@ -46,16 +45,18 @@ class ProductReview extends Component {
     const { reviews } = this.state;
     return (
       <div className="review-container flex column">
-        <Button
+        <button
           className="add-btn"
           variant="contained"
           onClick={this.onOpenAdd}
         >
-          Add Review
-        </Button>
+          Write a review
+        </button>
         {this.state.isAddReviewOn && (
+        <div className="add-review-section">
           <ReviewAdd onAddReview={this.onAddReview} />
-        )}
+          </div>
+          )}
         {reviews &&
           reviews.map((review, idx) => (
             <div className="buyer-review" key={idx}>
