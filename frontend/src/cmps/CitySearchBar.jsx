@@ -32,7 +32,7 @@ class CitySearchBar extends Component {
     return (
       <div className="city-search-bar">
         <Dropdown className="icon"
-          placeholder="Where Do You Want To Eat?"
+          placeholder="Where do you want to eat?"
           search
           labeled
           selection
@@ -40,7 +40,7 @@ class CitySearchBar extends Component {
           options={options}
           onChange={(e, { value }) => { this.setState({ curCity: value }) }}
         />
-        <Button positive onClick={this.selectCity}>Eat!</Button>
+        <Button positive onClick={this.selectCity}>EAT!</Button>
       </div>
     );
   }

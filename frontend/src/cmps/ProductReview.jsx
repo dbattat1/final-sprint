@@ -23,7 +23,7 @@ class ProductReview extends Component {
     });
   }
   onOpenAdd = () => {
-    this.setState({ isAddReviewOn: true });
+    this.setState({ isAddReviewOn: (!this.state.isAddReviewOn) ? true : false });
   };
   onAddReview = (newReview) => {
     this.setState((prevState) => ({
@@ -46,16 +46,18 @@ class ProductReview extends Component {
     const { reviews } = this.state;
     return (
       <div className="review-container flex column">
-        <Button
+        <button
           className="add-btn"
           variant="contained"
           onClick={this.onOpenAdd}
         >
-          Add Review
-        </Button>
+          Write a review
+        </button>
         {this.state.isAddReviewOn && (
+        <div className="add-review-section">
           <ReviewAdd onAddReview={this.onAddReview} />
-        )}
+          </div>
+          )}
         {reviews &&
           reviews.map((review, idx) => (
             <div className="buyer-review" key={idx}>
@@ -95,10 +97,4 @@ const mapDispatchToProps = {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductReview);
 
-// getStars = () => {
-//     var res = '';
-//     for (var i = 0; i < review.rate ; i++) {
-//         res += GradeIcon;
-//     }
-//     return res;
-// }
+
