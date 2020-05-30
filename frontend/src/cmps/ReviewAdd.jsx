@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { Button, Dropdown, Input, Form, TextArea } from 'semantic-ui-react'
 // import { connect } from 'react-redux';
 import ReviewRate from './ReviewRate.jsx';
+import { connect } from "react-redux";
 
 
-export class ReviewAdd extends Component {
+class ReviewAdd extends Component {
     state = {
         txt: '',
         rate: 0
@@ -20,22 +21,29 @@ export class ReviewAdd extends Component {
         ev.preventDefault();
         const reviewToAdd = this.state;
         reviewToAdd.createdAt = Date.now();
-        reviewToAdd.byUser = {
-            _id: "b120",
-            name: "Alexi Von-Moskva",
+        const { loggedInUser } = (this.props)
+        reviewToAdd.byUser = (loggedInUser)? 
+        {_id : loggedInUser._id,
+        name: loggedInUser.name,
+        imgUrl: loggedInUser.imgUrl
+        }:
+        {
+            _id: "guest_id",
+            name: {first: "Guest",
+                    last: "Guestman"},
             imgUrl: "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX"
-        }
+        };
         this.props.onAddReview(reviewToAdd)
         this.setState({ txt: '', rate: 0 })
     };
 
     rate = (val) => {
         console.log('val', val)
-        this.setState({rate : +val})
+        this.setState({ rate: +val })
     }
 
     render() {
-        console.log('the state is', this.state);
+        // console.log('the state is', this.state);
         const { txt, rate } = this.state;
         return (
             <div className="product-review">
@@ -52,7 +60,7 @@ export class ReviewAdd extends Component {
                             />
                         </label>
                     </div>
-                    <ReviewRate rate={this.rate}/>
+                    <ReviewRate rate={this.rate} />
                     {/* <div>
                         <label>Rate the expreience:</label>
                         <select name="rate"
@@ -74,3 +82,15 @@ export class ReviewAdd extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        loggedInUser: state.user.loggedInUser,
+    };
+};
+
+//   const mapDispatchToProps = {
+
+//   };
+
+export default connect(mapStateToProps)(ReviewAdd);

@@ -27,7 +27,6 @@ class ProductGallery extends Component {
   }
 
   handleChange = (e, { value, name }) => {
-    console.log(value, name);
     this.setState({ [name]: value }, () => {
       let filterBy = this.state
       this.props.loadProducts(filterBy);

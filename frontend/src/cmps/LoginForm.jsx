@@ -16,19 +16,20 @@ import Container from "@material-ui/core/Container";
 import Header from "./Header";
 
 import { connect } from "react-redux";
-
 import { login } from "../actions/userActions.js";
+import Swal from "sweetalert2";
 
 class LoginForm extends Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   };
 
   handleChange = (ev) => {
     const { name, value } = ev.target;
     this.setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
 
   doLogin = async (ev) => {
     ev.preventDefault();
@@ -37,13 +38,33 @@ class LoginForm extends Component {
       return this.setState({ msg: "Please enter user/password" });
     }
     const userCreds = { email, password };
-    this.props.login(userCreds);
-    this.setState({ email: "", password: "" }, () =>
-      this.props.history.push(`/`)
-    );
-  };
+    // try {
+    this.props.login(userCreds)
+      .then(res => this.props.history.push(`/`))
+      .catch(error => {
+        this.setState({ email: '', password: '' })
+        Swal.fire({
+          title: 'Wrong password or email',
+          text: 'Please try again',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
+      })
+  }
 
-  //
+  // doLogin = async (ev) => {
+  //   ev.preventDefault();
+  //   const { email, password } = this.state;
+  //   if (!email || !password) {
+  //     return this.setState({ msg: "Please enter user/password" });
+  //   }
+  //   const userCreds = { email, password };
+  //   this.props.login(userCreds);
+  //   this.setState({ email: "", password: "" }, () =>
+  //     this.props.history.push(`/`)
+  //   );
+  // };
+
 
   render() {
 

@@ -5,8 +5,8 @@ class Footer extends React.Component {
 
     componentDidUpdate() {
         // both works! 
-        console.log('g', window.location.pathname);
-        console.log('bb', this.props.history.location.pathname);
+        // console.log('g', window.location.pathname);
+        // console.log('bb', this.props.history.location.pathname);
     }
     render() {
         return (
