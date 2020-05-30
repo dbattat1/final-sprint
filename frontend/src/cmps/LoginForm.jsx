@@ -37,10 +37,11 @@ class LoginForm extends Component {
       return this.setState({ msg: "Please enter user/password" });
     }
     const userCreds = { email, password };
-    this.props.login(userCreds);
-    this.setState({ email: "", password: "" }, () =>
-      this.props.history.push(`/`)
-    );
+    this.props.login(userCreds)
+      .then(user => console.log(user))
+    // this.setState({ email: "", password: "" }, () =>
+    //   this.props.history.push(`/`)
+    // );
   };
 
   //

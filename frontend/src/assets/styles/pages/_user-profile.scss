@@ -10,4 +10,17 @@
     .profile-main-content {
         padding-left: 20px
     }
+    .messege-center-container {
+        width: 100%;
+        flex-grow: 1;
+        // margin: 0 auto;
+        // box-sizing: unset;
+    }
+    .user-orders-container {
+        p {
+            font-size: rem(27px);
+        }
+        // padding-top: 125px
 }
+}
+

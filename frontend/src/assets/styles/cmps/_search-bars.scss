@@ -2,25 +2,28 @@
     bottom: 60vh;
     position: sticky;
     top: 5px !important;
-    z-index: 101;
     margin-top: 20px;
+    z-index: 101;
     display: flex;
     // width: 40vw;
     justify-self: center;
+    // max-width: 30vw;
     .ui.selection {
-        margin: 0 0 0 auto;
+        // margin: 0 0 0 auto;
         width: 30vw;
         background: #ffffff none;
+        // left:50vw;
         border-radius: 4px 0 0 4px !important;
         // border: 3px solid silver;
-
         // font-size: 1.2em;
     }
-
-    .ui.button {
-        margin: 0 auto 0 0;
+    .ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text {
+        color:rgb(70, 68, 68)
+    }
+    .ui.button{
+        // margin: 0 auto 0 0;
         border-radius: 0 4px 4px 0;
-
+        // width: 30vw;
         // font-size: 1.2em;
     }
 

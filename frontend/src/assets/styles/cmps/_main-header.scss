@@ -23,18 +23,27 @@
             align-items: center;
             // font-size: rem(35px);  
         }
+        .MuiSvgIcon-root {
+            z-index: 102;
+        }
         .welcome-user-nav {
             font-family: Ubuntu-medium;
-            font-size: rem(28px);  
-            color: #35eb33
+            font-size: rem(22px);  
+            color: #fff8f8;
+            font-weight: bold;
+            text-shadow: 2px 0 5px #000000c7;
         }
         .login-icon-nav {
+            z-index: 102;
             font-size: rem(33px);
+            
         }
         .logout-icon-nav {
+            z-index: 102;
             font-size: rem(33px);
         }
         .order-icon-nav {
+            z-index: 102;
             font-size: rem(33px);
         }
     }
@@ -52,7 +61,9 @@
     background: #636e72;
     height: 6.5vh;
 
-
+    .MuiSvgIcon-root {
+        z-index: 102;
+    }
     .logo {
         color: #fff8f8;
         font-size: rem(30px);
@@ -70,16 +81,20 @@
         }
         .welcome-user-nav {
             font-family: Ubuntu-medium;
-            font-size: rem(28px);  
-            color: #35eb33
+            font-size: rem(21px);  
+            color: #fff8f8;
+            // text-shadow: 2px 0 5px #000000c7;
         }
         .login-icon-nav {
+            z-index: 102;
             font-size: rem(33px);
         }
         .logout-icon-nav {
+            z-index: 102;
             font-size: rem(33px);
         }
         .order-icon-nav {
+            z-index: 102;
             font-size: rem(33px);
         }
     }
