@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar } from "./Navbar.jsx";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";

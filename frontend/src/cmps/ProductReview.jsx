@@ -31,7 +31,8 @@ class ProductReview extends Component {
     }));
     const { id } = this.props;
     productService.get(id).then((user) => {
-      user.product.reviews.push(newReview);
+      console.log(newReview);
+      user.product.reviews.push('new',newReview);
       this.props.updateProduct(user);
     });
   };

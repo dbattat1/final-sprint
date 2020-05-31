@@ -21,7 +21,7 @@ import MessageCenter from './MessageCenter.jsx'
 
 class UserProfile extends React.Component {
   state = {
-    currTab: 'personal'
+    currTab: 'order'
   };
 
   componentDidMount() {
