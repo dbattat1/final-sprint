@@ -10,7 +10,7 @@ class UserOrders extends React.Component {
   state = {
     ordersBySeller: null,
     ordersByBuyer: null,
-    ordersTypes: 'buyer'
+    ordersTypes: 'seller'
   };
 
   componentDidMount() {
