@@ -26,11 +26,13 @@ class UserOrders extends React.Component {
       const { _id } = this.props.loggedInUser;
 
       orderService.queryBySeller(_id).then((orders) => {
-        this.setState({ ordersBySeller: orders });
+        const reversedOrders = orders.reverse();
+        this.setState({ ordersBySeller: reversedOrders });
       });
 
       orderService.queryByBuyer(_id).then((orders) => {
-        this.setState({ ordersByBuyer: orders });
+        const reversedOrders = orders.reverse();
+        this.setState({ ordersByBuyer: reversedOrders });
       });
     }
   };
