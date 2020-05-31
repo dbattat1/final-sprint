@@ -4,7 +4,7 @@
     margin-inline-end: 10px;
     height: 450px;
     width: 300px;
-    color: black;
+    color: $clr7;
     border-radius: 20px 20px 0px 0;
 
 
@@ -20,8 +20,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: black;
-            color: white;
+            background-color: $clr7;
+            color: $clr6;
             font-size: 1.3em;
             width: 70px;
             height: 30px;
