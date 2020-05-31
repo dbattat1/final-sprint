@@ -50,8 +50,8 @@ class UserOrders extends React.Component {
         {/* <Header pathname={this.props.location.pathname} /> */}
         <div className="ui secondary pointing menu">
           <div onClick={() => this.openOrders('buyer')}
-            className={`item ${this.state.isOrder === "buyer" ? "active" : ''}`} >My Orders</div>
-          <div onClick={() => this.openOrders('seller')} className={`item ${this.state.isOrder === "seller" ? "active" : ''}`}>My Sales</div>
+            className={`item ${this.state.ordersTypes === "buyer" ? "active" : ''}`} >My Orders</div>
+          <div onClick={() => this.openOrders('seller')} className={`item ${this.state.ordersTypes === "seller" ? "active" : ''}`}>My Sales</div>
         </div>
         {this.state.ordersTypes === 'seller' && <OrderList orders={this.state.ordersBySeller} />}
         {this.state.ordersTypes === 'buyer' && <OrderList orders={this.state.ordersByBuyer} />}

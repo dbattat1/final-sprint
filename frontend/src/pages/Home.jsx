@@ -22,27 +22,27 @@ class Home extends Component {
     this.props.loadCities();
     const favIds = [
       "5ecbb83a0c2535f563044b9b",
-      "5ecbb83a0c2535f563044ba4",
+      "5ecbb83a0c2535f563044b9d",
       "5ecbb83a0c2535f563044b9f",
-      "5ecbb83a0c2535f563044ba0",
+      "5ed26515757ca025f58f39dd",
     ];
     const chefIds = [
-      "5ecbb83a0c2535f563044b9b",
-      "5ecbb83a0c2535f563044b9e",
-      "5ecbb83a0c2535f563044b9f",
+      "5ecfc4f7d44f5a6943bfa99e",
+      "5ed2d2e871d6da0d6fe1eb02",
       "5ecbb83a0c2535f563044ba3",
+      "5ed2d2dc71d6da0d6fe1e768",
     ];
     const wShopIds = [
       "5ecbb83a0c2535f563044b9c",
-      "5ecbb83a0c2535f563044b9d",
-      "5ecbb83a0c2535f563044ba0",
+      "5ed2d2f771d6da0d6fe1ee2b",
+      "5ed2d2d171d6da0d6fe1e105",
       "5ecbb83a0c2535f563044ba2",
     ];
     const tourIds = [
-      "5ecbb83a0c2535f563044b99",
+      "5ed2d2ac71d6da0d6fe1da9f",
       "5ecbb83a0c2535f563044b9a",
       "5ecbb83a0c2535f563044ba1",
-      "5ecbb83a0c2535f563044ba4",
+      "5ed2d2b971d6da0d6fe1dd24",
     ];
     this.getFavUsers(favIds);
     this.getChefUsers(chefIds);
@@ -95,7 +95,7 @@ class Home extends Component {
           </section>
           <section className="top-chefs products-container">
             <div className="see-more flex justify-center space-between">
-              <h1>Private Chefs</h1>
+              <h1>Dining Experiences</h1>
               <Link to={`/gallery`}>See More >></Link>
             </div>
             <ul>
