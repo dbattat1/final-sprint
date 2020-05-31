@@ -9,34 +9,41 @@
     z-index: 100;
     height: 61px;
     .logo {
-        color: #fff8f8;
+        color: #171412;
         font-size: rem(30px);
         font-family: Alconica;
+        
+
     }
     .header-nav {
         width: 300px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
+        
+
         >* {
-            color: #fff8f8;
+            color: #171412;
             display: flex;
-            align-items: center;
-            // font-size: rem(35px);  
+            align-items: center; 
+            margin-left: 15px;
         }
         .MuiSvgIcon-root {
             z-index: 102;
         }
         .welcome-user-nav {
-            font-family: Ubuntu-medium;
-            font-size: rem(22px);  
-            color: #fff8f8;
+            font-family: Merry-Italic;
+            font-size: 1.2rem;  
+            color: #4b4b4b;
             font-weight: bold;
-            text-shadow: 2px 0 5px #000000c7;
+            
+
         }
         .login-icon-nav {
             z-index: 102;
             font-size: rem(33px);
             transition: 0.2s ease-in-out;
+            
+
             &:hover {
                 font-size: rem(35px);
             }
@@ -45,6 +52,8 @@
             z-index: 102;
             font-size: rem(33px);
             transition: 0.2s ease-in-out;
+            
+
             &:hover {
                 font-size: rem(35px);
             }
@@ -53,6 +62,7 @@
             z-index: 102;
             font-size: rem(33px);
             transition: 0.2s ease-in-out;
+            
             &:hover {
                 font-size: rem(35px);
             }
@@ -69,37 +79,41 @@
     transition: 0.4s ease-out;
     padding: 0px 80px;
     z-index: 100;
-    background: #474747;
+    // background: #474747;
+    background: #f5f6fa;
     height: 61px;
+    box-shadow: 0 1px 3px #0000006b;
 
     .MuiSvgIcon-root {
         z-index: 102;
     }
     .logo {
-        color: #fff8f8;
+        color: #171412;
         font-size: rem(30px);
         font-family: Alconica;
+        
     }
     .header-nav {
         width: 300px;
         display: flex;
         justify-content: space-evenly;
         >* {
-            color: #fff8f8;
+            color: #171412;
             display: flex;
             align-items: center;
             // font-size: rem(35px);  
         }
         .welcome-user-nav {
             font-family: Ubuntu-medium;
-            font-size: rem(21px);  
-            color: #fff8f8;
-            text-shadow: none 
+            font-size: 1.2rem;  
+            color: #4b4b4b;
+            
         }
         .login-icon-nav {
             z-index: 102;
             font-size: rem(33px);
             transition: 0.2s ease-in-out;
+            
             &:hover {
                 font-size: rem(35px);
             }
@@ -108,6 +122,7 @@
             z-index: 102;
             font-size: rem(33px);
             transition: 0.2s ease-in-out;
+            
             &:hover {
                 font-size: rem(35px);
             }
@@ -116,6 +131,8 @@
             z-index: 102;
             font-size: rem(33px);
             transition: 0.2s ease-in-out;
+            
+
             &:hover {
                 font-size: rem(35px);
             }

@@ -1,0 +1,34 @@
+{
+    "_id" : "ObjectId(5ecac62d860e88985ad9510a)",
+    "name" : "Moscow",
+    "info" : "The political, scientific, historical, architectural and business center of Russia, Moscow displays the country's contrasts at their most extreme. The ancient and modern are juxtaposed side by side in this city of 10 million. Catch a metro from one of the ornate stations to see Red Square, the Kremlin, the nine domes of St. Basil's Cathedral, Lenin's Mausoleum, the KGB Museum and other symbols of Moscow's great and terrible past, then lighten up and shop Boulevard Ring or people watch in Pushkin Square.",
+    "thumbnailUrl" : "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt",
+    "imgUrls" : [ 
+        "https://drive.google.com/uc?id=1WaXjZmx3JWgiz9VejE4s1jE7e2eI4sxt", 
+        "https://drive.google.com/uc?id=1SCdo4R9SkNqQZxB0DwkX_OvomUsn29gx", 
+        "https://drive.google.com/uc?id=1Vwuo4aRPrfLm0IiTgqT-WdoLtbjfzF_t", 
+        "https://drive.google.com/uc?id=1L88gO5XPlO90mGAnLojMn-PN_GQXy1VH"
+    ],
+    "attractions" : [ 
+        {
+            "name" : "Red Square",
+            "imgUrl" : "https://www.moscovery.com/wp-content/uploads/2016/03/header-47.jpg",
+            "description" : "You can learn about the local history of Moscow during your trip to a well-known site like Red Square. Experience the area's fascinating museums and acclaimed theater scene."
+        }, 
+        {
+            "name" : "St. Basil's Cathedral",
+            "imgUrl" : "https://media.mehrnews.com/d/2019/11/04/4/3285465.jpg",
+            "description" : "Think of Russia and you probably picture this iconic building, whose onion-shaped domes overlook the Moscow skyline."
+        }, 
+        {
+            "name" : "Bolshoi Theatre",
+            "imgUrl" : "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/f2/ae/d2.jpg",
+            "description" : "A centerpiece of the Russian arts scene, this theater’s magnificent auditorium and top-tier productions will impress even the most jaded theatergoer."
+        }, 
+        {
+            "name" : "Kremlin",
+            "imgUrl" : "https://i.insider.com/5d5b05dfcd97845e6b718f62?width=1136&format=jpeg",
+            "description" : "Visit the most iconic square in Russia, which is bordered by many of the city’s most famous landmarks."
+        }
+    ]
+}

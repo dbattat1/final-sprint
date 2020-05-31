@@ -2,12 +2,11 @@
     .hero {
         display: flex;
         height: 80vh;
-        background-image: url("https://drive.google.com/uc?id=1l0S5NKKvAxPqBAHnlxs1LvgYXjdv1CcI");
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://drive.google.com/uc?id=1l0S5NKKvAxPqBAHnlxs1LvgYXjdv1CcI");
         background-position: bottom;
         background-repeat: no-repeat;
         width: 100%;
         background-size: cover;
-        // justify-content: center;
         align-items: center;
         background-attachment: fixed;
     }
@@ -19,33 +18,11 @@
     .products-container {
         margin-bottom: 170px;
     }
-    .top-rated.products-container {
-        grid-area: top-products;
-    }
-    .cities-container {
-        grid-area: cities-container;
-    }
-    .top-chefs.products-container {
-        grid-area: chef-products;
-    }
-    .top-workshops.products-container {
-        grid-area: workshop-products;
-    }
-    .top-tours.products-container {
-        grid-area: tour-products;
-    }
+    
     .content-container {
         display: grid;
-        // grid-template-columns: 200px auto 200px;
-        grid-template-columns: auto 1320px auto;
+        grid-template-columns: minmax(1.6rem, 1fr) minmax(auto, 1320px) minmax(1.6rem, 1fr);
         grid-template-rows: auto;
-        grid-template-areas:
-            ". top-products ."
-            ". cities-container ."
-            ". chef-products ."
-            ". workshop-products ."
-            ". tour-products .";
-
         > * {
             grid-column: 2;
         }

@@ -1,0 +1,78 @@
+{
+    "_id" : "ObjectId(5ecbb83a0c2535f563044b9d)",
+    "name" : {
+        "first" : "Moshe",
+        "last" : "York"
+    },
+    "imgUrl" : "https://drive.google.com/uc?id=1h-jbo2gIZQDQQwi5uvwlvT48UthCGQLT",
+    "email" : "moshe@buy.com",
+    "password" : "moshe123",
+    "createdAt" : 1.54646679997843e+18,
+    "isAdmin" : true,
+    "bio" : "Hi everyone I'm Moshe and I just love pizza so much, I made it my occupation",
+    "msgs" : [ 
+        {
+            "createdAt" : 151515145687845.0,
+            "txt" : "hello",
+            "sentBy" : {
+                "_id" : "5ecb9aab0c2535f563044b90",
+                "name" : {
+                    "first" : "Alexi",
+                    "last" : "Romanov"
+                },
+                "imgUrl" : "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX"
+            }
+        }
+    ],
+    "product" : {
+        "title" : "Pizza Extravaganza Night",
+        "price" : 30.0,
+        "city" : {
+            "_id" : "5ecac62d860e88985ad9510b",
+            "name" : "New York",
+            "imgUrl" : "https://drive.google.com/uc?id=1kx7nfftpZCNHhw_wlH0K1sJ19r40OMU3"
+        },
+        "category" : "Cooking workshop",
+        "tags" : [ 
+            "pizza", 
+            "pizza", 
+            "Italian"
+        ],
+        "imgUrls" : [ 
+            "https://drive.google.com/uc?id=1-dttk7ju43xzlbi8MHKeA1NLx9oBaN7L", 
+            "https://drive.google.com/uc?id=1O2GFyEE-OBNLlx81wUbecMGiQXdXoRjT", 
+            "https://drive.google.com/uc?id=1MuP7hH31zb45qPfQLS6GGrltx7c2mXNp", 
+            "https://drive.google.com/uc?id=1sYf1sL1bL_YzgWT4dXiKJn5cN06O09LF", 
+            "https://drive.google.com/uc?id=1nUS8sghOpWju_KJ166H23P46vrYsyksk"
+        ],
+        "description" : "We all love pizza, and anyone who says differently is probably hiding something. So unless you are one of those weirdos, I invite you to invite me to your own kitchen where I will teach you and your pals how to change other people's life by making them THE MOST unforgetable pizza ever made by a human",
+        "reviews" : [ 
+            {
+                "txt" : "You think you know everything there is to know about pizza, and then you meet Moshe",
+                "rate" : 5.0,
+                "createdAt" : 15904444476723.0,
+                "byUser" : {
+                    "_id" : "5ecb9aab0c2535f563044b97",
+                    "name" : {
+                        "first" : "Lin",
+                        "last" : "Agaja"
+                    },
+                    "imgUrl" : "https://drive.google.com/uc?id=1bwvsW67t2RDpEyif12Y0nPXK1UIB9wYT"
+                }
+            }, 
+            {
+                "txt" : "Life changing experience. Could have been perfect if Moshe would have only clean up his kitchen every once in a while",
+                "rate" : 4.0,
+                "createdAt" : 15903444246723.0,
+                "byUser" : {
+                    "_id" : "5ecb9aab0c2535f563044b92",
+                    "name" : {
+                        "first" : "Dennis",
+                        "last" : "Yorkush"
+                    },
+                    "imgUrl" : "https://drive.google.com/uc?id=10bmSWI859txhEZPS9T5Ho_6d097f2dFG"
+                }
+            }
+        ]
+    }
+}

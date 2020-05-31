@@ -5,12 +5,10 @@ import './assets/styles/global.scss';
 import Home from './pages/Home.jsx';
 import CityPage from './pages/CityPage.jsx';
 import ProductDetails from './pages/ProductDetails';
-import Header from './cmps/Header.jsx';
-import  Footer  from './cmps/Footer.jsx';
+import Footer from './cmps/Footer.jsx';
 import EditProduct from './pages/EditProduct.jsx';
 import ProductGallery from './pages/ProductGallery.jsx';
 import AuthPage from './pages/AuthPage';
-// import UserOrders from './pages/UserOrders';
 import UserProfile from './pages/UserProfile';
 
 const history = createBrowserHistory();

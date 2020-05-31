@@ -22,15 +22,18 @@ class Header extends React.Component {
       document.body.scrollTop > 450 ||
       document.documentElement.scrollTop > 450
     ) {
-      document.querySelector(".main-header").style.background = "#474747";
-      document.querySelector(".main-header").style.boxShadow =
-        "0 1px 3px #0000006b";
+      // document.querySelector(".main-header").style.background = "#474747";
+      // document.querySelector(".main-header").style.boxShadow =
+      //   "0 1px 3px #0000006b";
       // document.querySelector(".main-header").style.height = "3.7em";
 
+      document.querySelector(".main-header").style.background = "#f5f6fa";
+      document.querySelector(".main-header").style.boxShadow = "0 1px 3px #0000006b";
+      
     } else {
       document.querySelector(".main-header").style.background = "none";
       document.querySelector(".main-header").style.boxShadow = "none";
-      // document.querySelector(".main-header").style.height = "4.7em";
+      
     }
   };
 
@@ -47,7 +50,7 @@ class Header extends React.Component {
         <div className="header-nav">
           {this.props.loggedInUser && (
             <div className="welcome-user-nav">
-              Hello, {this.props.loggedInUser.name.first}!
+              Hello {this.props.loggedInUser.name.first}
             </div>
           )}
           {this.props.loggedInUser && (

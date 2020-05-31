@@ -8,7 +8,7 @@ export function ProductList(props) {
     }
     
     return (
-        <ul className="flex  space-around wrap product-container-city">
+        <ul className="flex space-around wrap product-container-city">
             {props.users && usersWithProds.map((user, idx) => <ProductPreview user={user} key={idx}  />)}
         </ul>
     )
