@@ -12,8 +12,12 @@ body {
 }
 
 .App {
-    background: #f5f6fa
-    
+    background: #f5f6fa;
+
+    .background-container {
+        background-image: url('./rsz_auth_background.jpg');
+
+    }
 }
 
 ul {

@@ -4,9 +4,9 @@
         "hero-city-page"
         "cities-container"
         "products-container";
-        .product-card {
-            margin-bottom: 60px;
-        }
+    .product-card {
+        margin-bottom: 60px;
+    }
 
     .hero {
         display: flex;
@@ -23,7 +23,10 @@
         text-shadow: -1px 1px 20px rgba(39, 33, 33, 0.89);
     }
     .product-container-city {
-        margin-left: 15px;
+        display: flex;
+        max-width: 75vw;
+        position: relative;
+        left: 12vw;
     }
 
     .city-info {
@@ -42,7 +45,7 @@
                 font-size: 40px;
                 color: #423f3f;
             }
-            .city-info-txt{
+            .city-info-txt {
                 color: rgba(84, 81, 81, 0.87);
             }
         }

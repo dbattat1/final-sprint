@@ -1,0 +1,24 @@
+{
+    "_id" : "ObjectId(5ecd283b2efde9434c00c31c)",
+    "dueDate" : 1590503441003.0,
+    "quantity" : 4,
+    "totalPrice" : 1000,
+    "createdAt" : 1590503483155.0,
+    "status" : "Active",
+    "seller" : {
+        "_id" : "5ecbb83a0c2535f563044b99",
+        "name" : {
+            "first" : "Vlad",
+            "last" : "Ben-Moskva"
+        },
+        "imgUrl" : "https://drive.google.com/uc?id=1MCJG7SkclIkwhGQ3epWczqRPbxC8Gr5w"
+    },
+    "buyer" : {
+        "_id" : "5ecbb83a0c2535f563044ba2",
+        "name" : {
+            "first" : "O-Ren",
+            "last" : "Ishii"
+        },
+        "imgUrl" : "https://drive.google.com/uc?id=1JIG__AqS5a5YrcCFmM6vwPtZQuo8ANc5"
+    }
+}

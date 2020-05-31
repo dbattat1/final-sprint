@@ -4,9 +4,11 @@
     margin: 0 auto;
     box-sizing: unset;
     min-height: 80vh;
+    justify-content: center;
+    margin-right: 160px;
     .profile-menu {
         width: 100%;
-        max-width: 360px;
+        max-width: 220px;;
     }
     .profile-main-content {
         padding-left: 20px
@@ -21,7 +23,11 @@
         p {
             font-size: rem(27px);
         }
-        // padding-top: 125px
+        .ui.secondary.pointing.menu {
+            div {
+                cursor: pointer;
+            }
+        }
 }
 }
 
