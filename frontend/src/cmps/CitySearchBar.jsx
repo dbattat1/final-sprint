@@ -32,7 +32,7 @@ class CitySearchBar extends Component {
     return (
       <div className="city-search-bar">
         <Dropdown className="icon"
-          placeholder="Where do you want to eat?"
+          placeholder="Where Do You Want To Eat?"
           search
           labeled
           selection

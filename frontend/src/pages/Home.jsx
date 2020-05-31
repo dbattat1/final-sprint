@@ -40,7 +40,7 @@ class Home extends Component {
     ];
     const tourIds = [
       "5ed2d2ac71d6da0d6fe1da9f",
-      "5ecbb83a0c2535f563044b9a",
+      "5ed26763757ca025f58f39de",
       "5ecbb83a0c2535f563044ba1",
       "5ed2d2b971d6da0d6fe1dd24",
     ];

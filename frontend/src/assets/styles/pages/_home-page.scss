@@ -19,36 +19,32 @@
     .products-container {
         margin-bottom: 170px;
     }
-
-    // .top-rated.products-container {
-    //     grid-area: top-products;
-    // }
-    // .cities-container {
-    //     grid-area: cities-container;
-    // }
-    // .top-chefs.products-container {
-    //     grid-area: chef-products;
-    // }
-    // .top-workshops.products-container {
-    //     grid-area: workshop-products;
-    // }
-    // .top-tours.products-container {
-    //     grid-area: tour-products;
-    // }
-    
+    .top-rated.products-container {
+        grid-area: top-products;
+    }
+    .cities-container {
+        grid-area: cities-container;
+    }
+    .top-chefs.products-container {
+        grid-area: chef-products;
+    }
+    .top-workshops.products-container {
+        grid-area: workshop-products;
+    }
+    .top-tours.products-container {
+        grid-area: tour-products;
+    }
     .content-container {
-        
         display: grid;
         // grid-template-columns: 200px auto 200px;
-        grid-template-columns: minmax(1.6rem, 1fr) minmax(auto, 1320px) minmax(1.6rem, 1fr);
+        grid-template-columns: auto 1320px auto;
         grid-template-rows: auto;
-        // grid-template-areas:
-            
-        //     ". top-products ."
-        //     ". cities-container ."
-        //     ". chef-products ."
-        //     ". workshop-products ."
-        //     ". tour-products .";
+        grid-template-areas:
+            ". top-products ."
+            ". cities-container ."
+            ". chef-products ."
+            ". workshop-products ."
+            ". tour-products .";
 
         > * {
             grid-column: 2;

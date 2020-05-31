@@ -7,13 +7,15 @@
     margin-top: 20px;
     z-index: 101;
     display: flex;
-    width: 500px;
+    width: 400px;
     left: 36vw;
 
-    .ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text {
-        color: rgba(50, 60, 96, 0.87);
+    .ui.default.dropdown:not(.button) > .text,
+    .ui.dropdown:not(.button) > .default.text {
+        color: rgba(37, 37, 37, 0.8);
+        font-size: bold;
         font-family: Ubuntu-medium;
-        font-size: 1.2em;
+        font-size: 1.1m;
     }
 
     .ui.selection {
@@ -25,6 +27,11 @@
 
     .ui.button {
         border-radius: 0 4px 4px 0;
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0.5em;
+        padding-left: 1.5em;
+        font-size: 0.9rem;
     }
 
     .form-control {

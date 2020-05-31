@@ -10,7 +10,7 @@ class UserOrders extends React.Component {
   state = {
     ordersBySeller: null,
     ordersByBuyer: null,
-    ordersTypes: 'buyer'
+    ordersTypes: 'seller'
   };
 
   componentDidMount() {
@@ -26,7 +26,8 @@ class UserOrders extends React.Component {
       const { _id } = this.props.loggedInUser;
 
       orderService.queryBySeller(_id).then((orders) => {
-        this.setState({ ordersBySeller: orders });
+        const reversedOrders = orders.reverse();
+        this.setState({ ordersBySeller: reversedOrders });
       });
 
       orderService.queryByBuyer(_id).then((orders) => {

@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Moment from 'react-moment';
 import { Header, Image, Table } from 'semantic-ui-react'
 
 export function OrderPreview(props) {
     const { order } = props;
+ 
 
     return (
                 <Table.Row>
@@ -27,7 +29,7 @@ export function OrderPreview(props) {
                     <Table.Cell>{new Date(order.dueDate).toDateString()}</Table.Cell>
                     <Table.Cell>{order.quantity}</Table.Cell>
                     <Table.Cell>{order.totalPrice}</Table.Cell>
-                    <Table.Cell>{new Date(order.createdAt).toDateString()}</Table.Cell>
+                    <Table.Cell>  <Moment fromNow ago>{(order.dueDate)}</Moment></Table.Cell>
                 </Table.Row>
          
     );
