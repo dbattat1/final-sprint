@@ -55,7 +55,7 @@ class ReviewAdd extends Component {
                 type="text"
                 name="txt"
                 required
-                autocomplete="off"
+                autoComplete="off"
                 placeholder={`Tell us about your experience, ${name}`}
                 onChange={this.handleChange}
               />

@@ -52,7 +52,7 @@ class CityPage extends Component {
     </Spinner>;
     return (
       <div className="city-page container">
-        <Header pathname={this.props.location.pathname} />
+        <Header pathname={this.props.location.pathname} city={city._id} />
 
         <div
           className="hero hero-city-page"
@@ -81,7 +81,7 @@ class CityPage extends Component {
           </div>
         </section>
         <section className="city-attraction-wrapper">
-    <p className = "top-attraction-header">Top Attractions in {`${city.name}`}</p>
+          <p className="top-attraction-header">Top Attractions in {`${city.name}`}</p>
           <section className="city-attractions">
             <div className="attraction-card card-1">
               <img src={city.attractions[0].imgUrl} />

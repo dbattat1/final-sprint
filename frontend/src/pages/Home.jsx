@@ -22,9 +22,9 @@ class Home extends Component {
     this.props.loadCities();
     const favIds = [
       "5ecbb83a0c2535f563044b9b",
-      "5ecbb83a0c2535f563044ba4",
-      "5ecbb83a0c2535f563044b9f",
-      "5ecbb83a0c2535f563044ba0",
+      "5ecbb83a0c2535f563044b9f", 
+      "5ed26763757ca025f58f39de",
+      "5ecbb83a0c2535f563044b9d"
     ];
     const chefIds = [
       "5ecbb83a0c2535f563044b9b",
