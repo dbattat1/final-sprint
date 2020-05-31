@@ -34,7 +34,10 @@ class ProductGallery extends Component {
   };
 
   render() {
-    const categories = [{ value: '', text: 'All Experiences' }, { value: 'Culinary tour', text: 'Culinary Tour' }, { value: 'Cooking orkshop', text: 'Cooking Workshop' },
+    console.log("PRODUCTS", this.props.products);
+    console.log('the state is', this.state);
+
+    const categories = [{ value: '', text: 'All Experiences' }, { value: 'Culinary tour', text: 'Culinary Tour' }, { value: 'Cooking workshop', text: 'Cooking Workshop' },
     { value: 'Dining experience', text: 'Dining Experience' }];
     return (
       <div>

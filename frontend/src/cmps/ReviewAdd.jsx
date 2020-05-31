@@ -22,16 +22,16 @@ class ReviewAdd extends Component {
     const { loggedInUser } = this.props;
     reviewToAdd.byUser = loggedInUser
       ? {
-          _id: loggedInUser._id,
-          name: loggedInUser.name,
-          imgUrl: loggedInUser.imgUrl,
-        }
+        _id: loggedInUser._id,
+        name: loggedInUser.name,
+        imgUrl: loggedInUser.imgUrl,
+      }
       : {
-          _id: "guest_id",
-          name: { first: "Guest", last: "Guestman" },
-          imgUrl:
-            "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX",
-        };
+        _id: "guest_id",
+        name: { first: "Guest", last: "Guestman" },
+        imgUrl:
+          "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX",
+      };
     this.props.onAddReview(reviewToAdd);
     this.setState({ txt: "", rate: 0 });
   };
@@ -43,7 +43,10 @@ class ReviewAdd extends Component {
   render() {
     // console.log('the state is', this.state);
     const { txt, rate } = this.state;
-    const name = this.props.loggedInUser.name.first;
+    let name;
+    if (this.props.loggedInUser) {
+       name = this.props.loggedInUser.name.first;
+    }
     return (
       <div className="product-review">
         <form onSubmit={this.handleSubmit}>
@@ -56,7 +59,7 @@ class ReviewAdd extends Component {
                 name="txt"
                 required
                 autoComplete="off"
-                placeholder={`Tell us about your experience, ${name}`}
+                placeholder={`Tell us about your experience ${(name)? `, ${name}` : ''}`}
                 onChange={this.handleChange}
               />
             </label>
