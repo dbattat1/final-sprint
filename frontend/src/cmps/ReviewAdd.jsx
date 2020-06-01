@@ -28,9 +28,9 @@ class ReviewAdd extends Component {
       }
       : {
         _id: "guest_id",
-        name: { first: "Guest", last: "Guestman" },
+        name: { first: "Guest", last: "" },
         imgUrl:
-          "https://drive.google.com/uc?id=1CRTUFCJAzwxYqZEGigD6v8UPVz7f7kvX",
+          "https://pngimage.net/wp-content/uploads/2018/05/customer-icon-transparent-png-3.png",
       };
     this.props.onAddReview(reviewToAdd);
     this.setState({ txt: "", rate: 0 });
