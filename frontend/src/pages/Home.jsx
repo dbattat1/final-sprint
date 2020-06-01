@@ -22,7 +22,7 @@ class Home extends Component {
     this.props.loadCities();
     const favIds = [
       "5ecbb83a0c2535f563044b9b",
-      "5ecbb83a0c2535f563044b9f", 
+      "5ecbb83a0c2535f563044b9f",
       "5ed26763757ca025f58f39de",
       "5ecbb83a0c2535f563044b9d"
     ];
@@ -75,20 +75,25 @@ class Home extends Component {
     return (
       <div className="home-page container">
         <Header pathname={this.props.location.pathname} />
-        <div className="hero hero-home-page" />
-        <CitySearchBar />
+        <div className="hero">
+          <div className="hero-text">
+            <h1 >Taste The World.</h1>
+            <span>Find Exceptional Culinary Experiences Worldwide By Our Unique Hosts</span>
+          </div>
+             <CitySearchBar />
+        </div>
         <main className="content-container">
           <section className="top-rated products-container">
-            <div className="see-more flex justify-center space-between">
-              <h1>Top Rated</h1>
-              <Link to={`/gallery`}>See More >></Link>
-            </div>
+              <h1 className="title flex justify-center">
+                ★ Top Rated  </h1>
+              <div className="underline">&nbsp; &nbsp;</div>
+              
             <ul>
               <ProductList users={this.state.favUsers} />
             </ul>
           </section>
           <section className="cities-container">
-              <h1>Top Destinations</h1>
+            <h1>Top Destinations</h1>
             <ul>
               <CityList cities={this.props.cities} />
             </ul>

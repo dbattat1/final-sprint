@@ -3,39 +3,75 @@
     position: sticky;
     top: 1.3vh;
     z-index: 101;
-    margin-top: 20px;
+    margin-top: 300px;
     z-index: 101;
     display: flex;
-    width: 400px;
-    left: 36vw;
+    width: 550px;
+    left: 33vw;
+    opacity: 0.9;
+   .ui.selection.dropdown>.dropdown.icon {
+        top: 1.2em;
+    }
 
     .ui.default.dropdown:not(.button) > .text,
     .ui.dropdown:not(.button) > .default.text {
-        color: rgba(37, 37, 37, 0.8);
-        font-size: bold;
+        color: #606060;
+        text-shadow: 1px 0 0px #6d6d6d7d;
+        // font-size: bold;
         font-family: Ubuntu-medium;
-        font-size: 1.1m;
+        font-size: rem(19px);
+        padding: 5px;
+        letter-spacing: em(1.7px);
     }
 
     .ui.selection {
         width: 30vw;
-        background: #ffffff none;
+        background: #be2424;
         // left:50vw;
-        border-radius: 4px 0 0 4px !important;
+        border-radius: 50px 0px 0px 50px !important;
+        // .active
+        i {
+           top: 3em;;
+        }
+        // .dropdown >.dropdown.icon {
+        //     top: 3em;
+        // }
     }
-
+    .dropdown .menu>.item {
+        color: #606060;
+        // font-size: bold;
+        font-family: Ubuntu-medium;
+        font-size: rem(19px);
+        padding: 5px;
+        letter-spacing: em(1.7px);
+    }
+    .ui.active.selection.dropdown {
+        border-radius: 50px 0 0 50px !important;
+    }
+    .ui.selection.active.dropdown {
+        border: none;
+    }
     .ui.button {
-        border-radius: 0 4px 4px 0;
-        padding-top: 0.5em;
-        padding-right: 1.5em;
-        padding-bottom: 0.5em;
-        padding-left: 1.5em;
-        font-size: 0.9rem;
+        // font-weight: bold;
+        border-radius: 0px 50px 50px 0px;
+        padding-right: em(30px);
+        padding-left: em(20px);
+        font-size: rem(22px);
+        font-family: Ubuntu-medium;
+        letter-spacing: em(1px);
     }
-
     .form-control {
         margin: 1px;
         min-width: 120px;
+    }
+    
+    .ui.search.dropdown>.text {
+        color: #606060;
+        font-size: bold;
+        font-family: Ubuntu-medium;
+        font-size: rem(19px);
+        padding: 5px;
+        letter-spacing: em(1.7px);
     }
 
     .selectEmpty {
@@ -43,6 +79,7 @@
     }
 }
 .tag-search-bar {
+    
     position: relative;
     top: -24px;
     padding-bottom: 30px;

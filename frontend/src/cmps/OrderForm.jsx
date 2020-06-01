@@ -15,7 +15,6 @@ class OrderForm extends React.Component {
   componentDidMount() {
     let totalPrice = this.state.quantity * this.props.seller.product.price;
     this.setState({ totalPrice });
-    SocketService.setup()
   }
 
   onDateChange = (eventDate) => {
@@ -32,6 +31,7 @@ class OrderForm extends React.Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
+    if (this.props.loggedInUser){
     const newOrder = this.state;
     console.log(newOrder);
     const seller = this.getMiniSeller();
@@ -48,8 +48,9 @@ class OrderForm extends React.Component {
       totalPrice: 1 * this.props.seller.product.price,
       dueDate: Date.now(),
     });
-    SocketService.emit('makeOrder','17')
+    SocketService.emit('makeOrder')
     console.log("orderd!", newOrder);
+    }
   };
 
   getMiniBuyer = () => {

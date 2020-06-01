@@ -5,6 +5,7 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { logout } from "../actions/userActions.js";
+import RestaurantIcon from '@material-ui/icons/Restaurant';
 
 class Header extends React.Component {
   componentDidMount() {
@@ -45,7 +46,10 @@ class Header extends React.Component {
         }
       >
         <Link to="/">
-          <div className="logo">HEAT</div>
+          <div className="logo"
+          >  <RestaurantIcon
+          className="events-nav-icon" />
+          HEAT</div>
         </Link>
         <div className="header-nav">
           {this.props.loggedInUser && (
