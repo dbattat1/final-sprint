@@ -8,10 +8,10 @@
     margin-right: 160px;
     .profile-menu {
         width: 100%;
-        max-width: 220px;;
+        max-width: 220px;
     }
     .profile-main-content {
-        padding-left: 20px
+        padding-left: 20px;
     }
     .messege-center-container {
         width: 100%;
@@ -28,6 +28,15 @@
                 cursor: pointer;
             }
         }
-}
+    }
 }
 
+.ui.image.header {
+    img {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        object-fit: cover;
+    }
+}
