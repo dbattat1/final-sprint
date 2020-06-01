@@ -83,7 +83,9 @@
         grid-template-areas:
             "prime-img  img-1  img-2"
             "prime-img  img-3  img-4";
-
+        *:hover{
+            box-shadow: -1px 2px 5px 5px #808080c9;
+        }
         .prime-photo {
             grid-area: prime-img;
             width: 100%;

@@ -14,7 +14,7 @@ import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 import Divider from '@material-ui/core/Divider';
 import MessageIcon from '@material-ui/icons/Message';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import UserOrders from './UserOrders';
+import UserOrders from '../cmps/UserOrders';
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import PersonalDetails from './PersonalDetails.jsx'
 import MessageCenter from './MessageCenter.jsx'
@@ -35,8 +35,8 @@ export default class UserProfile extends React.Component {
   }));
 
   openTab = (tab) => {
-    this.setState({ currTab: tab }, () => console.log('state', this.state)
-    );
+    // this.setState({ currTab: tab }, () => console.log('state', this.state);
+    this.setState({ currTab: tab });
   }
 
   render() {

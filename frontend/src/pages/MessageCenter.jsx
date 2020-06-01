@@ -21,10 +21,10 @@ class MessageCenter extends React.Component {
     // this.props.loadUsers();
     // this.setState({ rating: this.props.users })
     const currUser = this.props.loggedInUser;
-    console.log(currUser._id, 'id');
+    // console.log(currUser._id, 'id');
     const { msgs } = currUser;
-    console.log('msgs', msgs);
-    console.log('user', this.props.loggedInUser);
+    // console.log('msgs', msgs);
+    // console.log('user', this.props.loggedInUser);
     const userMsg = msgs.filter((msg) => msg.sentBy._id == currUser._id)
     const responderMsg = msgs.filter((msg) => msg.sentBy._id !== currUser._id)
   }

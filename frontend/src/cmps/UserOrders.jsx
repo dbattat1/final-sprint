@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import orderService from "../services/orderService";
 import { loadOrders } from "../actions/orderActions.js";
-import OrderList from "../cmps/OrderList.jsx";
-import Header from "../cmps/Header";
+import OrderList from "./OrderList.jsx";
+import Header from "./Header";
 import SocketService from "../services/SocketService";
 
 class UserOrders extends React.Component {

@@ -111,6 +111,27 @@ class Home extends Component {
               <ProductList users={this.state.workshopUsers} />
             </ul>
           </section>
+          <section className="testimonials">
+            <h2>why they love it</h2>
+            <div className="row row2">
+              <section className="col span-1-of-3">
+                <blockquote> Alexandra was an excellent host. We were lucky in that it was only my husband and I on our hike so she catered the walk based on our preferences. The location was secluded and just perfect for a great view of the sunset over Old Town. 
+                  {/* <img src="https://www.pinclipart.com/picdir/middle/107-1073416_left-quote-quote-white-icon-png-clipart.png"></img> */}
+                  <cite><img src="https://cdn.fastly.picmonkey.com/contentful/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=800&q=70" alt="Customer 1 photo"></img> Alberto Duncan </cite>
+                </blockquote>
+              </section>
+              <section className="col span-1-of-3">
+                <blockquote>  We spent a couple of weeks bouncing around Italy and, by far, our dinner with Debora and Fiamma was the highlight! The dinner party was like nothing we'd experienced, Debora and Fiamma provided a fantastic meal and an atmosphere of openness and community that encouraged discussion amongst the travelers gathered.  
+                  <cite><img src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg" alt="Customer 1 photo"></img> Joana Silva </cite>
+                </blockquote>
+              </section>
+              <section className="col span-1-of-3">
+                <blockquote>  Can’t say enough about how amazing our experience at Laura’s was!!! The food, the atmosphere, the view, the drinks and most importantly, the people! Laura and her friends made our time in Barcelona a million times better and we HIGHLY recommend her to everyone.  
+                  <cite><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhhklLpQnJpmdcRWm07dxiiIp22D9ZaFlhzNF5S7EMPxEinocq&usqp=CAU" alt="Customer 1 photo"></img> Milton Chapman </cite>
+                </blockquote>
+              </section>
+              </div>
+          </section>
           <section className="top-tours products-container">
             <div className="see-more flex justify-center space-between">
               <h1>Culinary Tours</h1>

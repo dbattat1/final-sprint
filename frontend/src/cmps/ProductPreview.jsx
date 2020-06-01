@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import Carousel from '@bit/react-bootstrap.react-bootstrap.carousel'
+// import ReactBootstrapStyle from '@bit/react-bootstrap.react-bootstrap.internal.style-links';
+
 
 export function ProductPreview(props) {
   const { user } = props;
@@ -16,6 +19,16 @@ export function ProductPreview(props) {
   return (
     <li className="product-card">
       <Link to={`/user/${user._id}`}>
+      {/* <Carousel>
+      <Carousel.Item>
+					<img
+						className="d-block w-100"
+						src={`${product.imgUrls[0]}`}
+						alt="First slide"
+					/>
+
+        </Carousel.Item>
+        	</Carousel> */}
         <div
           className="product-card-img"
           style={{ backgroundImage: `url(${product.imgUrls[0]})` }}
