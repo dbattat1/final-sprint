@@ -16,7 +16,6 @@ class UserOrders extends React.Component {
   componentDidMount() {
     // this.props.loadOrders();
     // this.setState({ rating: this.props.orders })
-    SocketService.setup();
     this.loadOrders();
     SocketService.on('setOrders', this.loadOrders);
   }

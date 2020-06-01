@@ -19,7 +19,7 @@ import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import PersonalDetails from './PersonalDetails.jsx'
 import MessageCenter from './MessageCenter.jsx'
 
-class UserProfile extends React.Component {
+export default class UserProfile extends React.Component {
   state = {
     currTab: 'order'
   };
@@ -86,10 +86,10 @@ class UserProfile extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => { };
-const mapDispatchToProps = {};
+// const mapStateToProps = (state) => { };
+// // const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);
+// // export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);
 
 
 
