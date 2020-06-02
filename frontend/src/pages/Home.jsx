@@ -88,7 +88,6 @@ class Home extends Component {
   };
 
   render() {
-    console.log(this.state.isDown);
 
     return (
       <div className="home-page container">
