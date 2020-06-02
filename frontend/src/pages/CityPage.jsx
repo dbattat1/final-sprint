@@ -18,7 +18,7 @@ class CityPage extends Component {
     const { id } = this.props.match.params;
     this.props.loadCity(id);
     this.props.loadProducts({ city: id, category: '' });
-    this.setState({ city: id })
+    this.setState({ city: id });
   }
 
   handleChange = (e, { value, name }) => {

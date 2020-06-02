@@ -21,12 +21,13 @@
         color: white;
         font-size: 4em;
         text-shadow: -1px 1px 20px rgba(39, 33, 33, 0.89);
+        box-shadow: 0px 2px 2px 0px #3232328c;
     }
     .product-container-city {
         display: flex;
-        max-width: 80vw;
+        max-width: 84vw;
         position: relative;
-        left: 12vw;
+        left: 8vw;
     }
 
     .city-info {
