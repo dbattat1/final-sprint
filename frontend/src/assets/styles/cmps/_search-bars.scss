@@ -120,14 +120,20 @@
         }
     }
 }
-// .tag-search-bar {
+.tag-search-bar {
 
-//     position: relative;
-//     top: -24px;
-//     padding-bottom: 30px;
-//     padding-top: 30px;
+    position: relative;
+    top: -24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
 
-//     .ui.selection.dropdown {
-//         left: 44.7vw;
-//     }
-// }
+    // .ui.selection.dropdown {
+    //     left: 44.7vw;
+    // }
+}
+
+.tag-search {
+    justify-content: center;
+}
