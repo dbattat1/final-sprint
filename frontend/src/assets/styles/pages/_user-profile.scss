@@ -12,6 +12,7 @@
     }
     .profile-main-content {
         padding-left: 20px;
+        width: 800px;
     }
     .messege-center-container {
         width: 100%;
@@ -40,3 +41,16 @@
         object-fit: cover;
     }
 }
+
+.ui.segment.flex{
+    width: 847px;
+    // height: 500px;
+    .card{
+        max-width: 500px;
+    }
+}
+
+.ui.secondary.pointing.menu .item {
+cursor: pointer;
+}
+

@@ -29,7 +29,7 @@ export function OrderPreview(props) {
                     <Table.Cell>{new Date(order.dueDate).toDateString()}</Table.Cell>
                     <Table.Cell>{order.quantity}</Table.Cell>
                     <Table.Cell>{order.totalPrice}</Table.Cell>
-                    <Table.Cell>  <Moment fromNow ago>{(order.createdAt)}</Moment></Table.Cell>
+                    <Table.Cell>  <Moment fromNow ago>{(order.dueDate)}</Moment> ago</Table.Cell>
                 </Table.Row>
          
     );
