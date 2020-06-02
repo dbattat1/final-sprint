@@ -11,9 +11,9 @@ class Footer extends React.Component {
     return (
       <div className="main-footer">
         <div className="logo">HEAT</div>
-        <small>It's a Heat!</small>
+        {/* <small>It's a Heat!</small> */}
         <small>©2020 all rights reserved</small>
-        <div className="footer-social flex">
+        {/* <div className="footer-social flex">
           <a href="https://www.facebook.com/" target="_blank">
             <FacebookIcon />
           </a>
@@ -23,7 +23,7 @@ class Footer extends React.Component {
           <a href="https://www.linkedin.com/feed/" target="_blank">
             <LinkedInIcon />
           </a>
-        </div>
+        </div> */}
       </div>
     );
   }

@@ -83,7 +83,12 @@
         grid-template-areas:
             "prime-img  img-1  img-2"
             "prime-img  img-3  img-4";
-
+       
+        *:hover {
+            transition: 0.5s ease-in-out;
+            transform: scale(1.025, 1.025);
+            filter: saturate(1.5);
+        }
         .prime-photo {
             grid-area: prime-img;
             width: 100%;
@@ -146,7 +151,8 @@
                     font-family: Alconica;
                     letter-spacing: 1px;
                 }
-                p, h3 {
+                p,
+                h3 {
                     line-height: 1.7285em;
                     font-family: Ubuntu-medium;
                     color: #525252;
@@ -186,6 +192,5 @@
         grid-area: product-page-reviews;
         padding: 0px 90px 0px 90px;
         margin: 110px 0px;
-
     }
 }

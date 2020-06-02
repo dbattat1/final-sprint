@@ -18,12 +18,24 @@
     }
 }
 
-  
-  // Mixin for removing hover efects on iphone screen
-  @mixin hover-supported {    
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
     @media not all and (pointer: coarse) {
         &:hover {
             @content;
         }
     }
-  }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 30%;
+        width: 60%;
+    }
+    to {
+        margin-right: 100%;
+        width: 35%;
+    }
+}
+
+
