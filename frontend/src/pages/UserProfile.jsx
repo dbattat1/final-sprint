@@ -46,38 +46,38 @@ export default class UserProfile extends React.Component {
         <Header pathname={this.props.location.pathname} />
         <div className="user-profile-container flex">
           <List component="nav" className="profile-menu">
-            <ListItem button>
+            <ListItem button onClick={() => this.openTab('personal')}>
               <ListItemAvatar>
                 <Avatar>
                   <AccountCircleIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Profile" onClick={() => this.openTab('personal')} />
+              <ListItemText primary="Profile"  />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem button>
+            <ListItem button onClick={() => this.openTab('order')}>
               <ListItemAvatar>
                 <Avatar>
                   <LocalGroceryStoreIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Orders" onClick={() => this.openTab('order')} />
+              <ListItemText primary="Orders"  />
             </ListItem>
             <Divider variant="inset" component="li" />
-            <ListItem button>
+            <ListItem button onClick={() => this.openTab('messages')}>
               <ListItemAvatar>
                 <Avatar>
                   <MessageIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Messeges" onClick={() => this.openTab('messeges')} />
+              <ListItemText primary="Messages"  />
             </ListItem>
           </List>
           <div className="profile-main-content">
             <div className="ui segment flex">
               {currTab === 'order' && <UserOrders />}
               {currTab === 'personal' && <PersonalDetails />}
-              {currTab === 'messeges' && <MessageCenter />}
+              {currTab === 'messages' && <MessageCenter />}
             </div>
           </div>
         </div>
