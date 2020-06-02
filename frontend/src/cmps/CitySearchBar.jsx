@@ -32,10 +32,11 @@ class CitySearchBar extends Component {
     return (
       <div className="city-search-bar">
         <Dropdown className="icon"
-          placeholder="Where Do You Want To Eat?"
+          placeholder="Where Are We Eating Today?"
           search
           labeled
           selection
+          fluid
           floating
           options={options}
           onChange={(e, { value }) => { this.setState({ curCity: value }) }}

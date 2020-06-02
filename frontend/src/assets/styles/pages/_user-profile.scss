@@ -29,7 +29,16 @@
                 cursor: pointer;
             }
         }
-    }
+        .ui.image.header {
+            img {
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                min-height: 40px;
+                object-fit: cover;
+            }
+        }
+}
 }
 
 .ui.image.header {

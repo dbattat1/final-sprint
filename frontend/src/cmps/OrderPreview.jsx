@@ -11,7 +11,7 @@ export function OrderPreview(props) {
                 <Table.Row>
                     <Table.Cell>
                         <Header as='h4' image>
-                            <Image src={order.buyer.imgUrl} circular size='mini' />
+                            <Image src={order.buyer.imgUrl} className="mini-user-order" circular size='mini' />
                             <Header.Content>
                                 {order.buyer.name.first + ' ' + order.buyer.name.last}
                             </Header.Content>
@@ -19,7 +19,7 @@ export function OrderPreview(props) {
                     </Table.Cell>
                     <Table.Cell>
                         <Header as='h4' image>
-                            <Image src={order.seller.imgUrl} circular size='mini' />
+                            <Image src={order.seller.imgUrl} className="mini-user-order" circular size='mini' />
                             <Header.Content>
                                 {order.seller.name.first + ' ' + order.seller.name.last}
                             </Header.Content>
@@ -29,7 +29,7 @@ export function OrderPreview(props) {
                     <Table.Cell>{new Date(order.dueDate).toDateString()}</Table.Cell>
                     <Table.Cell>{order.quantity}</Table.Cell>
                     <Table.Cell>{order.totalPrice}</Table.Cell>
-                    <Table.Cell>  <Moment fromNow ago>{(order.dueDate)}</Moment> ago</Table.Cell>
+                    <Table.Cell>  <Moment fromNow ago>{(order.createdAt)}</Moment> ago</Table.Cell>
                 </Table.Row>
          
     );
