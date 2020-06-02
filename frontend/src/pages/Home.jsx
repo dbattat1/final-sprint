@@ -113,6 +113,7 @@ class Home extends Component {
           </section>
           <section className="cities-container">
             <h1>Top Destinations</h1>
+            <div className="underline1">&nbsp; &nbsp;</div>
             <ul>
               <CityList cities={this.props.cities} />
             </ul>
@@ -120,6 +121,7 @@ class Home extends Component {
           <section className="top-chefs products-container">
             <div className="see-more flex justify-center space-between">
               <h1>Dining Experiences</h1>
+              <div className="underline1">&nbsp; &nbsp;</div>
               <Link to={`/gallery`}>See More >></Link>
             </div>
             <ul>
@@ -129,6 +131,7 @@ class Home extends Component {
           <section className="top-workshops products-container">
             <div className="see-more flex justify-center space-between">
               <h1>Cooking Workshops</h1>
+              <div className="underline1">&nbsp; &nbsp;</div>
               <Link to={`/gallery`}>See More >></Link>
             </div>
             <ul>

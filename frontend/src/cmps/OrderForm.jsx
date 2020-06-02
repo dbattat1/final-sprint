@@ -79,7 +79,7 @@ class OrderForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit} >
           <EventCalendar onDateChange={this.onDateChange} />
-          <div className="pax-query">How many people?</div>
+          <div className="pax-query">How Many In Your Party?</div>
           <div className="order-controller">
             <div className="order-quantity">
               <button type="button" onClick={() => this.changeQuantity(-1)}>-</button>
@@ -87,7 +87,7 @@ class OrderForm extends React.Component {
               <button type="button" onClick={() => this.changeQuantity(1)}>+</button>
             </div>
             <div className="order-final">
-              <div>${totalPrice}</div>
+              <div>Total: ${totalPrice}</div>
               <button>Book Now</button>
             </div>
           </div>

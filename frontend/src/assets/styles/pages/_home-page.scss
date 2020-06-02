@@ -37,7 +37,6 @@
         // .city-search-bar {
         //     margin-top: 100px;
         // }
-     
     }
 
     h1 {
@@ -56,9 +55,9 @@
             font-size: rem(28px);
             margin-top: 1em;
             margin-bottom: 0.2em;
-            margin-right:em(30px);
+            margin-right: em(30px);
             span {
-                font-size: rem(22px);;
+                font-size: rem(22px);
                 color: gold;
                 margin-right: em(5px);
             }
@@ -66,6 +65,15 @@
     }
     .products-container {
         margin-bottom: 110px;
+    }
+    .top-chefs .cities-container .top-workshops {
+        .underline1 {
+            left: 45.5%;
+            position: relative;
+            width: 7.5%;
+            border-top: em(2.5px) solid #21ba45;
+            margin-bottom: em(2.5px);
+        }
     }
 
     .content-container {
@@ -76,9 +84,14 @@
             grid-column: 2;
         }
         .see-more {
-            padding: 0 12px;
+            margin: 0 auto;
+            padding: 0 0px;
             a {
-                font-size: 16px;
+                margin-bottom: 0;
+                // color: rgb(43, 142, 180);
+                font-weight: bold;
+                font-family: roboto;
+                font-size: rem(18px);
             }
         }
         .testimonials {
