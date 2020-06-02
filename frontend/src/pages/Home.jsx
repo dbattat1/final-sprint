@@ -22,8 +22,9 @@ class Home extends Component {
   componentDidMount() {
     this.props.loadCities();
     window.addEventListener("scroll", this.handleScroll);
+
     const favIds = [
-      "5ecbb83a0c2535f563044b9b",
+      "5ed2d2e871d6da0d6fe1eb02",
       "5ecbb83a0c2535f563044b9f",
       "5ed26763757ca025f58f39de",
       "5ecbb83a0c2535f563044b9d"
