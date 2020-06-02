@@ -83,10 +83,12 @@
         grid-template-areas:
             "prime-img  img-1  img-2"
             "prime-img  img-3  img-4";
-       
+
+        > * {
+            transition: 0.3s ease-in-out;
+        }
         *:hover {
-            transition: 0.5s ease-in-out;
-            transform: scale(1.025, 1.025);
+            transform: scale(1.01, 1.02);
             filter: saturate(1.5);
         }
         .prime-photo {
